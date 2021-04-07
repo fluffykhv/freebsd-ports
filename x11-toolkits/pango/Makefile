@@ -1,7 +1,7 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 
 PORTNAME=	pango
-DISTVERSION=	1.48.1
+DISTVERSION=	1.48.2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome

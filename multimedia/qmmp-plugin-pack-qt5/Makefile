@@ -1,4 +1,3 @@
-
 PORTNAME=	qmmp-plugin-pack
 PORTVERSION=	1.4.0
 CATEGORIES=	multimedia

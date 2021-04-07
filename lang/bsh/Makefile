@@ -9,6 +9,8 @@ COMMENT=	Beanshell java scripting language
 
 LICENSE=	APACHE20
 
+USES=		dos2unix
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	beanshell
 GH_PROJECT=	beanshell
@@ -16,6 +18,8 @@ GH_PROJECT=	beanshell
 USE_JAVA=	8
 USE_ANT=	yes
 ALL_TARGET=	jarall
+
+DOS2UNIX_FILES=	engine/src/TestBshScriptEngine.java
 
 SUB_FILES=	${PORTNAME}.sh
 SUB_LIST=	JARNAME=${PORTNAME}.jar

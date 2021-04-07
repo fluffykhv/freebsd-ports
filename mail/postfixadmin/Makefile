@@ -4,6 +4,7 @@ PORTNAME=	postfixadmin
 DISTVERSIONPREFIX=	postfixadmin-
 DISTVERSION=	3.2.4
 CATEGORIES=	mail www
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	ports.maintainer@evilphi.com
 COMMENT=	PHP web-based management tool for Postfix virtual domains and users
@@ -18,7 +19,7 @@ RUN_DEPENDS+=	p5-DBI>=1.634:databases/p5-DBI \
 		p5-Log-Log4perl>=0.26:devel/p5-Log-Log4perl \
 		p5-MIME-EncWords>=0.040:mail/p5-MIME-EncWords
 
-USES=		cpe perl5 shebangfix php
+USES=		cpe perl5 shebangfix php:flavors
 USE_GITHUB=	yes
 CPE_VENDOR=	postfix_admin_project
 CPE_PRODUCT=	postfix_admin

@@ -8,8 +8,8 @@ CATEGORIES=	graphics kde
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Cross stitch pattern editor
 
-LIB_DEPENDS=	libMagick++-6.so:graphics/ImageMagick6 \
-		libMagickCore-6.so:graphics/ImageMagick6
+LIB_DEPENDS=	libMagick++-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT} \
+		libMagickCore-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT}
 
 USES=		cmake compiler:c++11-lang desktop-file-utils kde:5 qt:5 tar:xz \
 		xorg

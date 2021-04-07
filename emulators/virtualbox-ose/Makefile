@@ -93,7 +93,8 @@ VDE_RUN_DEPENDS=	vde_switch:net/vde2
 VNC_CONFIGURE_ON=	--enable-vnc
 VNC_LIB_DEPENDS=	libvncserver.so:net/libvncserver
 VPX_CONFIGURE_OFF=	--disable-libvpx
-VPX_LIB_DEPENDS=	libvpx.so:multimedia/libvpx
+VPX_LIB_DEPENDS=	libvpx.so:multimedia/libvpx \
+			libopus.so:audio/opus
 X11_CONFIGURE_OFF=	--build-headless
 
 ENV=
@@ -131,8 +132,8 @@ KMK_BUILDTYPE=	release
 
 .if ${PORT_OPTIONS:MGUESTADDITIONS}
 GUESTADDITIONS=	VBoxGuestAdditions_${PORTVERSION}.iso
-RESTRICTED=	for personal use only
-RESTRICTED_FILES=	${GUESTADDITIONS}
+#RESTRICTED=	for personal use only
+#RESTRICTED_FILES=	${GUESTADDITIONS}
 .endif
 
 .if ${PORT_OPTIONS:MMANUAL}
@@ -274,6 +275,14 @@ post-patch:
 	    ${WRKSRC}/LocalConfig.kmk
 	@${ECHO_CMD} 'VBOX_WITH_VALIDATIONKIT =' >> ${WRKSRC}/LocalConfig.kmk
 	@${ECHO_CMD} 'VBOX_WITH_X11_ADDITIONS =' >> ${WRKSRC}/LocalConfig.kmk
+.if ${PORT_OPTIONS:MVPX}
+	@${ECHO} 'SDK_VBOX_OPUS_INCS = ${PREFIX}/include/opus' >> \
+	    ${WRKSRC}/LocalConfig.kmk
+	@${ECHO} 'SDK_VBOX_OPUS_LIBS = opus' >> ${WRKSRC}/LocalConfig.kmk
+.else
+	@${ECHO} 'SDK_VBOX_OPUS_INCS =' >> ${WRKSRC}/LocalConfig.kmk
+	@${ECHO} 'SDK_VBOX_OPUS_LIBS =' >> ${WRKSRC}/LocalConfig.kmk
+.endif
 .if ${PORT_OPTIONS:MR0LOGGING}
 	@${ECHO_CMD} 'VBOX_WITH_R0_LOGGING = 1' >> ${WRKSRC}/LocalConfig.kmk
 .endif

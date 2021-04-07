@@ -10,7 +10,7 @@ COMMENT=	Simple database explorer
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	convert:graphics/ImageMagick6
+BUILD_DEPENDS=	convert:graphics/ImageMagick${IMAGEMAGICK_DEFAULT}
 
 USES=		cmake compiler:c++11-lang qt:5
 USE_GITHUB=	yes

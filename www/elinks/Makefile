@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 USES=		bison:alias cpe gmake localbase ssl tar:bzip2
 CONFIGURE_ARGS=	--without-zlib
 
+CFLAGS+=	-fcommon
 LIBS+=		-lexecinfo
 
 OPTIONS_DEFINE=		88COLORS 256COLORS SPIDERMONKEY XBELMARKS LOCAL_CGI \

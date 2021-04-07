@@ -67,8 +67,6 @@ USE_GSTREAMER1=	cdparanoia \
 		flac \
 		lame \
 		mpg123 \
-		neon \
-		opus \
 		shout2 \
 		soup \
 		taglib \

@@ -19,7 +19,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libuv.so:devel/libuv \
 		librhash.so:security/rhash
 
-USES=		compiler:c++11-lang ncurses
+USES=		compiler:c++11-lang libarchive ncurses
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKE=make

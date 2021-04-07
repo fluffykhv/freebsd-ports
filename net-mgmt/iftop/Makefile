@@ -12,6 +12,7 @@ LICENSE=	GPLv2
 
 USES=		ncurses
 GNU_CONFIGURE=	yes
+CFLAGS+=	-fcommon
 
 PORTDOCS=	README
 PLIST_FILES=	sbin/iftop man/man8/iftop.8.gz

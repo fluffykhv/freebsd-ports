@@ -3,13 +3,14 @@
 PORTNAME=	wysiwyg
 DISTVERSION=	7.x-2.6
 CATEGORIES=	www
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Allows implementation of WYSIWYG editors for editing Drupal content
 
 LICENSE=	GPLv2
 
-USES=		drupal:7,module
+USES=		drupal:7,module php:web,flavors
 
 MODULE_FILES=	editors/css/tinymce-3.css \
 		editors/css/tinymce-4.css \

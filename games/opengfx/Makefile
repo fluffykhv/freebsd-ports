@@ -5,6 +5,7 @@ PORTVERSION=	0.6.0
 CATEGORIES=	games
 MASTER_SITES=	https://cdn.openttd.org/${PORTNAME}-releases/${PORTVERSION}/
 DISTFILES=	${PORTNAME}-${PORTVERSION}-all.zip
+PKGNAMEPREFIX=	openttd-
 
 MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Free alternative graphics for OpenTTD game engine

@@ -28,4 +28,7 @@ OPTIONS_DEFAULT=	IPV6LLPEER
 IPV6LLPEER_DESC=	Support nexthop using IPv6 link-local address
 IPV6LLPEER_MAKE_ARGS=	-DIPV6_LINKLOCAL_PEER
 
+post-patch:
+	@${REINPLACE_CMD} -e 's|\-O2|\-fcommon|' ${WRKSRC}/configure.ac
+
 .include <bsd.port.mk>

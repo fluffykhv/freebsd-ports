@@ -8,10 +8,11 @@ DISTNAME=	${PORTNAME}-freebsd-${PORTVERSION}-${ARCH:S/amd64/x86_64/:S/i386/i386/
 MAINTAINER=	freebsd@sysctl.cz
 COMMENT=	Fast remote desktop
 
-#LICENSE=	commercial
-#LICENSE_NAME=	commercial
-#LICENSE_FILE=	${WRKSRC}/copyright
+LICENSE=	commercial
+LICENSE_NAME=	commercial
+LICENSE_FILE=	${WRKSRC}/copyright
 #LICENSE_PERMS=	no-auto-accept no-dist-mirror no-dist-sell no-pkg-mirror no-pkg-sell
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 ONLY_FOR_ARCHS=	amd64 i386
 

@@ -5,13 +5,14 @@ DISTVERSION=	1-9-8-2
 CATEGORIES=	databases www
 MASTER_SITES=	https://bitbucket.org/phpliteadmin/public/downloads/
 DISTNAME=	${PORTNAME}_v${DISTVERSION}
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Web-based database management tool for Sqlite
 
 LICENSE=	GPLv3
 
-USES=		php:web zip
+USES=		php:web,flavors zip
 
 NO_ARCH=	yes
 NO_BUILD=	yes

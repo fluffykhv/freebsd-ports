@@ -31,7 +31,7 @@ IGNORE=	Missing or invalid argument for USES=drupal, a version must be provided:
 IGNORE=	theme and module arguments are mutually exclusive for USES=drupal
 .endif
 
-DRUPAL_BASE?=	www/drupal${_DRUPAL_VERSION}
+DRUPAL_BASE?=	www/drupal${_DRUPAL_VERSION}@${PHP_FLAVOR}
 
 DRUPAL_DIR=		${PREFIX}/${DRUPAL_BASE}
 DRUPAL_DOCSDIR?=	${PREFIX}/${DRUPAL_BASE}/doc

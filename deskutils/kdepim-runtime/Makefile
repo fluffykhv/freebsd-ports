@@ -18,7 +18,7 @@ LIB_DEPENDS=	libboost_date_time.so:devel/boost-libs \
 		libxerces-c-3.2.so:textproc/xerces-c3
 
 USES=		cmake:noninja compiler:c++11-lib gettext kde:5 qca qt:5 \
-		shared-mime-info tar:xz
+		pkgconfig shared-mime-info tar:xz
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons guiaddons holidays i18n iconthemes \
 		itemmodels itemviews jobwidgets kcmutils kdav kdelibs4support kio \

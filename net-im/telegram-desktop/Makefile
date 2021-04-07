@@ -91,7 +91,7 @@ TELEGRAM_API_ID=	601761
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK}
-USE_GNOME+=	gtk30
+USE_GNOME+=	cairo gtk30
 .endif
 
 .include <bsd.port.mk>

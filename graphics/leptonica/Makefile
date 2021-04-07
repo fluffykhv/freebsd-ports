@@ -43,7 +43,7 @@ WEBP_CONFIGURE_WITH=	libwebp
 ZLIB_CONFIGURE_WITH=	zlib
 
 TESTS?=	generate compare
-.if defined(MAINTAINER_MODE) || defined(PACKAGE_BUILDING)
+.if (defined(MAINTAINER_MODE) || defined(PACKAGE_BUILDING)) && !defined(BATCH)
 BUILD_DEPENDS+=	${LOCALBASE}/bin/gnuplot:math/gnuplot
 .endif
 #the display portion of the regression tests is interactive,

@@ -3,13 +3,14 @@
 PORTNAME=	phpvirtualbox
 DISTVERSION=	6.1
 CATEGORIES=	www
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	vbox@FreeBSD.org
 COMMENT=	AJAX Web Interface for VirtualBox
 
 LICENSE=	GPLv3
 
-USES=		dos2unix php
+USES=		dos2unix php:web,flavors
 USE_PHP=	json session simplexml soap xml
 
 NO_ARCH=	yes

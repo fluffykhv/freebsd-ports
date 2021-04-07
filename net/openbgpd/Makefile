@@ -17,6 +17,8 @@ LICENSE_FILE=	${FILESDIR}/COPYING
 USES=		tar:tgz uidfix
 USE_RC_SUBR=	${PORTNAME}
 
+CFLAGS+=	-fcommon
+
 CONFLICTS=	zebra-[0-9]* quagga-[0-9]*
 
 NO_WRKSUBDIR=	yes

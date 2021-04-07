@@ -115,7 +115,7 @@ PLIST_SUB+=	NO_OPENCL=""
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == clang && ${OPSYS} == FreeBSD || ${ARCH} == "i386"
-LLVM_DEFAULT=	10
+#LLVM_DEFAULT=	10
 BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 CC=		${LOCALBASE}/bin/clang${LLVM_DEFAULT}
 CPP=		${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT}

@@ -42,6 +42,7 @@ RUN_DEPENDS=	ImageMagick6>=6.9.3.1,1:graphics/ImageMagick6 \
 		xdg-utils>=1.0.2.20130919:devel/xdg-utils
 
 USES=		desktop-file-utils gettext-runtime gnome perl5 shebangfix
+USE_GNOME=	librsvg2
 
 USE_PERL5=	run
 INSTALLS_ICONS=	yes

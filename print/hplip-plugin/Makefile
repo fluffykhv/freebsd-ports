@@ -13,11 +13,12 @@ COMMENT=	Binary plugin for some HP Printers and All-in-One devices
 LICENSE=	HPLIP_PLUGIN
 LICENSE_NAME=	HPLIP Driver Plug-in License
 LICENSE_FILE=	${WRKSRC}/license.txt
-LICENSE_PERMS=	none
+#LICENSE_PERMS=	none
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 RUN_DEPENDS=	hp-plugin:print/hplip
 
-RESTRICTED=	License agreement is required
+#RESTRICTED=	License agreement is required
 
 ONLY_FOR_ARCHS=	amd64 i386 # arm
 

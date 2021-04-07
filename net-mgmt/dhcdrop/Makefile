@@ -14,6 +14,7 @@ LICENSE=	GPLv2
 USES=		autoreconf libtool tar:bzip2
 USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
+LDADD=		-libverbs
 
 PLIST_FILES=	sbin/dhcdrop man/man8/dhcdrop.8.gz \
 		man/ru/man8/dhcdrop.8.gz

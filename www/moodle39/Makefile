@@ -19,10 +19,10 @@ USE_PHP=	ctype curl dom fileinfo filter gd hash iconv intl json mbstring \
 		xml xmlreader zip zlib
 WRKSRC=		${WRKDIR}/moodle
 
-IGNORE_WITH_PHP=	80
+#IGNORE_WITH_PHP=	80
 
-OPTIONS_SINGLE=		BACKEND
-OPTIONS_SINGLE_BACKEND=	MYSQL PGSQL MSSQL
+OPTIONS_MULTI=		BACKEND
+OPTIONS_MULTI_BACKEND=	MYSQL PGSQL MSSQL SQLITE
 OPTIONS_DEFINE=		LDAP
 OPTIONS_DEFAULT=	MYSQL
 
@@ -30,6 +30,7 @@ MYSQL_USES=	mysql
 MYSQL_USE=	php=mysqli
 PGSQL_USE=	php=pgsql
 MSSQL_USE=	php=mssql
+SQLITE_USE=	php=sqlite3
 LDAP_USE=	php=ldap
 
 NO_BUILD=	yes

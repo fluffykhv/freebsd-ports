@@ -31,7 +31,7 @@ ANIMCURVE_BROKEN=	error: use of undeclared identifier 'animlib'
 DEEPWATER_DESC=	Build controls for deep water spectrum
 DEEPWATER_CMAKE_ON=	-DENABLE_DEEPWATER:BOOL=TRUE
 
-LLVM_DESC=		Build with LLVM ${LLVM_DEFAULT:C/.$$//} backend
+LLVM_DESC=		Build with LLVM ${LLVM_DEFAULT} backend
 LLVM_LIB_DEPENDS=	libLLVM.so:devel/llvm${LLVM_DEFAULT}
 LLVM_CMAKE_OFF=		-DENABLE_LLVM_BACKEND:BOOL=FALSE
 

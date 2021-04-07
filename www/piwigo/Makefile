@@ -4,6 +4,7 @@ PORTNAME=	piwigo
 DISTVERSION=	11.3.0
 CATEGORIES=	www
 MASTER_SITES=	https://piwigo.org/download/dlcounter.php?code=${PORTVERSION}&/
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	tremere@cainites.net
 COMMENT=	PHP based Web Gallery
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/doc/COPYING
 
 RUN_DEPENDS+=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/sodium.so:security/pecl-libsodium@${PHP_FLAVOR}
 
-USES=		cpe php:web zip
+USES=		cpe php:web,flavors zip
 USE_PHP=	ctype dom exif filter gd hash iconv json mbstring mysqli \
 		openssl pcre pdo session simplexml spl tokenizer xml zlib
 

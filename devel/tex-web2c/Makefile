@@ -11,8 +11,7 @@ DIST_SUBDIR=	TeX
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	TeX implementation translating WEB to C
 
-LIB_DEPENDS=	libopenjpeg.so:graphics/openjpeg15 \
-		libpng.so:graphics/png \
+LIB_DEPENDS=	libpng.so:graphics/png \
 		libzzip.so:devel/zziplib \
 		libmpfr.so:math/mpfr
 

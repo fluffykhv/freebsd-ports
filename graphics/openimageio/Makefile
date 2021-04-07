@@ -27,7 +27,7 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libtiff.so:graphics/tiff \
 		libwebp.so:graphics/webp
 
-USES=		cmake jpeg compiler:c++11-lib iconv:wchar_t
+USES=		cmake jpeg compiler:c++11-lib iconv:wchar_t pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenImageIO
 GH_PROJECT=	oiio
@@ -72,7 +72,8 @@ OCIO_LIB_DEPENDS=	libOpenColorIO.so:graphics/opencolorio
 OPENCV_CMAKE_BOOL=	USE_OPENCV
 OPENCV_LIB_DEPENDS=	libopencv_highgui.so:graphics/opencv \
 			libopencv_core.so:graphics/opencv \
-			libopenjpeg.so:graphics/openjpeg15
+			libopenjp2.so:graphics/openjpeg
+#			libopenjpeg.so:graphics/openjpeg15
 
 OPENJPEG_CMAKE_BOOL=	USE_OPENJPEG
 OPENJPEG_LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg

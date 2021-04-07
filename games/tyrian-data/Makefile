@@ -14,7 +14,7 @@ COMMENT=	Data files for opentyrian
 # From opentyrian FAQ:
 # "Tyrian was, however, released as freeware (under no specific
 # license) by Jason Emery in August 2004"
-LICENSE=	NONE
+#LICENSE=	NONE
 
 USES=		zip
 

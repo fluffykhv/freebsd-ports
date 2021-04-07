@@ -23,11 +23,11 @@ USE_PHP=	curl dom iconv json openssl pcre simplexml spl xml zlib
 PLIST_SUB=	VER="${PORTVERSION}" WWWOWN="${WWWOWN}" WWWGRP="${WWWGRP}"
 
 .if "${PKGNAMESUFFIX}" == "${PHP_PKGNAMESUFFIX}"
-RESTRICTED=	Redistribution in any form is prohibited
+#RESTRICTED=	Redistribution in any form is prohibited
 .endif
 
-OPTIONS_RADIO=		DB
-OPTIONS_RADIO_DB=	MYSQL PGSQL SQLITE
+OPTIONS_MULTI=		DB
+OPTIONS_MULTI_DB=	MYSQL PGSQL SQLITE
 OPTIONS_DEFAULT=	SQLITE
 
 MYSQL_USE=	PHP=pdo_mysql

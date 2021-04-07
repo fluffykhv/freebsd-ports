@@ -126,7 +126,7 @@ PLIST_SUB+=	AVAHI="@comment "
 .if ${PORT_OPTIONS:MGNOMEHELP}
 INSTALLS_OMF=	yes
 PLIST_SUB+=	GNOMEHELP=""
-USE_GNOME+=	gnomedocutils
+#USE_GNOME+=	gnomedocutils
 .else
 CONFIGURE_ARGS+=--disable-gdu
 PLIST_SUB+=	GNOMEHELP="@comment "

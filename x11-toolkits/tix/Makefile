@@ -17,6 +17,17 @@ USES=		tk:tea
 TIX_LIB=	libTix${PORTVERSION}.so
 TIX_LIB_FILE=	${TIX_LIB}.0
 
+.include <bsd.port.pre.mk>
+
+.if ${TCL_VER} > 8.6
+##CFLAGS+=	-DUSE_INTERP_RESULT -DUSE_INTERP_ERRORLINE
+post-patch:
+	@${REINPLACE_CMD} \
+	-e "s,generic/tclInt.h,tclInt.h,g" \
+	-e "s,generic/tkInt.h,tkInt.h,g" \
+	${WRKSRC}/configure
+.endif
+
 pre-configure:
 	@(cd ${WRKSRC} && \
 	    CC="${CC}" ac_cv_path_CC="${CC}" CFLAGS="${CFLAGS}" \
@@ -46,4 +57,4 @@ post-install:
 	${LN} -sf ${PREFIX}/include/tix/generic/tix.h ${STAGEDIR}${PREFIX}/include/tix.h
 	${RMDIR} ${STAGEDIR}${PREFIX}/lib/Tix${PORTVERSION}/html
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

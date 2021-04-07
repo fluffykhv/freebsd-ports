@@ -29,7 +29,7 @@ USE_LDCONFIG=	yes
 USE_GNOME=	cairo glib20 introspection:build
 
 VERSION=	1.8.0
-LIBVERSION=	0.4800.1
+LIBVERSION=	0.4800.2
 
 MESON_ARGS=	-Dintrospection=enabled -Dfontconfig=enabled -Dlibthai=enabled \
 		-Dcairo=enabled -Dfreetype=enabled

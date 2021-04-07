@@ -76,6 +76,108 @@ Notes:
   * Do not forget port variants (linux-f10-libxml2, libxml2, etc.)
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="a7b97d26-9792-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- jail escape possible by mounting over jail root</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>12.2</ge><lt>12.2_6</lt></range>
+	<range><ge>11.4</ge><lt>11.4_9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>Due to a race condition between lookup of ".." and remounting a filesystem,
+	a process running inside a jail might access filesystem hierarchy outside
+	of jail.</p>
+	<h1>Impact:</h1>
+	<p>A process with superuser privileges running inside a jail configured
+	with the allow.mount permission (not enabled by default) could change the root
+	directory outside of the jail, and thus gain full read and write access
+	to all files and directories in the system.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2020-25584</cvename>
+      <freebsdsa>SA-21:10.jail_mount</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-04-06</discovery>
+      <entry>2021-04-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f8e1e2a6-9791-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- double free in accept_filter(9) socket configuration interface</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>12.2</ge><lt>12.2_6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>An unprivileged process can configure an accept filter on a listening
+	socket.  This is done using the setsockopt(2) system call.  The process
+	supplies the name of the accept filter which is to be attached to the
+	socket, as well as a string containing filter-specific information.</p>
+	<p>If the filter implements the accf_create callback, the socket option
+	handler attempts to preserve the process-supplied argument string.  A
+	bug in the socket option handler caused this string to be freed
+	prematurely, leaving a dangling pointer.  Additional operations on the
+	socket can turn this into a double free or a use-after-free.</p>
+	<h1>Impact:</h1>
+	<p>The bug may be exploited to trigger local privilege escalation or
+	kernel memory disclosure.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-29627</cvename>
+      <freebsdsa>SA-21:09.accept_filter</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-04-06</discovery>
+      <entry>2021-04-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="13d37672-9791-11eb-b87a-901b0ef719ab">
+    <topic>FreeBSD -- Memory disclosure by stale virtual memory mapping</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>12.2</ge><lt>12.2_6</lt></range>
+	<range><ge>11.4</ge><lt>11.4_9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>A particular case of memory sharing is mishandled in the virtual memory
+	system.  It is possible and legal to establish a relationship where
+	multiple descendant processes share a mapping which shadows memory of an
+	ancestor process.  In this scenario, when one process modifies memory
+	through such a mapping, the copy-on-write logic fails to invalidate
+	other mappings of the source page.  These stale mappings may remain even
+	after the mapped pages have been reused for another purpose.</p>
+	<h1>Impact:</h1>
+	<p>An unprivileged local user process can maintain a mapping of a page
+	after it is freed, allowing that process to read private data belonging
+	to other processes or the kernel.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-29626</cvename>
+      <freebsdsa>SA-21:08.vm</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2021-04-06</discovery>
+      <entry>2021-04-07</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="dec7e4b6-961a-11eb-9c34-080027f515ea">
     <topic>ruby -- XML round-trip vulnerability in REXML</topic>
     <affects>
@@ -297,6 +399,10 @@ Notes:
 	<name>openssl</name>
 	<range><lt>1.1.1k,1</lt></range>
       </package>
+      <package>
+	<name>FreeBSD</name>
+	<range><ge>12.2</ge><lt>12.2_5</lt></range>
+      </package>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
@@ -321,10 +427,12 @@ Notes:
       <url>https://www.openssl.org/news/secadv/20210325.txt</url>
       <cvename>CVE-2021-3449</cvename>
       <cvename>CVE-2021-3450</cvename>
+      <freebsdsa>SA-21:07.openssl</freebsdsa>
     </references>
     <dates>
       <discovery>2021-03-25</discovery>
       <entry>2021-03-26</entry>
+      <modified>2021-04-07</modified>
     </dates>
   </vuln>
 

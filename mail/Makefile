@@ -98,7 +98,6 @@
     SUBDIR += dspam
     SUBDIR += ecartis
     SUBDIR += elm
-    SUBDIR += elmo
     SUBDIR += emailrelay
     SUBDIR += emil
     SUBDIR += enma
@@ -234,6 +233,7 @@
     SUBDIR += minimalist
     SUBDIR += missey
     SUBDIR += mlmmj
+    SUBDIR += mlmmj-webview
     SUBDIR += mls
     SUBDIR += mmh
     SUBDIR += mmr

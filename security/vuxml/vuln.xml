@@ -76,6 +76,86 @@ Notes:
   * Do not forget port variants (linux-f10-libxml2, libxml2, etc.)
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="9595d002-edeb-4602-be2d-791cd654247e">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.287</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.277.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2021-04-07/">
+	  <h1>Description</h1>
+	  <h5>(Low) SECURITY-1721 / CVE-2021-21639</h5>
+	  <p>Lack of type validation in agent related REST API</p>
+	  <h5>(Medium) SECURITY-1871 / CVE-2021-21640</h5>
+	  <p>View name validation bypass</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://www.jenkins.io/security/advisory/2021-04-07/</url>
+    </references>
+    <dates>
+      <discovery>2021-04-07</discovery>
+      <entry>2021-04-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c0c1834c-9761-11eb-acfd-0022489ad614">
+    <topic>Node.js -- April 2021 Security Releases</topic>
+    <affects>
+      <package>
+	<name>node10</name>
+	<range><lt>10.24.1</lt></range>
+      </package>
+      <package>
+	<name>node12</name>
+	<range><lt>12.22.1</lt></range>
+      </package>
+      <package>
+	<name>node14</name>
+	<range><lt>14.16.1</lt></range>
+      </package>
+      <package>
+	<name>node</name>
+	<range><lt>15.14.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Node.js reports:</p>
+	<blockquote cite="https://nodejs.org/en/blog/vulnerability/april-2021-security-releases/">
+	  <h1>OpenSSL - CA certificate check bypass with X509_V_FLAG_X509_STRICT (High) (CVE-2021-3450)</h1>
+	  <p>This is a vulnerability in OpenSSL which may be exploited through Node.js. You can read more about it in https://www.openssl.org/news/secadv/20210325.txt</p>
+	  <h1>OpenSSL - NULL pointer deref in signature_algorithms processing (High) (CVE-2021-3449)</h1>
+	  <p>This is a vulnerability in OpenSSL which may be exploited through Node.js. You can read more about it in https://www.openssl.org/news/secadv/20210325.txt</p>
+	  <h1>npm upgrade - Update y18n to fix Prototype-Pollution (High) (CVE-2020-7774)</h1>
+	  <p>This is a vulnerability in the y18n npm module which may be exploited by prototype pollution. You can read more about it in https://github.com/advisories/GHSA-c4w7-xm78-47vh</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://nodejs.org/en/blog/vulnerability/april-2021-security-releases/</url>
+      <url>https://www.openssl.org/news/secadv/20210325.txt</url>
+      <url>https://github.com/advisories/GHSA-c4w7-xm78-47vh</url>
+      <cvename>CVE-2021-3450</cvename>
+      <cvename>CVE-2021-3449</cvename>
+      <cvename>CVE-2020-7774</cvename>
+    </references>
+    <dates>
+      <discovery>2021-04-06</discovery>
+      <entry>2021-04-07</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="a7b97d26-9792-11eb-b87a-901b0ef719ab">
     <topic>FreeBSD -- jail escape possible by mounting over jail root</topic>
     <affects>
@@ -175,6 +255,36 @@ Notes:
     <dates>
       <discovery>2021-04-06</discovery>
       <entry>2021-04-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="79fa9f23-9725-11eb-b530-7085c2fb2c14">
+    <topic>upnp -- stack overflow vulnerability</topic>
+    <affects>
+      <package>
+	<name>upnp</name>
+	<range><lt>1.14.5,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mitre reports:</p>
+	<blockquote cite="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28302">
+	  <p>
+	      A stack overflow in pupnp 1.16.1 can cause the denial of service through the
+	      Parser_parseDocument() function. ixmlNode_free() will release a child node
+	      recursively, which will consume stack space and lead to a crash.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-28302</cvename>
+      <url>https://github.com/pupnp/pupnp/issues/249</url>
+    </references>
+    <dates>
+      <discovery>2021-03-12</discovery>
+      <entry>2021-04-06</entry>
     </dates>
   </vuln>
 

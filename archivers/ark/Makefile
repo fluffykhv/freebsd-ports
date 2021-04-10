@@ -31,7 +31,7 @@ OPTIONS_SUB=		YES
 7ZIP_RUN_DEPENDS=	7z:archivers/p7zip
 
 RAR_DESC=	Support for RAR archives (runtime)
-RAR_RUN_DEPENDS=	unrar:archivers/unrar \
+RAR_RUN_DEPENDS=	unrar:archivers/unrar-iconv \
 			rar:archivers/rar
 
 ZIP_DESC=	Support for ZIP archives

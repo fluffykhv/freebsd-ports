@@ -19,7 +19,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ssl --without-pmshell --without-atheos \
 		--without-gpm --without-fb --without-windows
 
-USES=		cpe localbase:ldflags ssl gettext-runtime
+USES=		cpe localbase:ldflags ssl gettext-runtime pkgconfig
 
 CPE_VENDOR=	twibright
 

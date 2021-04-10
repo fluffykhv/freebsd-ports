@@ -5,13 +5,14 @@ PORTVERSION=	0.9.38.7
 PORTREVISION=	4
 CATEGORIES=	sysutils www
 MASTER_SITES=	http://files.froxlor.org/releases/
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	coco@executive-computing.de
 COMMENT=	PHP-based ISP Server Management Panel
 
 LICENSE=	GPLv2
 
-USES=		php:cli
+USES=		php:cli,flavors
 USE_PHP=	bcmath curl filter ftp json pdo_mysql posix session xml zip
 
 SUB_FILES=	pkg-message pkg-deinstall
@@ -91,7 +92,7 @@ LIGHTTPD_RUN_DEPENDS=	lighttpd:www/lighttpd
 
 NGINX_RUN_DEPENDS=	nginx:www/nginx
 
-APACHE_USES=	apache php:mod
+APACHE_USES=	apache php:mod,flavors
 
 MYSQLS_USES=	mysql:server
 

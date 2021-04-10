@@ -7,7 +7,7 @@ CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
-MAINTAINER=	gnome@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	GNOME 3 multi-format document viewer
 
 LICENSE=	GPLv2
@@ -22,7 +22,10 @@ BUILD_DEPENDS=	itstool:textproc/itstool \
 LIB_DEPENDS=	libpoppler-glib.so:graphics/poppler-glib \
 		libfribidi.so:converters/fribidi \
 		libspectre.so:print/libspectre \
-		libtiff.so:graphics/tiff
+		libtiff.so:graphics/tiff \
+		libgspell-1.so:textproc/gspell \
+		libenchant-2.so:textproc/enchant2 \
+		libharfbuzz.so:print/harfbuzz
 RUN_DEPENDS=	adwaita-icon-theme>=0:x11-themes/adwaita-icon-theme \
 		gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 

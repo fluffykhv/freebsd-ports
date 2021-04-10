@@ -9,7 +9,8 @@ COMMENT=	ZFS based replication and failover solution
 LICENSE=	bolthole
 LICENSE_NAME=	bolthole
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
-LICENSE_PERMS=	no-dist-mirror no-dist-sell no-pkg-mirror no-pkg-sell
+#LICENSE_PERMS=	no-dist-mirror no-dist-sell no-pkg-mirror no-pkg-sell
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 RUN_DEPENDS=	ksh93:shells/ksh93
 

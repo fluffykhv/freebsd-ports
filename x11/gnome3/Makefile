@@ -31,8 +31,8 @@ RUN_DEPENDS?=	dconf-editor:devel/dconf-editor \
 		seahorse>=3.0.0:security/seahorse \
 		gnome-control-center>=3.0.0:sysutils/gnome-control-center \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:x11-themes/gnome-backgrounds \
-		caribou>=0:accessibility/caribou \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:audio/freedesktop-sound-theme
+#		caribou>=0:accessibility/caribou \
 
 OPTIONS_DEFINE=	DOCS
 

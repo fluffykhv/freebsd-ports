@@ -6,6 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 DISTNAME=	drupal-${PORTVERSION}
 DIST_SUBDIR=	drupal
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Database driven web content management system (CMS)
@@ -13,7 +14,7 @@ COMMENT=	Database driven web content management system (CMS)
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		drupal:7 php:web shebangfix
+USES=		drupal:7 php:web,flavors shebangfix
 USE_PHP=	dom filter gd hash json mbstring pcre pdo session simplexml xml
 
 SHEBANG_FILES=	scripts/password-hash.sh

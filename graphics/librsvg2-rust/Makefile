@@ -24,6 +24,8 @@ USES=		compiler:c11 gettext gmake gnome libtool pkgconfig tar:xz
 USE_GNOME=	cairo gdkpixbuf2 gnomeprefix libxml2 pango introspection:build
 USE_LDCONFIG=	yes
 
+PLIST_SUB+=	SHLIBVERSION=2.47.0
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-Bsymbolic \
 		--disable-dependency-tracking \

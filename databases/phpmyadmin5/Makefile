@@ -67,6 +67,8 @@ OPTIONS_DEFINE+=	PDF
 
 .if !defined(WITHOUT_PHP_DEPENDS)
 
+.include <bsd.port.options.mk>
+
 .for opt in ${OPTIONS_DEFINE}
 .    if ${PORT_OPTIONS:M${opt}}
 USE_PHP+=	${opt:tl}

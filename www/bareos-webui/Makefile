@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=      Release/
 DISTVERSION=    20.0.0
 PORTREVISION=	1
 CATEGORIES?=    www sysutils
-PKGNAMESUFFIX= -webui
+PKGNAMESUFFIX= -webui${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	PHP-Frontend to manage Bareos over the web
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/webui/LICENSE
 
 USE_GITHUB=	yes
 
-USES=		php:build cmake gettext
+USES=		php:build,flavors cmake gettext
 USE_PHP=	openssl gettext ctype hash json session iconv
 NO_BUILD=	yes
 NO_ARCH=	yes

@@ -17,6 +17,7 @@ PORTSCOUT=	ignore:1
 
 USES=		compiler:c11 python:2.7+ tar:xz tk
 USE_PYTHON=	distutils autoplist allflavors
+USE_XORG=	x11
 
 DIST_SUBDIR=	python
 DISTINFO_FILE=	${PORTSDIR}/lang/python${PYTHON_SUFFIX}/distinfo
@@ -25,6 +26,10 @@ WRKSRC=		${WRKDIR}/Python-${PORTVERSION}/Modules
 PYDISTUTILS_INSTALLARGS+=	--install-lib ${PYTHON_LIBDIR}/lib-dynload
 
 .include <bsd.port.pre.mk>
+
+.if (${_TCLTK_WANTED_VERSIONS} > 86 && ${PYTHON_REL} < 3000)
+EXTRA_PATCHES=	${FILESDIR}/extrapatch-py27__tkinter.c
+.endif
 
 post-extract:
 .if ${PYTHON_REL} < 3000

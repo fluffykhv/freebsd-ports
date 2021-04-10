@@ -100,11 +100,11 @@ CONFIGURE_ARGS+=--enable-fpm \
 .if defined(PKGNAMEPREFIX)
 USES+=		apache:2.2+
 .include "${PORTSDIR}/Mk/Uses/apache.mk"
-.if ${PORT_OPTIONS:MAP2FILTER}
-CONFIGURE_ARGS+=--with-apxs2filter=${APXS}
-.else
+#.if ${PORT_OPTIONS:MAP2FILTER}
+#CONFIGURE_ARGS+=--with-apxs2filter=${APXS}
+#.else
 CONFIGURE_ARGS+=--with-apxs2=${APXS}
-.endif
+#.endif
 PLIST=		${PKGDIR}/pkg-plist.mod
 PKGMESSAGE=	${PKGDIR}/pkg-message.mod
 MODULENAME=	libphp
@@ -145,6 +145,8 @@ CONFIGURE_ARGS+=--enable-debug
 .if ${PORT_OPTIONS:MZTS}
 CONFIGURE_ARGS+=--enable-zts
 CONFIGURE_ENV+=	pthreads_working="yes"
+#CONFIGURE_ENV+=	ac_cv_pthreads_cflags="-pthread"
+#CONFIGURE_ENV+=	ac_cv_pthreads_lib="-lpthread"
 .endif
 
 .if ${PORT_OPTIONS:MDTRACE}

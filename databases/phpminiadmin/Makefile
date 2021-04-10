@@ -6,8 +6,9 @@ CATEGORIES=	databases www
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 DISTNAME=	${PORTNAME}
 EXTRACT_SUFX=	.php
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 EXTRACT_ONLY=
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Lightweight alternative to phpMyAdmin
@@ -17,7 +18,7 @@ LICENSE_COMB=	dual
 
 NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
-USES=		php
+USES=		php:web,flavors
 USE_PHP=	mysqli pcre session
 NO_ARCH=	yes
 

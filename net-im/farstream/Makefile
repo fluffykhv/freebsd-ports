@@ -23,6 +23,8 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 MAKE_JOBS_UNSAFE=	yes
 
+MAKE_JOBS_UNSAFE=	yes
+
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in -exec ${REINPLACE_CMD} \
 		'/foreach/s/\\#include/#include/' {} +

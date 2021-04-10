@@ -16,7 +16,7 @@ USES=		cpe gmake iconv shebangfix tar:bzip2
 SHEBANG_FILES=	contrib/web/perl-user/mlmmj.cgi
 GNU_CONFIGURE=	yes
 
-CPPFLAGS+=	-I${ICONV_INCLUDE_PATH}
+CPPFLAGS+=	-I${ICONV_INCLUDE_PATH} -fcommon
 LDFLAGS+=	${ICONV_LIB_PATH}
 
 OPTIONS_DEFINE=		DOCS PERL PHP

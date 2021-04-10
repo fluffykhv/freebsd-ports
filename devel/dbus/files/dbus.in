@@ -10,7 +10,7 @@
 
 . /etc/rc.subr
 
-: ${dbus_enable=${gnome_enable-NO}} ${dbus_flags="--system"}
+: ${dbus_enable=${dbus_enable-NO}} ${dbus_flags="--system"}
 
 name=dbus
 rcvar=dbus_enable

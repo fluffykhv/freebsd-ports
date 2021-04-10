@@ -6,6 +6,7 @@ PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	https://cdn.openttd.org/opensfx-releases/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-all
+PKGNAMEPREFIX=	openttd-
 
 MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Free alternative sounds for OpenTTD game engine

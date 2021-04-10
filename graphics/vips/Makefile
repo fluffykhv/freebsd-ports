@@ -112,9 +112,9 @@ LIBEXIF_LIB_DEPENDS=	libexif.so:graphics/libexif
 
 .if ${PORT_OPTIONS:MIMAGEMAGICK}
 . if ${PORT_OPTIONS:MX11}
-LIB_DEPENDS+=		libMagickCore-7.so:graphics/ImageMagick7
+LIB_DEPENDS+=		libMagickCore-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT}
 . else
-LIB_DEPENDS+=		libMagickCore-7.so:graphics/ImageMagick7-nox11
+LIB_DEPENDS+=		libMagickCore-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT}-nox11
 . endif
 .elif ${PORT_OPTIONS:MGRAPHMAGICK}
 LIB_DEPENDS+=		libGraphicsMagick.so:graphics/GraphicsMagick

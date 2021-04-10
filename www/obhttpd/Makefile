@@ -22,6 +22,7 @@ USE_RC_SUBR=	obhttpd
 
 CFLAGS+=	-Wall -fcommon
 CFLAGS+=	-I${WRKDIR}/libressl-${SSL_VERSION}/include
+CFLAGS+=	-fcommon
 
 MAKE_ARGS+=	MANDIR=${PREFIX}/man/man
 

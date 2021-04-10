@@ -25,6 +25,11 @@ USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
+LDFLAGS_aarch64=-Wl,-z,notext
+LDFLAGS_armv6=	-Wl,-z,notext
+LDFLAGS_armv7=	-Wl,-z,notext
+LDFLAGS_i386+=	-Wl,-z,notext
+
 OPTIONS_DEFINE=	FFMPEG
 OPTIONS_DEFAULT=FFMPEG
 

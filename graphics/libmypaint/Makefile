@@ -28,6 +28,6 @@ NLS_USE=	GNOME=intltool
 NLS_CONFIGURE_ENABLE=	nls i18n
 
 OPENMP_CONFIGURE_ENABLE=	openmp
-OPENMP_USES=			compiler:openmp
+#OPENMP_USES=			compiler:openmp
 
 .include <bsd.port.mk>

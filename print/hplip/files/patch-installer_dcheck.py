@@ -13,6 +13,19 @@
  
      if status != 0:
          log.debug("ldconfig failed.")
+@@ -372,7 +376,11 @@ def get_pil_version():
+         return '-'
+     else:
+          #return Image.PILLOW_VERSION
+-         return PIL.__version__
++         #return PIL.__version__
++        if hasattr(Image, "__version__"): # required for Pillow >= 6.0.0
++            return Image.__version__
++        else:
++            return PIL.__version__
+ 
+ def get_libpthread_version():
+     try:
 @@ -378,6 +385,8 @@ def get_libpthread_version():
      except ImportError:
          return '-'

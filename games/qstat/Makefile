@@ -17,6 +17,7 @@ GH_ACCOUNT=	multiplay
 
 USES=		autoreconf
 GNU_CONFIGURE=	yes
+CFLAGS+=	-fcommon
 
 PLIST_FILES=	bin/qstat \
 		@sample\ etc/qstat.cfg.sample

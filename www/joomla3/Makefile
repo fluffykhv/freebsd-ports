@@ -4,7 +4,7 @@ PORTNAME=	joomla
 DISTVERSION=	3-9-24
 CATEGORIES=	www
 MASTER_SITES=	https://downloads.joomla.org/cms/joomla3/${DISTVERSION}/
-PKGNAMESUFFIX=	3
+PKGNAMESUFFIX=	3${PHP_PKGNAMESUFFIX}
 DISTNAME=	Joomla_${DISTVERSION}-Stable-Full_Package.tar.bz2?format=bz2
 
 MAINTAINER=	ler@FreeBSD.org
@@ -12,7 +12,7 @@ COMMENT=	Dynamic web content management system (CMS)
 
 LICENSE=	GPLv2
 
-USES=		php:web tar:bz2 shebangfix
+USES=		php:web,flavors tar:bz2 shebangfix
 
 NO_ARCH=	yes
 NO_BUILD=	yes

@@ -77,6 +77,9 @@ CUPS_LIB_DEPENDS=	libcups.so:print/cups
 
 DOSBOX_RUN_DEPENDS=	dosbox:emulators/dosbox
 
+GCC_USE=		gcc=yes
+GCC_USES_OFF=		compiler:c++17-lang
+
 GECKO_RUN_DEPENDS=	${DATADIR}/gecko/wine-gecko-2.47.1-x86.msi:emulators/wine-gecko
 
 GNUTLS_CONFIGURE_WITH=	gnutls

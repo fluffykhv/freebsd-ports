@@ -1,3 +1,3 @@
-TIMESTAMP = 1536530045
-SHA256 (gnome2/pango-1.42.4.tar.xz) = 1d2b74cd63e8bd41961f2f8d952355aa0f9be6002b52c8aa7699d9f5da597c9d
-SIZE (gnome2/pango-1.42.4.tar.xz) = 833876
+TIMESTAMP = 1613229888
+SHA256 (gnome/pango-1.48.2.tar.xz) = d21f8b30dc8abdfc55de25656ecb88dc1105eeeb315e5e2a980dcef8010c2c80
+SIZE (gnome/pango-1.48.2.tar.xz) = 537588

@@ -27,7 +27,6 @@ BUILD_DEPENDS=	\
 LIB_DEPENDS=	\
 	${PY_BOOST} \
 	libboost_thread.so:devel/boost-libs \
-	libleveldb.so:databases/leveldb \
 	libnss3.so:security/nss \
 	libcryptopp.so:security/cryptopp \
 	liboath.so:security/oath-toolkit \
@@ -40,6 +39,7 @@ LIB_DEPENDS=	\
 	libtcmalloc.so:devel/google-perftools \
 	librabbitmq.so:net/rabbitmq-c \
 	libfmt.so:devel/libfmt
+#	libleveldb.so:databases/leveldb \
 RUN_DEPENDS=	\
 	bash:shells/bash \
 	flock:sysutils/flock \
@@ -92,7 +92,7 @@ CMAKE_BUILD_TYPE=	Release
 CMAKE_ON=	WITH_SYSTEM_BOOST WITH_BOOST_CONTEXT WITH_FUSE WITH_PYTHON3
 CMAKE_OFF=	WITH_LTTNG WITH_BABELTRACE WITH_KRBD WITH_XFS \
 		WITH_SPDK WITH_RDMA WITH_MGR_DASHBOARD_FRONTEND WITH_PYTHON2 \
-		WITH_RADOSGW_KAFKA_ENDPOINT
+		WITH_RADOSGW_KAFKA_ENDPOINT WITH_LEVELDB
 CMAKE_ARGS=	-D MGR_PYTHON_VERSION=${PYTHON_VER} \
 		-D CEPH_MAN_DIR:STRING=man
 

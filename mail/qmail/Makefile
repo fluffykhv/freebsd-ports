@@ -548,6 +548,7 @@ PATCHFILES+=	qmail-date-localtime.patch:localtime
 .endif
 
 .if ${PORT_OPTIONS:MTARPIT_PATCH}
+PATCH_SITES+=	LOCAL/bdrewery/qmail/:tarpit
 PATCH_SITES+=	http://www.palomine.net/qmail/:tarpit
 PATCHFILES+=	tarpit.patch:tarpit
 .endif

@@ -13,7 +13,8 @@ EXTRA_PATCHES=	\
 	${FILESDIR}/c5a95780e2233a05ab3fb8b4eb8a9550f0c3b53c.patch:-p1 \
 	${FILESDIR}/pound-2.8-websocket.diff:-p1 \
 	${FILESDIR}/pound-2.8-fallback_scsv.diff:-p0 \
-	${FILESDIR}/a2c9dde4d055ea8942afb150b7fc3a807d4e5d60.patch:-p1
+	${FILESDIR}/a2c9dde4d055ea8942afb150b7fc3a807d4e5d60.patch:-p1 \
+	${FILESDIR}/0003-Support-for-libressl-coexisting-with-openssl-1.1.x.patch:-p1
 
 MAINTAINER=	zeus@gnu.org.ua
 COMMENT=	HTTP/HTTPS reverse-proxy and load-balancer

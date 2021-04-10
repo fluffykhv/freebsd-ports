@@ -26,6 +26,7 @@ CONFIGURE_ARGS=	--with-db-inc=${BDB_INCLUDE_DIR} \
 		--with-squiduser=${SQUID_UID} \
 		--exec-prefix=${PREFIX}
 CPPFLAGS+=	-I${PREFIX}/include -I${LOCALBASE}/include -fcommon
+CFLAGS+=	-fcommon
 
 SQUID_UID?=	squid
 SQUID_GID?=	squid

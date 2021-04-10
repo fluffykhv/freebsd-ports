@@ -8,6 +8,9 @@ MASTER_SITES=	https://poppler.freedesktop.org/
 MAINTAINER?=	desktop@FreeBSD.org
 COMMENT?=	PDF rendering library
 
+PATCH_SITES=	https://gitlab.freedesktop.org/poppler/poppler/-/commit/
+PATCHFILES=	47de887d7658cfd68df44b3acf710971054f957b.patch:-p1
+
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 

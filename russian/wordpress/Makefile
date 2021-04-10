@@ -5,6 +5,7 @@ DISTVERSION=	5.5.3
 DISTVERSIONSUFFIX=	-ru_RU
 CATEGORIES=	russian www
 MASTER_SITES=	http://ru.wordpress.org/
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	State-of-the-art semantic personal publishing platform
@@ -17,7 +18,7 @@ CONFLICTS_INSTALL=	wordpress-[0-9].* de-wordpress-[0-9].* ja-wordpress-[0-9].*
 
 NO_ARCH=	yes
 NO_BUILD=	yes
-USES=		php:web cpe
+USES=		php:web,flavors cpe
 USE_PHP=	curl exif fileinfo ftp gd hash json mysqli pcre tokenizer xml zip zlib
 RUN_DEPENDS=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/imagick.so:graphics/pecl-imagick@${PHP_FLAVOR}
 WRKSRC=		${WRKDIR}/${PORTNAME}

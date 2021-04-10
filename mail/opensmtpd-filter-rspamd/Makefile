@@ -10,14 +10,18 @@ COMMENT=	OpenSMTPD filter integration for the Rspamd daemon
 
 LICENSE=	ISCL
 
-RUN_DEPENDS=	opensmtpd>=6.6.0:mail/opensmtpd \
-		rspamd>=0:mail/rspamd
+RUN_DEPENDS=	opensmtpd>=6.6.0:mail/opensmtpd
 
 USES=		go
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	poolpOrg
 GH_PROJECT=	filter-rspamd
+
+OPTIONS_DEFINE=	RSDEVEL
+RSDEVEL_DESC=	Use development version of rspamd
+RSDEVEL_RUN_DEPENDS_OFF=	rspamd>=0:mail/rspamd
+RSDEVEL_RUN_DEPENDS=		rspamd-devel>=0:mail/rspamd-devel
 
 PLIST_FILES=	libexec/opensmtpd/opensmtpd-filter-rspamd
 

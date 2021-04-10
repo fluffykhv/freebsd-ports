@@ -6,6 +6,7 @@ PORTREVISION=	0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://www.percona.com/downloads/percona-monitoring-plugins/${PORTNAME}-${PORTVERSION}/source/tarball/ \
 		ftp://ftp.renatasystems.org/pub/FreeBSD/ports/distfiles/
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cacti templates for MySQL, Apache, Memcached, and more by Percona
@@ -13,12 +14,12 @@ COMMENT=	Cacti templates for MySQL, Apache, Memcached, and more by Percona
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-RUN_DEPENDS=	cacti>=0:net-mgmt/cacti \
+RUN_DEPENDS=	cacti-${PHP_FLAVOR}>=0:net-mgmt/cacti@${PHP_FLAVOR} \
 		p5-DBD-mysql>=0:databases/p5-DBD-mysql \
 		bash:shells/bash \
 		wget:ftp/wget
 
-USES=		mysql perl5 php:cli python:run shebangfix
+USES=		mysql perl5 php:cli,flavors python:run shebangfix
 USE_PERL5=	run
 SHEBANG_FILES=	nagios/bin/pmp-check-pt-table-checksum \
 		nagios/bin/pmp-check-aws-rds.py \

@@ -1,6 +1,5 @@
 PORTNAME=	lgi
-PORTVERSION=	0.9.2
-PORTREVISION=	2
+PORTVERSION=	0.9.2.20200926
 CATEGORIES=	devel
 PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
@@ -12,10 +11,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS+=	libffi.so:devel/libffi
 
-USES=		gmake gnome lua:-53,module pkgconfig
+USES=		gmake gnome lua:module pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	pavouk
+GH_TAGNAME=	c21f35f
 
 USE_GNOME=	introspection:build,run
 

@@ -15,7 +15,7 @@ LIB_DEPENDS=	libKF5Sane.so:graphics/libksane \
 		libboost_graph.so:devel/boost-libs \
 		libexiv2.so:graphics/exiv2 \
 		libexpat.so:textproc/expat2 \
-		libMagickCore-6.so:graphics/ImageMagick6 \
+		libMagickCore-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT} \
 		libgphoto2.so:graphics/libgphoto2 \
 		libicalss.so:devel/libical \
 		libjasper.so:graphics/jasper \

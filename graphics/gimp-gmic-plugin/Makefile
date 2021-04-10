@@ -15,7 +15,7 @@ BROKEN=		OpenCV4 no longer ships OpencCV-1.0 headers
 LIB_DEPENDS=	libGraphicsMagick++.so:graphics/GraphicsMagick \
 		libIlmImf.so:graphics/openexr \
 		libopencv_video.so:graphics/opencv \
-		libMagick++-6.so:graphics/ImageMagick6 \
+		libMagick++-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT} \
 		libavcodec.so:multimedia/ffmpeg \
 		libfftw3.so:math/fftw3 \
 		libgimp-2.0.so:graphics/gimp-app \

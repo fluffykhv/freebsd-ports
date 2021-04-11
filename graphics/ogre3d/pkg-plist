@@ -5359,9 +5359,12 @@ share/OGRE/tests.cfg
 %%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_item_identity_exception__inherit__graph.map
 %%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_item_identity_exception__inherit__graph.md5
 %%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_item_identity_exception__inherit__graph.svg
-%%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_iterator_wrapper-members.html
 %%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_iterator_wrapper.html
 %%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_iterator_wrapper.js
+%%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_iterator_wrapper-members.html
+%%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_iterator_wrapper__inherit__graph.map
+%%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_iterator_wrapper__inherit__graph.md5
+%%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_iterator_wrapper__inherit__graph.svg
 %%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_key_frame-members.html
 %%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_key_frame.html
 %%DOCS%%share/OGRE/docs/api/html/class_ogre_1_1_key_frame.js
@@ -13109,6 +13112,8 @@ share/OGRE/tests.cfg
 %%DOCS%%share/OGRE/docs/api/latex/class_ogre_1_1_item_identity_exception__inherit__graph.md5
 %%DOCS%%share/OGRE/docs/api/latex/class_ogre_1_1_item_identity_exception__inherit__graph.pdf
 %%DOCS%%share/OGRE/docs/api/latex/class_ogre_1_1_iterator_wrapper.tex
+%%DOCS%%share/OGRE/docs/api/latex/class_ogre_1_1_iterator_wrapper__inherit__graph.md5
+%%DOCS%%share/OGRE/docs/api/latex/class_ogre_1_1_iterator_wrapper__inherit__graph.pdf
 %%DOCS%%share/OGRE/docs/api/latex/class_ogre_1_1_key_frame.tex
 %%DOCS%%share/OGRE/docs/api/latex/class_ogre_1_1_key_frame__inherit__graph.md5
 %%DOCS%%share/OGRE/docs/api/latex/class_ogre_1_1_key_frame__inherit__graph.pdf

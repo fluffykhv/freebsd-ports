@@ -479,6 +479,7 @@
     SUBDIR += healthd
     SUBDIR += heirloom
     SUBDIR += helm
+    SUBDIR += helmfile
     SUBDIR += hexpeek
     SUBDIR += hextools
     SUBDIR += hexyl
@@ -1234,7 +1235,6 @@
     SUBDIR += screenie
     SUBDIR += scterc
     SUBDIR += sd-agent
-    SUBDIR += sd-mux-ctrl
     SUBDIR += sdparm
     SUBDIR += seatd
     SUBDIR += seatools

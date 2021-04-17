@@ -43,6 +43,7 @@
     SUBDIR += ansible
     SUBDIR += ansible-iocage
     SUBDIR += ansible-kld
+    SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
     SUBDIR += ansible27
     SUBDIR += ansible28
@@ -607,6 +608,7 @@
     SUBDIR += linux-c7-lttng-ust
     SUBDIR += linux-c7-numactl-libs
     SUBDIR += linux-c7-userspace-rcu
+    SUBDIR += linux-miniconda-installer
     SUBDIR += linux-rkbin
     SUBDIR += linuxfdisk
     SUBDIR += lizardfs
@@ -1119,7 +1121,6 @@
     SUBDIR += rubygem-capistrano-ext
     SUBDIR += rubygem-capistrano-harrow
     SUBDIR += rubygem-chef
-    SUBDIR += rubygem-chef15
     SUBDIR += rubygem-chef-api
     SUBDIR += rubygem-chef-bin
     SUBDIR += rubygem-chef-config
@@ -1130,6 +1131,7 @@
     SUBDIR += rubygem-chef-utils15
     SUBDIR += rubygem-chef-vault
     SUBDIR += rubygem-chef-zero
+    SUBDIR += rubygem-chef15
     SUBDIR += rubygem-choria-mcorpc-support
     SUBDIR += rubygem-facter
     SUBDIR += rubygem-fluent-mixin-plaintextformatter

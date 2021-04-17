@@ -1,15 +1,12 @@
 # Created by: marcus@FreeBSD.org
 
 PORTNAME=	poppler
-DISTVERSION=	21.03.0
+DISTVERSION=	21.04.0
 CATEGORIES=	graphics print
 MASTER_SITES=	https://poppler.freedesktop.org/
 
 MAINTAINER?=	desktop@FreeBSD.org
 COMMENT?=	PDF rendering library
-
-PATCH_SITES=	https://gitlab.freedesktop.org/poppler/poppler/-/commit/
-PATCHFILES=	47de887d7658cfd68df44b3acf710971054f957b.patch:-p1
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -49,7 +46,7 @@ CMAKE_OFF+=	${_POPPLER_SLAVES:N${_SLAVE_PORT}:tu:S/^/ENABLE_/}
 PORTSCOUT=	limitw:1,even
 USES+=		iconv
 CMAKE_ON+=	ENABLE_CPP
-PLIST_SUB+=	SHLIB_VER=108
+PLIST_SUB+=	SHLIB_VER=109
 
 OPTIONS_DEFINE=		CURL OPENJPEG
 OPTIONS_DEFAULT=	OPENJPEG

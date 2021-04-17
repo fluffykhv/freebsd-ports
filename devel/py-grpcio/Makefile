@@ -26,10 +26,10 @@ LDFLAGS+=	-lcares
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/grpc/_cython/cygrpc*.so
-.if ${OSVERSION} < 1300060
+#.if ${OSVERSION} < 1300060
 	${REINPLACE_CMD} -e 's|${PYTHONPREFIX_SITELIBDIR}/\(.*\)/grpcio/grpc/_cython/cygrpc${PYTHON_EXT_SUFFIX}.so|${PYTHONPREFIX_SITELIBDIR}/grpc/_cython/cygrpc${PYTHON_EXT_SUFFIX}.so|g' ${_PYTHONPKGLIST}
-.else
-	${REINPLACE_CMD} -e 's|pc${PYTHON_EXT_SUFFIX}.so|${PYTHONPREFIX_SITELIBDIR}/grpc/_cython/cygrpc${PYTHON_EXT_SUFFIX}.so|g' ${_PYTHONPKGLIST}
-.endif
+#.else
+#	${REINPLACE_CMD} -e 's|pc${PYTHON_EXT_SUFFIX}.so|${PYTHONPREFIX_SITELIBDIR}/grpc/_cython/cygrpc${PYTHON_EXT_SUFFIX}.so|g' ${_PYTHONPKGLIST}
+#.endif
 
 .include <bsd.port.post.mk>

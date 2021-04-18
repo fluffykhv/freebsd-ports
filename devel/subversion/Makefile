@@ -155,6 +155,8 @@ post-install:	${MKREPOS_TARGET}
 	(cd ${WRKSRC}/tools.examples && ${TAR} --exclude '*.in' -cf - * | ${TAR} -C ${STAGEDIR}${DATADIR} -xof - )
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+# remove staled tmpfiles after install
+	-@${RM} ${STAGEDIR}${PREFIX}/bin/ecp.*
 
 post-install-STATIC-off:
 	-@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so
@@ -165,6 +167,8 @@ post-install-SVNSERVE_WRAPPER-on:
 post-install-TOOLS-on:
 	@${MAKE} -C ${WRKSRC} install-tools ${MAKE_ARGS}
 	-@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*
+# remove staled tmpfiles after install
+	-@${RM} ${STAGEDIR}${PREFIX}/bin/ecp.*
 
 # ===============================================================================
 repository:	_mkrepos

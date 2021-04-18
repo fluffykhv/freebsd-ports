@@ -2305,6 +2305,7 @@ lib/wine/fakedlls/winedbg.exe
 lib/wine/fakedlls/winedevice.exe
 lib/wine/fakedlls/winefile.exe
 lib/wine/fakedlls/winehid.sys
+lib/wine/fakedlls/winejoystick.drv
 lib/wine/fakedlls/winemapi.dll
 lib/wine/fakedlls/winemenubuilder.exe
 lib/wine/fakedlls/winemine.exe
@@ -2998,6 +2999,7 @@ lib/wine/winedevice.exe.so
 lib/wine/winefile.exe.so
 lib/wine/winehid.sys.so
 lib/wine/winemapi.dll.so
+lib/wine/winejoystick.drv.so
 lib/wine/winemenubuilder.exe.so
 lib/wine/winemine.exe.so
 lib/wine/winemsibuilder.exe.so

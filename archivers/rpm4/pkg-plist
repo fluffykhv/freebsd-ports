@@ -58,6 +58,9 @@ lib/librpmio.so.9.1.2
 lib/librpmsign.so
 lib/librpmsign.so.9
 lib/librpmsign.so.9.1.2
+lib/rpm-plugins/prioreset.so
+lib/rpm-plugins/syslog.so
+lib/rpm-plugins/systemd_inhibit.so
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/rpm/__init__.py
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/rpm/_rpm.so
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/rpm/transaction.py
@@ -186,6 +189,10 @@ man/ko/man8/rpm.8.gz
 man/ko/man8/rpm2cpio.8.gz
 man/man1/gendiff.1.gz
 man/man8/rpm-misc.8.gz
+man/man8/rpm-plugin-prioreset.8.gz
+man/man8/rpm-plugin-syslog.8.gz
+man/man8/rpm-plugin-systemd-inhibit.8.gz
+man/man8/rpm-plugins.8.gz
 man/man8/rpm.8.gz
 man/man8/rpm2archive.8.gz
 man/man8/rpm2cpio.8.gz
@@ -240,5 +247,6 @@ man/sk/man8/rpm.8.gz
 %%NLS%%share/locale/vi/LC_MESSAGES/rpm.mo
 %%NLS%%share/locale/zh_CN/LC_MESSAGES/rpm.mo
 %%NLS%%share/locale/zh_TW/LC_MESSAGES/rpm.mo
+@dir lib/rpm-plugins
 @dir lib/rpm/lua
 @dir lib/rpm/macros.d

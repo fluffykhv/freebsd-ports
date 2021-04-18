@@ -4,7 +4,7 @@ PORTNAME=	rpm
 PORTVERSION=	4.16.1.2
 CATEGORIES=	archivers
 MASTER_SITES=	http://ftp.rpm.org/releases/rpm-4.16.x/
-PKGNAMESUFFIX=	4
+PKGNAMESUFFIX=	5
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Red Hat Package Manager

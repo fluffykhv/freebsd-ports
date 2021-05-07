@@ -7,7 +7,7 @@ MASTER_SITES=	https://bitbucket.org/phpliteadmin/public/downloads/
 DISTNAME=	${PORTNAME}_v${DISTVERSION}
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
-MAINTAINER=	portmaster@BSDforge.com
+MAINTAINER=	ports@freebsd.org
 COMMENT=	Web-based database management tool for Sqlite
 
 LICENSE=	GPLv3

@@ -69,7 +69,7 @@ HYPERSCAN_LIB_DEPENDS=	libhs.so:devel/hyperscan
 
 LUAJIT_CMAKE_OFF=	-DENABLE_LUAJIT=OFF
 LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit
-LUAJIT_USES_OFF=	lua:51+
+LUAJIT_USES_OFF=	lua:51-53
 
 CGP_RUN_DEPENDS+=	\
 	p5-AnyEvent-HTTP>=0:www/p5-AnyEvent-HTTP \

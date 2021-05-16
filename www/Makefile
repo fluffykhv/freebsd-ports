@@ -285,6 +285,7 @@
     SUBDIR += lagrange
     SUBDIR += larbin
     SUBDIR += libapreq2
+    SUBDIR += libdatachannel
     SUBDIR += libdom
     SUBDIR += libecap
     SUBDIR += libepc
@@ -1558,7 +1559,6 @@
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django22
-    SUBDIR += py-django30
     SUBDIR += py-django31
     SUBDIR += py-django32
     SUBDIR += py-django_compressor
@@ -1912,6 +1912,7 @@
     SUBDIR += rubygem-http-cookie
     SUBDIR += rubygem-http-form_data
     SUBDIR += rubygem-http3
+    SUBDIR += rubygem-http4
     SUBDIR += rubygem-http_router
     SUBDIR += rubygem-httparty
     SUBDIR += rubygem-httpclient
@@ -1959,6 +1960,7 @@
     SUBDIR += rubygem-less
     SUBDIR += rubygem-lighthouse-api
     SUBDIR += rubygem-link_header
+    SUBDIR += rubygem-llhttp-ffi
     SUBDIR += rubygem-lograge
     SUBDIR += rubygem-lograge-rails5
     SUBDIR += rubygem-lograge-rails52
@@ -2158,6 +2160,7 @@
     SUBDIR += squidpurge
     SUBDIR += squidview
     SUBDIR += srg
+    SUBDIR += srt
     SUBDIR += stagit
     SUBDIR += subsonic-standalone
     SUBDIR += suphp

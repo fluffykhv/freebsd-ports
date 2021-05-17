@@ -1,9 +1,9 @@
 # Created by: Javier Martin Rueda <jmrueda@diatel.upm.es>
 
 PORTNAME=	moodle
-PORTVERSION=	3.9.7
+PORTVERSION=	3.11
 CATEGORIES=	www education
-MASTER_SITES=	SF/moodle/Moodle/stable39/
+MASTER_SITES=	SF/moodle/Moodle/stable311/
 PKGNAMESUFFIX=	${PKGORIGIN:T:S/moodle//}${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	wen@FreeBSD.org
@@ -11,18 +11,18 @@ COMMENT=	Course management system based on social constructionism
 
 LICENSE=	GPLv3
 
-CONFLICTS=	moodle310-3.10.[0-9]* moodle311-3.11
+CONFLICTS=	moodle39-3.9.[0-9]* moodle310-3.10.[0-9]*
 
 USES=		cpe php:flavors tar:tgz
 USE_PHP=	ctype curl dom fileinfo filter gd hash iconv intl json mbstring \
-		opcache openssl pcre session simplexml soap spl tokenizer \
+		opcache openssl pcre session simplexml soap sodium spl tokenizer \
 		xml xmlreader zip zlib
 WRKSRC=		${WRKDIR}/moodle
 
-#IGNORE_WITH_PHP=	80
+IGNORE_WITH_PHP=	80
 
-OPTIONS_MULTI=		BACKEND
-OPTIONS_MULTI_BACKEND=	MYSQL PGSQL MSSQL SQLITE
+OPTIONS_SINGLE=		BACKEND
+OPTIONS_SINGLE_BACKEND=	MYSQL PGSQL MSSQL
 OPTIONS_DEFINE=		LDAP
 OPTIONS_DEFAULT=	MYSQL
 
@@ -30,7 +30,6 @@ MYSQL_USES=	mysql
 MYSQL_USE=	php=mysqli
 PGSQL_USE=	php=pgsql
 MSSQL_USE=	php=mssql
-SQLITE_USE=	php=sqlite3
 LDAP_USE=	php=ldap
 
 NO_BUILD=	yes
@@ -45,7 +44,7 @@ MOODLEDATADIR?=	moodledata
 .include <bsd.port.options.mk>
 
 .if ${FLAVOR} != php80
-USE_PHP+=       xmlrpc
+USE_PHP+=	xmlrpc
 .endif
 
 pre-install:

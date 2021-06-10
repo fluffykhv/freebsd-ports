@@ -51,7 +51,7 @@ PYNVIM_DESC=	Enable support for plugins written in python
 LUAJIT_CMAKE_OFF=	-DPREFER_LUA:BOOL="ON"
 LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit
 LUAJIT_USES=		lua:build
-LUAJIT_USES_OFF=	lua:52
+LUAJIT_USES_OFF=	lua:53
 NLS_CMAKE_BOOL=	ENABLE_LIBINTL
 NLS_USES=	gettext
 PYNVIM_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pynvim>=0.3.0:editors/py-pynvim@${PY_FLAVOR}

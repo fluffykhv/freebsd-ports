@@ -31,7 +31,8 @@ CMAKE_SOURCE_PATH=	${WRKSRC}/third_party/ycmd/cpp
 
 PLIST_SUB=		VIMFILESDIR=share/vim/vimfiles \
 			YCMDDIR=share/vim/vimfiles/third_party/ycmd \
-			PYTHON_MAJOR_VER=${PYTHON_MAJOR_VER}
+			PYTHON_MAJOR_VER=${PYTHON_MAJOR_VER} \
+			COMPILER_VERSION=${COMPILER_VERSION:R}
 
 SUB_FILES=		pkg-message pkg-install pkg-deinstall
 SUB_LIST=		VIMFILESDIR="${VIMFILESDIR}" \

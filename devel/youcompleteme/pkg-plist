@@ -307,7 +307,7 @@
 %%YCMDDIR%%/third_party/clang/lib/clang/12.0.0/include/xsaveoptintrin.h
 %%YCMDDIR%%/third_party/clang/lib/clang/12.0.0/include/xsavesintrin.h
 %%YCMDDIR%%/third_party/clang/lib/clang/12.0.0/include/xtestintrin.h
-%%YCMDDIR%%/third_party/clang/lib/libclang.so.9
+%%YCMDDIR%%/third_party/clang/lib/libclang.so.%%COMPILER_VERSION%%
 %%YCMDDIR%%/third_party/generic_server/.eslintignore
 %%YCMDDIR%%/third_party/generic_server/.eslintrc.js
 %%YCMDDIR%%/third_party/generic_server/.eslintrc.json

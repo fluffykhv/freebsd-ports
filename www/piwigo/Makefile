@@ -1,12 +1,12 @@
 # Created by: Goran Lowkrantz <glz@hidden-powers.com>
 
 PORTNAME=	piwigo
-DISTVERSION=	11.4.0
+DISTVERSION=	11.5.0
 CATEGORIES=	www
 MASTER_SITES=	https://piwigo.org/download/dlcounter.php?code=${PORTVERSION}&/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
-MAINTAINER=	tremere@cainites.net
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PHP based Web Gallery
 
 LICENSE=	GPLv2

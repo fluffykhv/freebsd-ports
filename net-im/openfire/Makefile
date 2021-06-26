@@ -1,19 +1,19 @@
 # Created by: Nikolay Pavlov <qpadla@gmail.com>
-# $FreeBSD$
 
 PORTNAME=	openfire
-PORTVERSION=	4.6.3
+PORTVERSION=	4.6.4
+DISTVERSIONPREFIX=	v
 PORTEPOCH=	1
 CATEGORIES=	net-im java
-MASTER_SITES=	https://github.com/igniterealtime/${PORTNAME}/releases/download/v${PORTVERSION}/ \
-		LOCAL/pi:maven
-DISTFILES=	${PORTNAME}_src_${PORTVERSION:S/./_/g}.tar.gz
 
 MAINTAINER=	nikita@druba.su
 COMMENT=	Enterprise instant messaging server
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	igniterealtime
 
 BUILD_DEPENDS=	mvn:devel/maven
 
@@ -24,7 +24,6 @@ MAVEN_DESC=	Source of Maven build plugins
 LOCAL_M2_DESC=	Use prefetch plugins from FreeBSD repository
 ONLINE_M2_DESC=	Download last plugins during build process (into ~/.m2)
 OPTIONS_DEFAULT=	LOCAL_M2
-LOCAL_M2_DISTFILES=	FreeBSD-${PORTNAME}-${PORTVERSION}-maven-repository.tar.gz:maven
 
 USES=		cpe
 USE_JAVA=	yes

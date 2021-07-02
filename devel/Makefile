@@ -4446,6 +4446,7 @@
     SUBDIR += py-freebsd-sysctl
     SUBDIR += py-freenas.utils
     SUBDIR += py-freezegun
+    SUBDIR += py-frictionless
     SUBDIR += py-frozendict
     SUBDIR += py-fs
     SUBDIR += py-fs2
@@ -5058,6 +5059,7 @@
     SUBDIR += py-requestsexceptions
     SUBDIR += py-requirementslib
     SUBDIR += py-resolvelib
+    SUBDIR += py-resolvelib05
     SUBDIR += py-resolver
     SUBDIR += py-resource
     SUBDIR += py-responses
@@ -5200,6 +5202,7 @@
     SUBDIR += py-txaio
     SUBDIR += py-typechecks
     SUBDIR += py-typed-ast
+    SUBDIR += py-typer
     SUBDIR += py-types-PyYAML
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-requests
@@ -6045,11 +6048,13 @@
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-create-meta
     SUBDIR += rubygem-cucumber-create-meta2
+    SUBDIR += rubygem-cucumber-create-meta4
     SUBDIR += rubygem-cucumber-cucumber-expressions
     SUBDIR += rubygem-cucumber-cucumber-expressions10
     SUBDIR += rubygem-cucumber-formatter-dots
     SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-messages13
+    SUBDIR += rubygem-cucumber-messages15
     SUBDIR += rubygem-cucumber-messages4
     SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag-expressions
@@ -6793,6 +6798,8 @@
     SUBDIR += scalatest
     SUBDIR += scandoc
     SUBDIR += sccache
+    SUBDIR += sccs
+    SUBDIR += schilybase
     SUBDIR += scons
     SUBDIR += sd-mux-ctrl
     SUBDIR += sdl12
@@ -6877,6 +6884,7 @@
     SUBDIR += subversion-book
     SUBDIR += subversion-lts
     SUBDIR += subversive
+    SUBDIR += sunpromake
     SUBDIR += svk
     SUBDIR += svn2git
     SUBDIR += svn_load_dirs

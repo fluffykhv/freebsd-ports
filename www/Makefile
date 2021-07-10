@@ -431,7 +431,6 @@
     SUBDIR += nextcloud
     SUBDIR += nextcloud-appointments
     SUBDIR += nextcloud-calendar
-    SUBDIR += nextcloud-circles
     SUBDIR += nextcloud-contacts
     SUBDIR += nextcloud-deck
     SUBDIR += nextcloud-forms
@@ -1684,6 +1683,7 @@
     SUBDIR += py-praw
     SUBDIR += py-prawcore
     SUBDIR += py-priority
+    SUBDIR += py-priority1
     SUBDIR += py-protego
     SUBDIR += py-puppetboard
     SUBDIR += py-py-restclient
@@ -1871,8 +1871,10 @@
     SUBDIR += rubygem-faraday
     SUBDIR += rubygem-faraday-em_http
     SUBDIR += rubygem-faraday-em_synchrony
+    SUBDIR += rubygem-faraday-httpclient
     SUBDIR += rubygem-faraday-net_http
     SUBDIR += rubygem-faraday-net_http_persistent
+    SUBDIR += rubygem-faraday-patron
     SUBDIR += rubygem-faraday0
     SUBDIR += rubygem-faraday_middleware
     SUBDIR += rubygem-faraday_middleware0
@@ -2326,6 +2328,7 @@
     SUBDIR += yanopaste
     SUBDIR += yarn
     SUBDIR += yarn-node14
+    SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get
     SUBDIR += yourls

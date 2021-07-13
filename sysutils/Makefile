@@ -107,6 +107,7 @@
     SUBDIR += bashtop
     SUBDIR += bastille
     SUBDIR += batmon
+    SUBDIR += batterycat
     SUBDIR += battmond
     SUBDIR += battray
     SUBDIR += bchunk
@@ -711,6 +712,7 @@
     SUBDIR += mixer
     SUBDIR += mkdesktop
     SUBDIR += mkfwimage
+    SUBDIR += mkjail
     SUBDIR += mkntpwd
     SUBDIR += mmc-utils
     SUBDIR += mmve

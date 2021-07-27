@@ -83,6 +83,7 @@ lib/qmmp%%LIB_SUFFX%%/Effect/libmonotostereo.so
 %%HISTORY%%lib/qmmp%%LIB_SUFFX%%/General/libhistory.so
 %%HOTKEY%%lib/qmmp%%LIB_SUFFX%%/General/libhotkey.so
 %%KDENOTIFY%%lib/qmmp%%LIB_SUFFX%%/General/libkdenotify.so
+lib/qmmp%%LIB_SUFFX%%/General/liblibrary.so
 lib/qmmp%%LIB_SUFFX%%/General/liblistenbrainz.so
 %%LYRICS%%lib/qmmp%%LIB_SUFFX%%/General/liblyrics.so
 %%MPRIS%%lib/qmmp%%LIB_SUFFX%%/General/libmpris.so

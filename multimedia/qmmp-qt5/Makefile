@@ -1,8 +1,8 @@
 PORTNAME=	qmmp
-PORTVERSION=	1.4.0
+PORTVERSION=	1.5.1
 CATEGORIES=	multimedia
-MASTER_SITES=	http://qmmp.ylsoftware.com/files/ \
-	SF/qmmp-dev/${PORTNAME}/
+MASTER_SITES=	http://qmmp.ylsoftware.com/files/${PORTNAME}/${PORTVERSION:R}/ \
+	SF/qmmp-dev/${PORTNAME}/${PORTVERSION:R}/
 PKGNAMESUFFIX=	-qt5
 
 MAINTAINER=	liangtai.s16@gmail.com

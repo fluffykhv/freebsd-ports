@@ -5,7 +5,7 @@ MASTER_SITES=	http://qmmp.ylsoftware.com/files/${PORTNAME}/${PORTVERSION:R}/ \
 	SF/qmmp-dev/${PORTNAME}/${PORTVERSION:R}/
 PKGNAMESUFFIX=	-qt5
 
-MAINTAINER=	liangtai.s16@gmail.com
+MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Additional plug-ins for QMMP (Qt5)
 
 LICENSE=	GPLv2

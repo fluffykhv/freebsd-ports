@@ -33,7 +33,7 @@ DIALOG4PORTS_DESC=	Install dialog4ports for options command
 DIALOG4PORTS_RUN_DEPENDS=	dialog4ports>0:ports-mgmt/dialog4ports
 
 QEMU_DESC=	Add qemu-user-static for non-x86 architectures
-QEMU_RUN_DEPENDS=	qemu-user-static>0:emulators/qemu-user-static
+QEMU_RUN_DEPENDS=	qemu-user-static>0:emulators/qemu-user-static-devel
 
 .include <bsd.port.options.mk>
 

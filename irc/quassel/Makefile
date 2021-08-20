@@ -18,8 +18,6 @@ USE_QT=		buildtools_build core network qmake_build
 CPE_VENDOR=	quassel-irc
 CPE_PRODUCT=	quassel_irc
 
-CONFLICTS?=	quassel-core-[0-9]*
-
 OPTIONS_DEFINE=		NLS
 OPTIONS_MULTI=		MODULE DB
 OPTIONS_GROUP=		UI

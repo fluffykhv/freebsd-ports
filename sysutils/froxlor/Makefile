@@ -12,7 +12,7 @@ COMMENT=	PHP-based ISP Server Management Panel
 
 LICENSE=	GPLv2
 
-USES=		php:cli,flavors
+USES=		cpe php:cli,flavors
 USE_PHP=	bcmath curl filter ftp json pdo_mysql posix session xml zip
 
 SUB_FILES=	pkg-message pkg-deinstall

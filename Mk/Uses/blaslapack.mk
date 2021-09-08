@@ -13,7 +13,7 @@ _INCLUDE_USES_BLASLAPACK_MK=	yes
 
 _valid_ARGS=	atlas gotoblas netlib openblas
 
-_DEFAULT_BLASLAPACK=	netlib
+_DEFAULT_BLASLAPACK=	openblas
 
 .if empty(blaslapack_ARGS)
 blaslapack_ARGS=	${_DEFAULT_BLASLAPACK}

@@ -49,7 +49,7 @@ CBLASLIB=		libcblas.a
 LIBS=			cblas
 PLIST_SUB+=		BLAS="@comment " CBLAS="" LAPACK="@comment " XLAPACK="@comment " LAPACKE="@comment "
 .elif defined(LAPACKE_SLAVEPORT)
-USES+=			blaslapack
+USES+=			blaslapack:netlib
 CMAKE_ON+=		USE_OPTIMIZED_BLAS USE_OPTIMIZED_LAPACK LAPACKE
 CMAKE_ARGS+=		-DBLAS_LIBRARIES="${LOCALBASE}/lib/libblas.so"		\
 			-DLAPACK_LIBRARIES="${LOCALBASE}/lib/liblapack.so"

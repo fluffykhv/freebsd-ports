@@ -90,7 +90,7 @@ CONFIGURE_ARGS=	--verbose \
 		--without-vkd3d \
 		--without-xslt
 
-CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex" JXRLIB_CFLAGS="-I${LOCALBASE}/include/jxrlib" ac_cv_lib_openal=yes
+CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex" JXRLIB_CFLAGS="-I${LOCALBASE}/include/jxrlib"
 
 .include <bsd.port.pre.mk>
 

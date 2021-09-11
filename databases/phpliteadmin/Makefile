@@ -12,7 +12,7 @@ COMMENT=	Web-based database management tool for Sqlite
 
 LICENSE=	GPLv3
 
-USES=		php:web,flavors zip
+USES=		cpe php:web,flavors zip
 
 NO_ARCH=	yes
 NO_BUILD=	yes

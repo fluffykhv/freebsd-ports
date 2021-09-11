@@ -19,8 +19,9 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libuv.so:devel/libuv \
 		librhash.so:security/rhash
 
-USES=		compiler:c++11-lang libarchive ncurses
+USES=		compiler:c++11-lang cpe libarchive ncurses
 
+CPE_VENDOR=	cmake_project
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	MAKE=make
 CONFIGURE_ARGS=	--prefix=${PREFIX} \

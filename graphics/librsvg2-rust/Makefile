@@ -1,8 +1,7 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
 
 PORTNAME=	librsvg
-PORTVERSION=	2.50.3
-PORTREVISION=	6
+PORTVERSION=	2.52.0
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2-rust
@@ -24,7 +23,7 @@ USES=		compiler:c11 gettext gmake gnome libtool pkgconfig tar:xz
 USE_GNOME=	cairo gdkpixbuf2 gnomeprefix libxml2 pango introspection:build
 USE_LDCONFIG=	yes
 
-PLIST_SUB+=	SHLIBVERSION=2.47.0
+PLIST_SUB+=	SHLIBVERSION=2.48.0
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-Bsymbolic \

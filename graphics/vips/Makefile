@@ -95,6 +95,7 @@ LIB_DEPENDS+=		libMagickCore-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMA
 . else
 LIB_DEPENDS+=		libMagickCore-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT}-nox11
 . endif
+. endif
 
 .if !${PORT_OPTIONS:MGRAPHMAGICK} && !${PORT_OPTIONS:MIMAGEMAGICK}
 CONFIGURE_ARGS+=--without-magick

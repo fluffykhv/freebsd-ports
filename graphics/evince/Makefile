@@ -40,7 +40,6 @@ USE_GSTREAMER1=	yes
 USE_LDCONFIG=	yes
 USE_XORG=	ice
 CPE_VENDOR=	gnome
-INSTALLS_ICONS=	yes
 MESON_ARGS=	-Dgtk_doc=false \
 		-Dps=enabled \
 		-Dsystemduserunitdir=no

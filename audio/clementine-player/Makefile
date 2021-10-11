@@ -75,7 +75,6 @@ USE_GSTREAMER1=	cdparanoia \
 		twolame \
 		vorbis
 
-INSTALLS_ICONS=	yes
 
 CFLAGS+=	-Wno-inconsistent-missing-override \
 		-Wno-unused-variable \

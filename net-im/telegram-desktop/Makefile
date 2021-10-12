@@ -1,6 +1,5 @@
 PORTNAME=	telegram-desktop
-DISTVERSION=	2.8.11
-PORTREVISION=	3
+DISTVERSION=	3.1.9
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/
 DISTNAME=	tdesktop-${DISTVERSION}-full
@@ -12,7 +11,7 @@ COMMENT=	Telegram Desktop messaging app
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_i386=	Does not build, webrtc related.
+BROKEN_i386=	does not build, webrtc related
 NOT_FOR_ARCHS=		powerpc powerpc64 powerpcspe
 NOT_FOR_ARCHS_REASON=	Only little endian is supported
 
@@ -40,6 +39,7 @@ LIB_DEPENDS=	libavformat.so:multimedia/ffmpeg \
 		libpipewire-0.3.so:multimedia/pipewire \
 		libqrcodegencpp.so:graphics/qr-code-generator \
 		libusrsctp.so:net/libusrsctp \
+		libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 		libxcb-keysyms.so:x11/xcb-util-keysyms \
 		libxkbcommon.so:x11/libxkbcommon \
 		libxxhash.so:devel/xxhash \
@@ -54,7 +54,7 @@ GH_PROJECT=	tdesktop
 USE_GL=		gl
 USE_GNOME=	glib20 glibmm
 USE_QT=		core dbus gui imageformats network widgets buildtools_build \
-		qmake_build wayland
+		qmake_build wayland svg
 USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrender xrandr xtst
 
 CMAKE_ARGS=	-DDESKTOP_APP_SPECIAL_TARGET="" -DTDESKTOP_LAUNCHER_BASENAME="telegramdesktop" \
@@ -94,4 +94,11 @@ PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 TELEGRAM_API_HASH=	20a3432aab43f24bb4460fceac5ba38d
 TELEGRAM_API_ID=	601761
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${CHOSEN_COMPILER_TYPE} == clang && ${COMPILER_VERSION} <= 100
+post-patch:
+	@${REINPLACE_CMD} -e '/-fstack-clash-protection/d' ${WRKSRC}/cmake/options_linux.cmake
+.endif
+
+.include <bsd.port.post.mk>

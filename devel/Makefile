@@ -822,15 +822,19 @@
     SUBDIR += git-cinnabar
     SUBDIR += git-codereview
     SUBDIR += git-cola
+    SUBDIR += git-cvs
     SUBDIR += git-delta
     SUBDIR += git-extras
     SUBDIR += git-filter-repo
+    SUBDIR += git-gui
     SUBDIR += git-lab
     SUBDIR += git-lfs
     SUBDIR += git-merge-changelog
     SUBDIR += git-modes
+    SUBDIR += git-p4
     SUBDIR += git-review
     SUBDIR += git-subrepo
+    SUBDIR += git-svn
     SUBDIR += git-town
     SUBDIR += gitaly
     SUBDIR += gitblit
@@ -5129,6 +5133,7 @@
     SUBDIR += py-requirementslib
     SUBDIR += py-resolvelib
     SUBDIR += py-resolvelib05
+    SUBDIR += py-resolvelib07
     SUBDIR += py-resolver
     SUBDIR += py-resource
     SUBDIR += py-responses

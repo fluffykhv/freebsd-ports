@@ -21,7 +21,6 @@ MAKE_JOBS_UNSAFE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lncurses
 
-BINARY_ALIAS=	python3=${PYTHON_VERSION}
 SUB_FILES=	pkgIndex.tcl
 SUB_LIST=	VERSION="${PORTVERSION}"
 
@@ -35,7 +34,8 @@ OPTIONS_SUB=		yes
 NLS_USES=		gettext
 NLS_CONFIGURE_ENABLE=	nls
 PYTHON_USES=		python
-PYTHON_CONFIGURE_WITH=	python
+PYTHON_CONFIGURE_WITH=	python=${PYTHON_VERSION}
+PYTHON_VARS=		BINARY_ALIAS=python3=${PYTHON_VERSION}
 TCL_USES=		tcl
 TCL_CONFIGURE_WITH=	tcl
 TCL_CONFIGURE_ENV=	ac_cv_c_tclconfig=${TCL_LIBDIR:Q}
@@ -51,10 +51,6 @@ post-patch:
 		 s| -g | |g ; \
 		 /make -C/s|^|#| ; \
 		 /whiptcl.$$(SOEXT)/s|install|${TRUE}|' ${WRKSRC}/Makefile.in
-
-post-patch-PYTHON-on:
-	@${REINPLACE_CMD} -e \
-		'/PYTHONVERS/s|=.*|=${PYTHON_VERSION}|' ${WRKSRC}/configure.ac
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/whiptail

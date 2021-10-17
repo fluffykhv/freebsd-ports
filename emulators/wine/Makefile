@@ -21,7 +21,10 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex
 LIB_DEPENDS=	libFAudio.so:audio/faudio \
 		libxml2.so:textproc/libxml2
 
-USES=		bison cpe desktop-file-utils gmake localbase pkgconfig shebangfix tar:xz
+USES=		bison cpe desktop-file-utils gmake localbase \
+		pkgconfig sdl shebangfix tar:xz
+USE_GCC=	yes
+USE_SDL=	sdl2
 
 CPE_VENDOR=	winehq
 
@@ -47,6 +50,7 @@ CONFIGURE_ARGS+=--verbose \
 		--with-oss \
 		--without-pulse \
 		--without-sane \
+		--with-sdl \
 		--without-tiff \
 		--without-udev \
 		--without-unwind \
@@ -63,13 +67,12 @@ SUB_FILES=	pkg-message
 
 PORTDATA=	wine.inf
 
-OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS LDAP LIBXSLT MPG123 OPENAL SDL V4L VKD3D WINEMAKER X11 GECKO MONO
+OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS LDAP LIBXSLT MPG123 OPENAL V4L VKD3D WINEMAKER X11 GECKO MONO
 OPTIONS_DEFAULT=GNUTLS OPENAL X11
 OPTIONS_SUB=	yes
 
 DOSBOX_DESC=	Use DOSBox to run MS-DOS programs
 LIBXSLT_DESC=	Use libxslt (only used by msxml3.dll)
-SDL_DESC=	Use SDL for gamepad support (XInput only)
 VKD3D_DESC=	Vulkan and Direct3D 12 support
 WINEMAKER_DESC=	Fully support winemaker (requires Perl)
 GECKO_DESC=	Bundle Gecko MSI package for Wine
@@ -81,9 +84,6 @@ CUPS_CONFIGURE_WITH=	cups
 CUPS_LIB_DEPENDS=	libcups.so:print/cups
 
 DOSBOX_RUN_DEPENDS=	dosbox:emulators/dosbox
-
-GCC_USE=		gcc=yes
-GCC_USES_OFF=		compiler:c++17-lang
 
 GECKO_RUN_DEPENDS=	${DATADIR}/gecko/wine-gecko-2.47.2-x86.msi:emulators/wine-gecko
 
@@ -103,10 +103,6 @@ MPG123_LIB_DEPENDS=	libmpg123.so:audio/mpg123
 
 OPENAL_CONFIGURE_WITH=	openal
 OPENAL_USES=		openal
-
-SDL_CONFIGURE_WITH=	sdl
-SDL_USES=		sdl
-SDL_USE=		SDL=sdl2
 
 V4L_CONFIGURE_WITH=	v4l2
 V4L_BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat

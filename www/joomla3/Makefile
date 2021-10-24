@@ -12,7 +12,9 @@ COMMENT=	Dynamic web content management system (CMS)
 
 LICENSE=	GPLv2
 
-USES=		php:web,flavors tar:bz2 shebangfix
+USES=		cpe php:web,flavors tar:bz2 shebangfix
+CPE_VENDOR=	${PORTNAME}
+CPE_PRODUCT=	${PORTNAME}\!
 
 NO_ARCH=	yes
 NO_BUILD=	yes

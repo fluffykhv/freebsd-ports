@@ -25,6 +25,6 @@ UDEV_LIB_DEPENDS=	libudev.so:devel/libudev-devd
 UDEV_CONFIGURE_WITH=	libudev
 
 ONLY_FOR_ARCHS=	i386 amd64
-ONLY_FOR_ARCHS_REASON=	The vmmouse protocol is only supported on x86-compatible architectures.
+ONLY_FOR_ARCHS_REASON=	vmmouse protocol is only supported on x86-compatible architectures
 
 .include <bsd.port.mk>

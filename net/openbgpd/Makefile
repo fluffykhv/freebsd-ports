@@ -18,7 +18,7 @@ USE_RC_SUBR=	${PORTNAME}
 
 CFLAGS+=	-fcommon
 
-CONFLICTS=	zebra-[0-9]* quagga-[0-9]*
+CONFLICTS=	zebra quagga
 
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	sbin/bgpctl sbin/bgpd man/man5/bgpd.conf.5.gz \

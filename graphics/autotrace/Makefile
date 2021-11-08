@@ -27,7 +27,7 @@ OPTIONS_DEFAULT=IMAGEMAGICK PSTOEDIT
 MING_DESC=	Enable swf interface
 PSTOEDIT_DESC=	Convert postscript to other formats
 
-IMAGEMAGICK_LIB_DEPENDS=	libMagickWand-6.so:graphics/ImageMagick6
+IMAGEMAGICK_LIB_DEPENDS=	libMagickWand-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT}
 IMAGEMAGICK_CONFIGURE_OFF=	--without-magick
 
 MING_LIB_DEPENDS=	libming.so:graphics/ming

@@ -24,7 +24,7 @@ CCSUTIL_DESC=	Install Coded character set (CCS) util
 CCSUTIL_USE=	PERL5=run
 CCSUTIL_EXTRA_PATCHES_OFF=	${FILESDIR}/extra-patch-ccs_Makefile
 
-.if defined(NO_PROFILE)
+.if defined(NO_PROFILE) || (${OPSYS} == FreeBSD && ${OSVERSION} > 1400022)
 PLIST_SUB+=	PROFILE="@comment "
 .else
 PLIST_SUB+=	PROFILE=""

@@ -16,7 +16,7 @@ LICENSE_FILE_GPLv2=	${WRKSRC_bash}/COPYING
 LICENSE_DISTFILES_ISCL=	${DISTNAME}${EXTRACT_SUFX}
 LICENSE_DISTFILES_GPLv2=	${DISTFILE_bash}
 
-USES=		cpe ncurses pkgconfig
+USES=		cpe localbase ncurses pkgconfig
 
 CPE_VENDOR=	tmux_project
 

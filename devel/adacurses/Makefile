@@ -12,6 +12,9 @@ COMMENT=	Ada95 bindings for ncurses
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/README
 
+BUILD_DEPENDS=	gsed:textproc/gsed
+BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
+
 USES=		ada gmake pkgconfig tar:tgz
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ada-include=${PREFIX}/include/adacurses \
@@ -23,6 +26,8 @@ PORTDOCS=	ada Ada95.html
 PLIST_SUB=	atic=adacurses/terminal_interface-curses
 
 OPTIONS_DEFINE=	DOCS
+
+BROKEN_FreeBSD_14=	stuck at cconfigure
 
 post-patch:
 	@${REINPLACE_CMD} -e '/(INSTALL_PROG)/d' -e 's|@ADAGEN_LDFLAGS@||' \

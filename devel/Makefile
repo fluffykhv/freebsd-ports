@@ -1790,6 +1790,7 @@
     SUBDIR += p5-B-C
     SUBDIR += p5-B-COW
     SUBDIR += p5-B-Compiling
+    SUBDIR += p5-B-Debug
     SUBDIR += p5-B-Deobfuscate
     SUBDIR += p5-B-Flags
     SUBDIR += p5-B-Generate
@@ -2509,6 +2510,7 @@
     SUBDIR += p5-Function-Fallback-CoreOrPP
     SUBDIR += p5-Function-Parameters
     SUBDIR += p5-Future
+    SUBDIR += p5-Future-IO
     SUBDIR += p5-Gearman
     SUBDIR += p5-Gearman-Client-Async
     SUBDIR += p5-Gearman-Server
@@ -5885,6 +5887,7 @@
     SUBDIR += rubygem-aws-sdk-redshift
     SUBDIR += rubygem-aws-sdk-redshiftdataapiservice
     SUBDIR += rubygem-aws-sdk-rekognition
+    SUBDIR += rubygem-aws-sdk-resiliencehub
     SUBDIR += rubygem-aws-sdk-resourcegroups
     SUBDIR += rubygem-aws-sdk-resourcegroupstaggingapi
     SUBDIR += rubygem-aws-sdk-resources
@@ -6263,6 +6266,7 @@
     SUBDIR += rubygem-eventmachine
     SUBDIR += rubygem-excon
     SUBDIR += rubygem-execjs
+    SUBDIR += rubygem-execjs-node16
     SUBDIR += rubygem-extlib
     SUBDIR += rubygem-extras
     SUBDIR += rubygem-facets
@@ -6927,6 +6931,7 @@
     SUBDIR += rubygem-webfinger
     SUBDIR += rubygem-webpacker-rails60
     SUBDIR += rubygem-webpacker-rails61
+    SUBDIR += rubygem-webpacker-rails61-node16
     SUBDIR += rubygem-webpacker4-rails5
     SUBDIR += rubygem-webpacker4-rails50
     SUBDIR += rubygem-webpacker4-rails60

@@ -4768,6 +4768,7 @@
     SUBDIR += py-moto
     SUBDIR += py-mox
     SUBDIR += py-mox3
+    SUBDIR += py-mrkd
     SUBDIR += py-msal
     SUBDIR += py-msal-extensions
     SUBDIR += py-msgpack
@@ -6973,6 +6974,7 @@
     SUBDIR += schilybase
     SUBDIR += scons
     SUBDIR += sd-mux-ctrl
+    SUBDIR += sdbus-cpp
     SUBDIR += sdl12
     SUBDIR += sdl12-compat
     SUBDIR += sdl20

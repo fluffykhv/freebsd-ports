@@ -4349,6 +4349,7 @@
     SUBDIR += py-click-plugins
     SUBDIR += py-click-threading
     SUBDIR += py-click6
+    SUBDIR += py-click7
     SUBDIR += py-cliff
     SUBDIR += py-cligj
     SUBDIR += py-clikit
@@ -5853,6 +5854,7 @@
     SUBDIR += rubygem-aws-sdk-mgn
     SUBDIR += rubygem-aws-sdk-migrationhub
     SUBDIR += rubygem-aws-sdk-migrationhubconfig
+    SUBDIR += rubygem-aws-sdk-migrationhubstrategyrecommendations
     SUBDIR += rubygem-aws-sdk-mobile
     SUBDIR += rubygem-aws-sdk-mq
     SUBDIR += rubygem-aws-sdk-mturk
@@ -6208,6 +6210,7 @@
     SUBDIR += rubygem-ddmetrics
     SUBDIR += rubygem-ddplugin
     SUBDIR += rubygem-ddtrace
+    SUBDIR += rubygem-debase-ruby_core_source
     SUBDIR += rubygem-debug
     SUBDIR += rubygem-debug_inspector
     SUBDIR += rubygem-debugger-linecache

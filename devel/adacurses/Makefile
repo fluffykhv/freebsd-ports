@@ -1,7 +1,7 @@
 # Created by: olgeni@FreeBSD.org
 
 PORTNAME=	adacurses
-DISTVERSION=	20180127
+DISTVERSION=	20211021
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.invisible-island.net/AdaCurses/
 DISTNAME=	AdaCurses-${DISTVERSION}
@@ -26,8 +26,6 @@ PORTDOCS=	ada Ada95.html
 PLIST_SUB=	atic=adacurses/terminal_interface-curses
 
 OPTIONS_DEFINE=	DOCS
-
-BROKEN_FreeBSD_14=	stuck at cconfigure
 
 post-patch:
 	@${REINPLACE_CMD} -e '/(INSTALL_PROG)/d' -e 's|@ADAGEN_LDFLAGS@||' \

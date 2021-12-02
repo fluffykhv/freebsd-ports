@@ -1,7 +1,7 @@
 # Created by: Goran Lowkrantz <glz@hidden-powers.com>
 
 PORTNAME=	piwigo
-DISTVERSION=	11.5.0
+DISTVERSION=	12.1.0
 CATEGORIES=	www
 MASTER_SITES=	https://piwigo.org/download/dlcounter.php?code=${PORTVERSION}&/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}

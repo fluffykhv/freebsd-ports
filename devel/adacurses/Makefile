@@ -12,10 +12,10 @@ COMMENT=	Ada95 bindings for ncurses
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/README
 
-BUILD_DEPENDS=	gsed:textproc/gsed
-BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
+#BUILD_DEPENDS=	gsed:textproc/gsed
+#BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
 
-USES=		ada gmake pkgconfig tar:tgz
+USES=		ada autoreconf gmake pkgconfig tar:tgz
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ada-include=${PREFIX}/include/adacurses \
 		--with-ada-objects=${PREFIX}/lib/adacurses \

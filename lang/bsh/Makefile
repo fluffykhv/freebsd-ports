@@ -19,7 +19,7 @@ USE_JAVA=	8
 USE_ANT=	yes
 ALL_TARGET=	jarall
 
-DOS2UNIX_FILES=	engine/src/TestBshScriptEngine.java
+DOS2UNIX_FILES=	engine/src/bsh/TestBshScriptEngine.java
 
 SUB_FILES=	${PORTNAME}.sh
 SUB_LIST=	JARNAME=${PORTNAME}.jar

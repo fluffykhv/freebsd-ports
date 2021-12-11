@@ -90,12 +90,12 @@ X11_CONFIGURE_WITH=	x
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MIMAGEMAGICK}
-. if ${PORT_OPTIONS:MX11}
-LIB_DEPENDS+=		libMagickCore-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT}
-. else
-LIB_DEPENDS+=		libMagickCore-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT}-nox11
-. endif
-. endif
+.if ${PORT_OPTIONS:MX11}
+USES+=		magick:7
+.else
+USES+=		magick:7,nox11
+.endif
+.endif
 
 .if !${PORT_OPTIONS:MGRAPHMAGICK} && !${PORT_OPTIONS:MIMAGEMAGICK}
 CONFIGURE_ARGS+=--without-magick

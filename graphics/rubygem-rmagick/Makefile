@@ -16,7 +16,7 @@ USE_RUBY=	yes
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11
 
-X11_LIB_DEPENDS=	libMagickWand-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT}
-X11_LIB_DEPENDS_OFF=	libMagickWand-${IMAGEMAGICK_DEFAULT}.so:graphics/ImageMagick${IMAGEMAGICK_DEFAULT}-nox11
+X11_USES=		magick
+X11_USES_OFF=		magick:nox11
 
 .include <bsd.port.mk>

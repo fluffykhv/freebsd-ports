@@ -15,6 +15,8 @@ USE_PHP=	bcmath bz2 ctype curl dom fileinfo filter gd gmp hash iconv \
 		json mbstring pcntl pdo posix session simplexml xml xmlreader \
 		xmlwriter xsl zip zlib
 
+IGNORE_WITH_PHP=	81
+
 NEXTCLOUD_USERNAME?=	${WWWOWN}
 NEXTCLOUD_GROUPNAME?=	${WWWGRP}
 

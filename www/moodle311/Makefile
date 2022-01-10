@@ -19,7 +19,7 @@ USE_PHP=	ctype curl dom fileinfo filter gd hash iconv intl json mbstring \
 		xml xmlreader xmlrpc zip zlib
 WRKSRC=		${WRKDIR}/moodle
 
-#IGNORE_WITH_PHP=	80 81
+IGNORE_WITH_PHP=	81
 
 OPTIONS_MULTI=		BACKEND
 OPTIONS_MULTI_BACKEND=	MYSQL PGSQL MSSQL SQLITE

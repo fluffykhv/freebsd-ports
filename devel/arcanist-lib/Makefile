@@ -40,8 +40,6 @@ SLAVE_PKGNAMESUFFIX=	-${SLAVEPORT}
 
 RUN_DEPENDS=	ca_root_nss>0:security/ca_root_nss
 
-IGNORE_WTH_PHP=	81
-
 OPTIONS_DEFINE=	ENCODINGS
 OPTIONS_DEFAULT=ENCODINGS
 ENCODINGS_DESC=	Support for encodings other than utf-8

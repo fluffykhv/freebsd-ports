@@ -1,7 +1,7 @@
 # Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
 
 PORTNAME=	dbmail
-PORTVERSION=	3.2.6
+PORTVERSION=	3.2.5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	mail
 

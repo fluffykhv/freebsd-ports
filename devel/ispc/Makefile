@@ -55,8 +55,8 @@ GENX_PLIST_FILES=	include/ispcrt/ispcrt.h \
 			lib/libispcrt_static.a
 
 .include <bsd.port.options.mk>
-.if ${LLVM_DEFAULT:M[7891]0} || ${LLVM_DEFAULT:M1[12]} # max(LLVM_DEFAULT,13)
-LLVM_VERSION=	13
+.if ${LLVM_DEFAULT:M[7891]0} || ${LLVM_DEFAULT:M1[13]} # max(LLVM_DEFAULT,13)
+LLVM_VERSION=	12
 .else
 LLVM_VERSION=	${LLVM_DEFAULT}
 .endif

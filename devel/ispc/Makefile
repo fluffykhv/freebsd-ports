@@ -61,7 +61,7 @@ LLVM_VERSION=	12
 LLVM_VERSION=	${LLVM_DEFAULT}
 .endif
 
-#LLVM_VERSION=	11 # 13 fails on some systems with: Assertion failed: (PointeeType && "Must specify element type"), function Create
+#LLVM_VERSION?=	11 # 13 fails on some systems with: Assertion failed: (PointeeType && "Must specify element type"), function Create
 
 do-test: # some tests fail: https://github.com/ispc/ispc/issues/1868
 	@cd ${WRKSRC} && ISPC_HOME=${BUILD_WRKSRC}/bin ./run_tests.py

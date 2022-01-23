@@ -7,7 +7,9 @@ CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
-MAINTAINER=	desktop@FreeBSD.org
+PATCH_SITES=	https://gitlab.gnome.org/GNOME/${PORTNAME}/-/commit/
+PATCHFILES+=	1060b24d0516.patch:-p1 # https://gitlab.gnome.org/GNOME/evince/-/merge_requests/398
+
 COMMENT=	GNOME 3 multi-format document viewer
 
 LICENSE=	GPLv2

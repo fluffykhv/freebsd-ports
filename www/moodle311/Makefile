@@ -17,9 +17,9 @@ USES=		cpe php:flavors tar:tgz
 USE_PHP=	ctype curl dom fileinfo filter gd hash iconv intl json mbstring \
 		opcache openssl pcre session simplexml soap sodium spl tokenizer \
 		xml xmlreader xmlrpc zip zlib
-WRKSRC=		${WRKDIR}/moodle
-
 IGNORE_WITH_PHP=	81
+
+WRKSRC=		${WRKDIR}/moodle
 
 OPTIONS_MULTI=		BACKEND
 OPTIONS_MULTI_BACKEND=	MYSQL PGSQL MSSQL SQLITE

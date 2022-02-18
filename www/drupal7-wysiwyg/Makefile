@@ -1,7 +1,7 @@
 # Created by: Nick Hilliard <nick@foobar.org>
 
 PORTNAME=	wysiwyg
-DISTVERSION=	7.x-2.6
+DISTVERSION=	7.x-2.9
 CATEGORIES=	www
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
@@ -28,7 +28,6 @@ MODULE_FILES=	editors/css/tinymce-3.css \
 		editors/js/whizzywig-60.js \
 		editors/js/whizzywig.js \
 		editors/js/wymeditor.js \
-		editors/js/yui.js \
 		editors/ckeditor.inc \
 		editors/epiceditor.inc \
 		editors/fckeditor.inc \
@@ -38,7 +37,6 @@ MODULE_FILES=	editors/css/tinymce-3.css \
 		editors/tinymce.inc \
 		editors/whizzywig.inc \
 		editors/wymeditor.inc \
-		editors/yui.inc \
 		wysiwyg-dialog-page.tpl.php \
 		wysiwyg.admin.inc \
 		wysiwyg.api.js \

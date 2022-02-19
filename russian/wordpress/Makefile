@@ -4,7 +4,7 @@ PORTNAME=	wordpress
 DISTVERSION=	5.9
 DISTVERSIONSUFFIX=	-ru_RU
 CATEGORIES=	russian www
-MASTER_SITES=	http://ru.wordpress.org/
+MASTER_SITES=	https://ru.wordpress.org/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	joneum@FreeBSD.org

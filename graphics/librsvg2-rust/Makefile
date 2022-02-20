@@ -26,6 +26,7 @@ USE_LDCONFIG=	yes
 
 PLIST_SUB+=	SHLIBVERSION=2.48.0
 
+PORTSCOUT=	limitw:1,even
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-Bsymbolic \
 		--disable-dependency-tracking \

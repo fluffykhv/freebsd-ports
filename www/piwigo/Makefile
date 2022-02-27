@@ -1,12 +1,12 @@
 # Created by: Goran Lowkrantz <glz@hidden-powers.com>
 
 PORTNAME=	piwigo
-DISTVERSION=	12.1.0
+DISTVERSION=	12.2.0
 CATEGORIES=	www
 MASTER_SITES=	https://piwigo.org/download/dlcounter.php?code=${PORTVERSION}&/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
-MAINTAINER=	sunpoet@FreeBSD.org
+MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	PHP based Web Gallery
 
 LICENSE=	GPLv2
@@ -63,5 +63,20 @@ do-install:
 	@${INSTALL} -d ${STAGEDIR}${WWWDIR}
 	@${TAR} -C ${WRKSRC} -cf - . | \
 	${TAR} --unlink -C ${STAGEDIR}${WWWDIR} -xf -
+
+gen-plist:
+	${ECHO} '@dir(%%WWWOWN%%,%%WWWGRP%%,750) %%WWWDIR%%/language' > ${PLIST}.new
+	${ECHO} '@dir(%%WWWOWN%%,%%WWWGRP%%,750) %%WWWDIR%%/plugins' >> ${PLIST}.new
+	${ECHO} '@dir(%%WWWOWN%%,%%WWWGRP%%,750) %%WWWDIR%%/themes' >> ${PLIST}.new
+	${FIND} ${STAGEDIR}${PREFIX} -type f -o -type l | \
+	    ${SED} -e "s:${STAGEDIR}${PREFIX}/::g ; \
+	        s:www/piwigo/language:@(%%WWWOWN%%,%%WWWGRP%%,750) %%WWWDIR%%/language:g ; \
+		s:www/piwigo/plugins:@(%%WWWOWN%%,%%WWWGRP%%,750) %%WWWDIR%%/plugins:g ; \
+		s:www/piwigo/themes:@(%%WWWOWN%%,%%WWWGRP%%,750) %%WWWDIR%%/themes:g ; \
+	    	s:www/piwigo:%%WWWDIR%%:g ; \
+		s:share/examples/piwigo:%%PORTEXAMPLES%%%%EXAMPLESDIR%%:g ;" |  \
+	    ${GREP} -v -E '^share/(doc|licenses)/' | ${SORT} >> ${PLIST}.new
+	${ECHO} '@dir(%%WWWOWN%%,%%WWWGRP%%,777) %%WWWDIR%%/_data' >> ${PLIST}.new
+	${ECHO} '@dir(%%WWWOWN%%,%%WWWGRP%%,750) %%WWWDIR%%/upload' >> ${PLIST}.new
 
 .include <bsd.port.post.mk>

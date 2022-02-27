@@ -275,6 +275,7 @@
 %%WWWDIR%%/admin/themes/default/images/piwigo-orange.svg
 %%WWWDIR%%/admin/themes/default/images/piwigo_app_banner.jpg
 %%WWWDIR%%/admin/themes/default/index.php
+%%WWWDIR%%/admin/themes/default/js/LocalStorageCache.js
 %%WWWDIR%%/admin/themes/default/js/addAlbum.js
 %%WWWDIR%%/admin/themes/default/js/batchManagerGlobal.js
 %%WWWDIR%%/admin/themes/default/js/cat_list.js

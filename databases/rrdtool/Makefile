@@ -55,7 +55,7 @@ PERL_CONFIGURE_ON=	--enable-perl --enable-perl-site-install
 PERL_MAKE_ARGS=		PERL_MAKE_OPTIONS='PREFIX="${PREFIX}" INSTALLPRIVLIB="${PREFIX}/lib" INSTALLARCHLIB="${PREFIX}/lib"'
 PERL_USES=		perl5
 PYTHON_CONFIGURE_ENABLE=python
-PYTHON_USES=		python
+PYTHON_USES=		python:3.7-3.9
 PYTHON_USE=		python=flavors,optsuffix
 RUBY_CONFIGURE_ENABLE=	ruby
 RUBY_USE=		RUBY=yes

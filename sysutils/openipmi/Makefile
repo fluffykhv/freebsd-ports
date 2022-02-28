@@ -80,7 +80,7 @@ PLIST_SUB+=		OIPMIPERL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON}
-USES+=			python
+USES+=			python:3.7-3.9
 USE_PYTHON=		py3kplist
 CONFIGURE_ARGS+=	--with-python --with-swig
 CONFIGURE_ENV+=	ac_cv_path_pythonprog=${PYTHON_CMD}

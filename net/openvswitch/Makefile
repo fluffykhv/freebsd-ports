@@ -14,7 +14,7 @@ BROKEN_mips64=		fails to compile: ofp-actions.h:486: flexible array member in ot
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
 
-USES=		compiler:c11 cpe gmake libtool perl5 pkgconfig python \
+USES=		compiler:c11 cpe gmake libtool perl5 pkgconfig python:3.7-3.9 \
 		shebangfix ssl
 SHEBANG_FILES=	ipsec/ovs-monitor-ipsec.in \
 		utilities/bugtool/ovs-bugtool-get-port-stats \

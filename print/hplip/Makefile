@@ -21,7 +21,7 @@ RUN_DEPENDS=	cups-filters>=0:print/cups-filters \
 CONFLICTS_INSTALL=	hpijs
 
 INSTALL_TARGET=	install-strip
-USES=		dos2unix jpeg libtool pkgconfig python:3.6+ shebangfix
+USES=		dos2unix jpeg libtool pkgconfig python:-3.9 shebangfix
 USE_LDCONFIG=	yes
 SHEBANG_GLOB=	*.py hpps pstotiff
 DOS2UNIX_FILES=	scan/sane/orblite.c

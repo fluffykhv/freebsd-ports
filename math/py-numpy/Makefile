@@ -1,7 +1,7 @@
 # Created by: Tony Maher
 
 PORTNAME=	numpy
-PORTVERSION=	1.20.3
+PORTVERSION=	1.22.1
 PORTEPOCH=	1
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP \
@@ -19,10 +19,10 @@ COMMENT=	The New Numeric Extension to Python
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}hypothesis>=5.41.3:devel/py-hypothesis@${PY_FLAVOR}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=6.2.4:devel/py-pytest@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}hypothesis>=6.12.0:devel/py-hypothesis@${PY_FLAVOR}
 
-USES=		compiler:c11 cpe fortran python:3.7-3.9 zip
+USES=		compiler:c11 cpe fortran python:3.8-3.10 zip
 USE_PYTHON=	allflavors autoplist concurrent cython distutils
 
 GCCLIBDIR_CMDS=	${FC} -print-file-name=libgfortran.so | ${SED} -e s/libgfortran.so//
@@ -47,6 +47,8 @@ OPENBLAS_USES=		blaslapack:openblas
 OPENBLAS_VARS=		BLASLIBS="openblas, gfortran" BLASNAME=openblas LAPACKLIBS="openblas, gfortran" LIBRARIES=libraries
 SUITESPARSE_LIB_DEPENDS=libumfpack.so:math/suitesparse-umfpack
 
+NO_TEST=		yes
+
 post-extract:
 	@${TOUCH} ${WRKSRC}/numpy/f2py/tests/src/temp
 	@${TOUCH} ${WRKSRC}/numpy/random/_examples/temp
@@ -62,6 +64,8 @@ pre-configure:
 		-e 's|%%LAPACKLIBS%%|${LAPACKLIBS}|; s|%%LIBRARIES%%|${LIBRARIES}|' \
 			${WRKSRC}/site.cfg
 	@${REINPLACE_CMD} -e "s|%%GCCLIBDIR%%|$$(${GCCLIBDIR_CMDS})|" ${WRKSRC}/site.cfg ${WRKSRC}/numpy/distutils/system_info.py
+
+do-configure:
 
 post-install:
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name '*.so' | ${XARGS} ${STRIP_CMD}

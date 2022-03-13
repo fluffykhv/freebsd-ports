@@ -1,7 +1,7 @@
 # Created by: Dan Pelleg <dpelleg+unison@cs.cmu.edu>
 
 PORTNAME=	unison
-PORTVERSION=	2.52.0
+PORTVERSION=	2.51.5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 
@@ -14,10 +14,13 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 FLAVORS=	x11 nox11
 FLAVOR?=	${FLAVORS:[1]}
 
-nox11_PKGNAMESUFFIX=		-nox11
-nox11_CONFLICTS_INSTALL=	unison
+VERSIONSUFFIX=	251
 
-x11_CONFLICTS_INSTALL=		unison-nox11
+nox11_PKGNAMESUFFIX=		${VERSIONSUFFIX}-nox11
+nox11_CONFLICTS_INSTALL=	unison${VERSIONSUFFIX}
+
+x11_PKGNAMESUFFIX=		${VERSIONSUFFIX}
+x11_CONFLICTS_INSTALL=		unison${VERSIONSUFFIX}-nox11
 x11_BUILD_DEPENDS=	lablgtk2:x11-toolkits/ocaml-lablgtk2 \
 			icotool:graphics/icoutils
 x11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
@@ -25,7 +28,7 @@ x11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 			libharfbuzz.so:print/harfbuzz
 x11_RUN_DEPENDS=	lablgtk2:x11-toolkits/ocaml-lablgtk2
 
-PLIST_SUB=	PORTVERSION=${PORTVERSION}
+PLIST_SUB=	PORTVERSION=${PORTVERSION} VERSIONSUFFIX=${VERSIONSUFFIX}
 USES=		gmake localbase
 USE_OCAML=	yes
 WRKSRC_SUBDIR=	src
@@ -37,7 +40,7 @@ ALL_TARGET=	unison all
 USE_GITHUB=	yes
 GH_ACCOUNT=	bcpierce00
 
-DOCS=		NEWS.md README.md
+DOCS=		NEWS README
 
 OPTIONS_DEFINE=		DOCS FSMONITOR
 OPTIONS_DEFAULT?=	FSMONITOR
@@ -64,6 +67,11 @@ post-patch-FSMONITOR-off:
 	@${REINPLACE_CMD} -e 's/-include fsmonitor/#&/' \
 		${WRKSRC}/Makefile.OCaml
 
+post-patch-FSMONITOR-on:
+	@${REINPLACE_CMD} \
+		-e '/let suffix = if Util.osType/s/else "" in/else "${VERSIONSUFFIX}" in/' \
+		${WRKSRC}/fswatch.ml
+
 post-patch:
 .if ${FLAVOR} == nox11
 	@${REINPLACE_CMD} -e 's/CFLAGS/COFLAGS/g' \
@@ -84,18 +92,18 @@ post-build:
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}${VERSIONSUFFIX}
 .if ${FLAVOR} == x11
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}-text ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.desktop ${STAGEDIR}${DESKTOPDIR}
-	${INSTALL_DATA} ${WRKSRC}/win32rc/U_4_48x48x32.png ${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.png
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}-text ${STAGEDIR}${PREFIX}/bin/${PORTNAME}${VERSIONSUFFIX}-text
+	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.desktop ${STAGEDIR}${DESKTOPDIR}/${PORTNAME}${VERSIONSUFFIX}.desktop
+	${INSTALL_DATA} ${WRKSRC}/win32rc/U_4_48x48x32.png ${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}${VERSIONSUFFIX}.png
 .endif
 
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	cd ${WRKSRC}/.. && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
 
 do-install-FSMONITOR-on:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}-fsmonitor ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}-fsmonitor ${STAGEDIR}${PREFIX}/bin/${PORTNAME}-fsmonitor${VERSIONSUFFIX}
 
 .include <bsd.port.mk>

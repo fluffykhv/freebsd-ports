@@ -1020,8 +1020,6 @@ man/man1/ruby%%RUBY_SUFFIX%%.1.gz
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d36/stringio_8c_source.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d38/structmapping__buffer.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d3e/structrb__f__p__arg.html
-%%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d42/rb__mjit__min__header-2_86_89_8h.html
-%%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d42/rb__mjit__min__header-2_86_89_8h_source.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d44/hash_8c__incl.map
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d44/hash_8c__incl.md5
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d44/hash_8c__incl.png
@@ -1046,6 +1044,7 @@ man/man1/ruby%%RUBY_SUFFIX%%.1.gz
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d59/struct4_8c_source.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d5a/structibf__object__string.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d5c/structtr.html
+%%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d63/structsockcred2.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d61/structibf__object__header.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d64/structparser__params.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d65/structcls__struct__7byte.html
@@ -4597,7 +4596,6 @@ man/man1/ruby%%RUBY_SUFFIX%%.1.gz
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_2a2ea99ad6c319bd9463d461e8062398.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_2a3153a8a4ffff59dc4ea484e38e9002.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_2abbeb173fd350dcc764b3385a91be4a.html
-%%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_319f0d916016c08196a8348449a7d555.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_31ad5611867e11b3bbb07523261d2b9b.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_31cedd4509e06940f559c1ca2f722e02.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_366417a472cdcf451e0b26263c592ba7.html
@@ -4612,7 +4610,6 @@ man/man1/ruby%%RUBY_SUFFIX%%.1.gz
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_4fb18f83be51439919d5e23acffd9e43.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_514284781123d4a3f42b63f3714e189c.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_5183dadf5f88c523a2d4106a0d1c0fc8.html
-%%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_51f19e88bc37de7d12cc3a95314ed120.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_5261788b1818a9c80c17bdd6b3fc023f.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_55965a0b7f896966aebdf0768b7cd008.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_598e7cc2bf0ac08540f21218af598432.html
@@ -4631,7 +4628,6 @@ man/man1/ruby%%RUBY_SUFFIX%%.1.gz
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_75b8d1c25f65c048145bd8d8322c2ecd.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_79d6de2b76182588f1767c9f30c83d18.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_7e45bd65ef6fb61fff80234b1efdec17.html
-%%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_7fed72ef06aab166e93e289e8a5a4efa.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_8044ed5df129125bcd0428ee377fefbd.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_82434f6a8a39055b35115fc8d4134985.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_8462c367d9e69a7809faa14633ccfafa.html

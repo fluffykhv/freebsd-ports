@@ -1154,6 +1154,7 @@ man/man1/ruby%%RUBY_SUFFIX%%.1.gz
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d5d/include_2ruby_2internal_2intern_2object_8h__dep__incl.png
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d61/structibf__object__header.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d62/structenc__synmane__type__leading__chars__tag.html
+%%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d63/structsockcred2.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d64/structparser__params.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d66/struct_r_rational.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/d0/d67/struct____mcontext.html
@@ -3312,9 +3313,9 @@ man/man1/ruby%%RUBY_SUFFIX%%.1.gz
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_24f3e0475497c356f650dc9ed4652cab.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_2fcfb3e6a265a41ab3dff2c804294027.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_309b0841cecee8572b88f73d5ed85209.html
-%%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_319f0d916016c08196a8348449a7d555.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_3788cb8bca2eb155424c61794086f08c.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_3b72186685c7133d1efd37f277c25bfa.html
+%%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_4a0596afa8ae2a1c3c95b15b25dc60fa.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_4d2a760764f2f01f9d5f8efa641e6a6e.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_5183dadf5f88c523a2d4106a0d1c0fc8.html
 %%CAPIDOCS%%%%RUBY_DOCDIR%%/capi/html/dir_51f19e88bc37de7d12cc3a95%%RUBY_SUFFIX%%4ed120.html

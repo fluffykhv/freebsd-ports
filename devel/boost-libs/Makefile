@@ -5,7 +5,6 @@ PORTNAME=	boost-libs
 COMMENT=	Free portable C++ libraries (without Boost.Python)
 
 LICENSE=	BSL
-LICENSE_FILE=	${WRKDIR}/${DISTNAME}/LICENSE_1_0.txt
 
 BROKEN_sparc64=	https://github.com/boostorg/context/commit/f2ef6326b6ed
 

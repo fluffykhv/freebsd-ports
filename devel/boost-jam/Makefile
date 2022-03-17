@@ -6,7 +6,6 @@ COMMENT=	Build tool from the boost.org
 PLIST_FILES=	bin/bjam
 
 LICENSE=	BSL
-LICENSE_FILE=	${WRKDIR}/${DISTNAME}/LICENSE_1_0.txt
 
 EXTRACT_AFTER_ARGS=	--no-same-owner --no-same-permissions ${DISTNAME}/${WRKSRC_SUBDIR}
 MAKE_CMD=	./build.sh

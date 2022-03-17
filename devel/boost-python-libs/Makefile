@@ -7,7 +7,6 @@ PATCHDIR=	../boost-libs/files
 COMMENT=	Framework for interfacing Python and C++
 
 LICENSE=	BSL
-LICENSE_FILE=	${WRKDIR}/${DISTNAME}/LICENSE_1_0.txt
 
 BUILD_DEPENDS=	bjam:devel/boost-jam \
 		${PYNUMPY}

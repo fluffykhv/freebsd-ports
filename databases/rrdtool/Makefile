@@ -5,12 +5,15 @@ PORTVERSION=	1.7.2
 PORTREVISION=	4
 CATEGORIES=	databases graphics
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
+PKGNAMESUFFIX=${PYTHON_PKGNAMESUFFIX}
 
 MAINTAINER=	zeising@FreeBSD.org
 COMMENT=	Round Robin Database Tools
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+USES=		cpe gmake gnome libtool pathfix pkgconfig shebangfix
 
 CONFLICTS=	rrdtool12
 
@@ -19,7 +22,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/freetype2
 USE_RC_SUBR=	rrdcached
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USES=		cpe gmake gnome libtool pathfix pkgconfig shebangfix
 USE_GNOME=	glib20 libxml2
 INSTALL_TARGET=	install-strip
 CPE_VENDOR=	rrdtool_project

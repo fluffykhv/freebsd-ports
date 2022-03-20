@@ -1,11 +1,10 @@
-PORTNAME=	lua-resty-string
+PORTNAME=	lua-resty-dns
 DISTVERSIONPREFIX=v
-DISTVERSION=	0.15
-PORTREVISION=	1
-CATEGORIES=	devel www
+DISTVERSION=	0.22
+CATEGORIES=	dns www
 
 MAINTAINER=	mm@FreeBSD.org
-COMMENT=	String utilities and common hash functions for ngx_lua and LuaJIT
+COMMENT=	Lua DNS resolver for ngx_lua
 
 LICENSE=	BSD2CLAUSE
 
@@ -19,7 +18,7 @@ NO_BUILD=	yes
 
 LUA_MODSHAREDIR=${LOCALBASE}/share/lua/5.1
 
-PLIST_SUB=	LUA_MODSHAREDIR=${LUA_MODSHAREDIR}
+PLIST_FILES=	${LUA_MODSHAREDIR}/resty/dns/resolver.lua
 
 PORTDOCS=	README.markdown
 
@@ -28,8 +27,8 @@ DOCSDIR=	${PREFIX}/share/doc/lua${LUA_VER_STR}/${PORTNAME}
 OPTIONS_DEFINE=	DOCS
 
 do-install:
-	@${MKDIR} ${STAGEDIR}${LUA_MODSHAREDIR}
-	@(cd ${WRKSRC}/lib && ${COPYTREE_SHARE} . ${STAGEDIR}${LUA_MODSHAREDIR} "-name *\.lua")
+	@${MKDIR} ${STAGEDIR}${LUA_MODSHAREDIR}/resty/dns
+	${INSTALL_DATA} ${WRKSRC}/lib/resty/dns/resolver.lua ${STAGEDIR}${LUA_MODSHAREDIR}/resty/dns
 
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

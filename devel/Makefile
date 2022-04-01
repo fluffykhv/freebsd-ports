@@ -949,7 +949,6 @@
     SUBDIR += gwenhywfar-gtk3
     SUBDIR += gwenhywfar-qt5
     SUBDIR += gzstream
-    SUBDIR += hadoop2
     SUBDIR += hapy
     SUBDIR += hcs12mem
     SUBDIR += heaptrack
@@ -7058,7 +7057,6 @@
     SUBDIR += sope
     SUBDIR += sope2
     SUBDIR += sord
-    SUBDIR += spark
     SUBDIR += sparsehash
     SUBDIR += spatialindex
     SUBDIR += spdlog

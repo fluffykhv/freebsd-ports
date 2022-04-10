@@ -1,7 +1,5 @@
 PORTNAME=	astroid
-DISTVERSIONPREFIX=	v
 DISTVERSION=	0.16
-CATEGORIES=	mail
 
 MAINTAINER=	mylan.connolly@gmail.com
 COMMENT=	Graphical email client for notmuch, inspired by sup and others

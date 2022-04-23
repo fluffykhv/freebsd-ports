@@ -921,6 +921,7 @@
     SUBDIR += py-pgpy
     SUBDIR += py-plaso
     SUBDIR += py-potr
+    SUBDIR += py-pwntools
     SUBDIR += py-pyaes
     SUBDIR += py-pyaff4
     SUBDIR += py-pyaxo
@@ -959,6 +960,7 @@
     SUBDIR += py-pywinrm
     SUBDIR += py-requests-credssp
     SUBDIR += py-requests-kerberos
+    SUBDIR += py-ropgadget
     SUBDIR += py-ropper
     SUBDIR += py-rsa
     SUBDIR += py-safe
@@ -1167,6 +1169,7 @@
     SUBDIR += silktools
     SUBDIR += sks
     SUBDIR += smurflog
+    SUBDIR += sniffglue
     SUBDIR += snoopy
     SUBDIR += snort
     SUBDIR += snort-rep

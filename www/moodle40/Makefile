@@ -32,6 +32,7 @@ MYSQL_USES=	mysql
 MYSQL_USE=	php=mysqli
 PGSQL_USE=	php=pgsql
 MSSQL_USE=	php=mssql
+SQLITE_USE=	php=sqlite3
 LDAP_USE=	php=ldap
 
 NO_BUILD=	yes

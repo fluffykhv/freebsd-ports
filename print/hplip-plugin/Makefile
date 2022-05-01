@@ -1,7 +1,7 @@
 # Created by: amistry@am-productions.biz
 
 PORTNAME=	hplip-plugin
-PORTVERSION=	3.22.2
+PORTVERSION=	3.22.4
 CATEGORIES=	print
 MASTER_SITES=	https://developers.hp.com/sites/default/files/
 DISTNAME=	hplip-${DISTVERSION}-plugin
@@ -17,9 +17,9 @@ LICENSE_FILE=	${WRKSRC}/license.txt
 #LICENSE_PERMS=	none
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-RUN_DEPENDS=	hp-plugin:print/hplip
-
 ONLY_FOR_ARCHS=	amd64 i386 # arm
+
+RUN_DEPENDS=	hp-plugin:print/hplip
 
 PLUGINS=	fax/plugins/fax_marvell \
 		prnt/plugins/hbpl1 \

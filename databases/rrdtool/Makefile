@@ -7,7 +7,7 @@ CATEGORIES=	databases graphics
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
 PKGNAMESUFFIX=${PYTHON_PKGNAMESUFFIX}
 
-MAINTAINER=	zeising@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Round Robin Database Tools
 
 LICENSE=	GPLv2

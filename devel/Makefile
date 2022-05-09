@@ -191,6 +191,7 @@
     SUBDIR += arduinoOTA
     SUBDIR += argdata
     SUBDIR += argouml
+    SUBDIR += argparse
     SUBDIR += argp-standalone
     SUBDIR += args
     SUBDIR += argtable
@@ -316,6 +317,7 @@
     SUBDIR += cargo-generate
     SUBDIR += cask
     SUBDIR += catch
+    SUBDIR += cbang
     SUBDIR += cbrowser
     SUBDIR += cc65
     SUBDIR += ccache

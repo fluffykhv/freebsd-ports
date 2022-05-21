@@ -61,13 +61,13 @@ SUB_LIST+=	PKGNAME=${PKGNAME}	        \
 		CFG_FILE=${WWWDIR}/${CFG_FILE}
 SUB_FILES+=	pkg-message
 
-.if ${FLAVOR} != php80
-OPTIONS_DEFINE+=	PDF
-.endif
-
 .if !defined(WITHOUT_PHP_DEPENDS)
 
 .include <bsd.port.options.mk>
+
+.if ${FLAVOR} == php74 && !defined(PACKAGE_BUILDING)
+OPTIONS_DEFINE+=	PDF
+.endif
 
 .for opt in ${OPTIONS_DEFINE}
 .    if ${PORT_OPTIONS:M${opt}}

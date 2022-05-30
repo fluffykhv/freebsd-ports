@@ -23,7 +23,7 @@ GH_PROJECT=	OpenSceneGraph
 
 CONFLICTS_INSTALL=osg34
 
-USES=		alias cmake compiler:c11 jpeg gl pkgconfig xorg
+USES=		alias cmake compiler:c11 jpeg gl localbase:ldflags pkgconfig xorg
 USE_GL=		gl
 USE_XORG=	x11
 USE_LDCONFIG=	yes

@@ -5,7 +5,6 @@ PORTVERSION=	1.7.2
 PORTREVISION=	6
 CATEGORIES=	databases graphics
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
-PKGNAMESUFFIX=${PYTHON_PKGNAMESUFFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Round Robin Database Tools

@@ -7,6 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	SF/gallery/gallery2/${PORTVERSION}
 DISTNAME=	gallery-${PORTVERSION}-full
 DIST_SUBDIR=	gallery2
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Web based photo album organizer written in PHP
@@ -14,7 +15,7 @@ COMMENT=	Web based photo album organizer written in PHP
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		php:web
+USES=		php:web,flavors
 USE_PHP=	pcre session
 
 NO_ARCH=	yes

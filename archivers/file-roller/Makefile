@@ -50,7 +50,7 @@ LZO_RUN_DEPENDS=	lzop:archivers/lzop
 
 RAR_DESC=	RAR archive support
 RAR_RUN_DEPENDS=	rar:archivers/rar \
-			unrar:archivers/unrar
+			unrar:archivers/unrar-iconv
 
 ZIP_DESC=	ZIP archive support
 ZIP_RUN_DEPENDS=	zip:archivers/zip

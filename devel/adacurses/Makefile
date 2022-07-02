@@ -15,7 +15,10 @@ LICENSE_FILE=	${WRKSRC}/README
 #BUILD_DEPENDS=	gsed:textproc/gsed
 #BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
 
+EXPIRATION_DATE=2022-09-30
+
 USES=		ada autoreconf gmake pkgconfig tar:tgz
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ada-include=${PREFIX}/include/adacurses \
 		--with-ada-objects=${PREFIX}/lib/adacurses \

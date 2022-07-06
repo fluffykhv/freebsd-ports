@@ -23,7 +23,7 @@ NO_ARCH=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|apache2ctl|apachectl|' ${WRKSRC}/certbot_apache/_internal/configurator.py
-	@${REINPLACE_CMD} -e 's|/etc/apache2|${LOCALBASE}/etc/apache24|' \
+	@${REINPLACE_CMD} -e 's|/etc/apache2|/etc/apache24|' \
 	${WRKSRC}/certbot_apache/_internal/configurator.py
 
 .include "${.CURDIR}/../py-acme/version.mk"

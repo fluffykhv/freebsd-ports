@@ -160,7 +160,7 @@ STRIP_CMD=	${LOCALBASE}/bin/strip # unsupported e_type with base strip
 .endif
 
 .ifdef QEMU_EMULATING
-IGNORE=	fails to build with qemu-user-static
+#IGNORE=	fails to build with qemu-user-static
 .endif
 
 .if make(makesum)

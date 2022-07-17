@@ -6,7 +6,6 @@ CATEGORIES=	games
 MASTER_SITES=	https://cdn.openttd.org/${PORTNAME}-releases/${PORTVERSION}/
 PKGNAMEPREFIX=	openttd-
 DISTNAME=	${PORTNAME}-${PORTVERSION}-all
-PKGNAMEPREFIX=	openttd-
 
 MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Free alternative sounds for OpenTTD game engine

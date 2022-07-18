@@ -759,6 +759,7 @@
     SUBDIR += gearmand
     SUBDIR += generate
     SUBDIR += gengetopt
+    SUBDIR += genht
     SUBDIR += genie
     SUBDIR += genromfs
     SUBDIR += getoptions
@@ -7267,7 +7268,6 @@
     SUBDIR += wandio
     SUBDIR += wasi-compiler-rt11
     SUBDIR += wasi-compiler-rt13
-    SUBDIR += wasi-compiler-rt14
     SUBDIR += wasi-libc
     SUBDIR += wasi-libcxx
     SUBDIR += wasm3

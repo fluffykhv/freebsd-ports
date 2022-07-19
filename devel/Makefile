@@ -4145,6 +4145,7 @@
     SUBDIR += py-aws-requests-auth
     SUBDIR += py-aws-sam-translator
     SUBDIR += py-aws-xray-sdk
+    SUBDIR += py-awscrt
     SUBDIR += py-azure-appconfiguration
     SUBDIR += py-azure-batch
     SUBDIR += py-azure-core
@@ -4310,6 +4311,7 @@
     SUBDIR += py-circuitbreaker
     SUBDIR += py-circuits
     SUBDIR += py-ciso8601
+    SUBDIR += py-ckanapi
     SUBDIR += py-clang
     SUBDIR += py-cld
     SUBDIR += py-cle
@@ -4542,6 +4544,7 @@
     SUBDIR += py-gitdb
     SUBDIR += py-gitless
     SUBDIR += py-gitpython
+    SUBDIR += py-giturlparse
     SUBDIR += py-glance-store
     SUBDIR += py-glob2
     SUBDIR += py-gobject3

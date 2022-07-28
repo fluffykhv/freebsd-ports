@@ -9,7 +9,7 @@ COMMENT=	Objective Caml interface to Tk
 
 LICENSE=	LGPL20
 
-USES=		gmake tk
+USES=		gmake tk:86
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	-tkdefs "-I${LOCALBASE}/include -I${TCL_INCLUDEDIR}\
 		-I${TK_INCLUDEDIR}" \

@@ -4128,6 +4128,7 @@
     SUBDIR += py-asciimatics
     SUBDIR += py-asn1crypto
     SUBDIR += py-aspy.yaml
+    SUBDIR += py-asteval
     SUBDIR += py-astor
     SUBDIR += py-astroid
     SUBDIR += py-astroid253
@@ -4717,6 +4718,7 @@
     SUBDIR += py-libversion
     SUBDIR += py-libvirt
     SUBDIR += py-libzfs
+    SUBDIR += py-line-profiler
     SUBDIR += py-linear-tsv
     SUBDIR += py-linecache2
     SUBDIR += py-lineedit
@@ -5392,6 +5394,7 @@
     SUBDIR += py-tzlocal
     SUBDIR += py-u-msgpack-python
     SUBDIR += py-ua_parser
+    SUBDIR += py-ubelt
     SUBDIR += py-uhid-freebsd
     SUBDIR += py-ujson
     SUBDIR += py-unearth
@@ -5460,6 +5463,7 @@
     SUBDIR += py-xcaplib
     SUBDIR += py-xdg
     SUBDIR += py-xdis
+    SUBDIR += py-xdoctest
     SUBDIR += py-xerox
     SUBDIR += py-xmltodict
     SUBDIR += py-xstatic

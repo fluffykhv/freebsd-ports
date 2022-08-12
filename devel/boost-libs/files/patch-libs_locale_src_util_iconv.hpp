@@ -1,6 +1,6 @@
---- libs/locale/src/boost/locale/util/iconv.hpp.orig	2017-09-02 09:56:14 UTC
-+++ libs/locale/src/boost/locale/util/iconv.hpp
-@@ -12,27 +12,7 @@ namespace boost {
+--- libs/locale/src/util/iconv.hpp.orig	2017-09-02 09:56:14 UTC
++++ libs/locale/src/util/iconv.hpp
+@@ -12,27 +12,7 @@
  
  namespace boost {
      namespace locale {
@@ -44,6 +44,6 @@
 -
 +            return d;
 +        }
-     } // locale
+     } // locale 
  } // boost
  

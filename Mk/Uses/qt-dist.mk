@@ -28,8 +28,9 @@ _QT5_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
 			serialport speech svg tools translations virtualkeyboard wayland \
 			webchannel webengine webglplugin websockets webview winextras \
 			x11extras xmlpatterns
-_QT6_DISTS=		3d 5compat base declarative doc imageformats multimedia quick3d quickcontrols2 \
-			quicktimeline networkauth shadertools svg tools translations virtualkeyboard webchannel webengine \
+_QT6_DISTS=		3d 5compat base charts datavis3d declarative doc imageformats languageserver lottie multimedia quick3d quickcontrols2 \
+			quicktimeline networkauth remoteobjects scxml sensors serialbus serialport shadertools svg tools \
+			translations virtualkeyboard webchannel webengine \
 			websockets webview wayland
 
 _QT_DISTS=		${_QT${_QT_VER}_DISTS}

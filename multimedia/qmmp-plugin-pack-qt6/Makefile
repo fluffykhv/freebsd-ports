@@ -1,9 +1,9 @@
 PORTNAME=	qmmp-plugin-pack
-PORTVERSION=	1.6.0
+PORTVERSION=	2.1.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://qmmp.ylsoftware.com/files/${PORTNAME}/${PORTVERSION:R}/ \
 	SF/qmmp-dev/${PORTNAME}/${PORTVERSION:R}/
-PKGNAMESUFFIX=	-qt5
+PKGNAMESUFFIX=	-qt6
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Additional plug-ins for QMMP (Qt5)
@@ -11,15 +11,14 @@ COMMENT=	Additional plug-ins for QMMP (Qt5)
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libqmmpui-1.so:multimedia/qmmp-qt5
-BUILD_DEPENDS=	qmmp-qt5>=1.5.0:multimedia/qmmp-qt5
+LIB_DEPENDS=	libqmmpui.so:multimedia/qmmp-qt6
+BUILD_DEPENDS=	qmmp-qt6>=2.1:multimedia/qmmp-qt6
 
-CONFLICTS=	${PORTNAME}-qt6
+CONFLICTS=	${PORTNAME}-qt5
 PORTSCOUT=	limit:^1\..*
 
-USES=		cmake pkgconfig qt:5 tar:bzip2
-USE_QT=		core gui widgets \
-		buildtools_build linguisttools_build qmake_build
+USES=		cmake pkgconfig qt:6 tar:bzip2
+USE_QT=		base tools_build
 USE_LDCONFIG=	yes
 
 OPTIONS_SUB=	yes
@@ -34,6 +33,7 @@ OPTIONS_DEFAULT_amd64=	FFAPASM GOOMASM
 
 FFAP_DESC=		Support APE sound file
 FFAP_LIB_DEPENDS=	libtag.so:audio/taglib
+FAAP_USES=		iconv
 FFAP_CMAKE_BOOL=	USE_FFAP
 
 FFAPASM_DESC=		Optimize FFap decoder using devel/yasm
@@ -58,7 +58,6 @@ SRCONV_LIB_DEPENDS=	libsamplerate.so:audio/libsamplerate
 SRCONV_CMAKE_BOOL=	USE_SRC
 
 YTB_DESC=		YouTube plugin
-YTB_USE=		QT=network
 YTB_CMAKE_BOOL=		USE_YTB
 
 PLIST_SUB+=		APP_SUFFIX=${PORTVERSION:R}

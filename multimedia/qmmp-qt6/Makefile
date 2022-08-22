@@ -1,10 +1,9 @@
 PORTNAME=	qmmp
-PORTVERSION=	1.6.1
-PORTREVISION=	2
+PORTVERSION=	2.1.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://qmmp.ylsoftware.com/files/${PORTNAME}/${PORTVERSION:R}/ \
 	SF/qmmp-dev/${PORTNAME}/${PORTVERSION:R}/
-PKGNAMESUFFIX=	-qt5
+PKGNAMESUFFIX=	-qt6
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Qt5-based multimedia player
@@ -12,12 +11,12 @@ COMMENT=	Qt5-based multimedia player
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-CONFLICTS=	${PORTNAME}-qt6
+CONFLICTS=	${PORTNAME}-qt5
 PORTSCOUT=	limit:^1\..*
 
-USES=		cmake gnome pathfix pkgconfig tar:bzip2
-USE_QT=		core gui network widgets xml \
-		buildtools_build linguisttools_build qmake_build
+USES=		cmake gl gnome pathfix pkgconfig qt:6 tar:bzip2
+USE_GL=		gl opengl
+USE_QT=		base_build declarative_build tools_build
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	USE_MMS
@@ -62,7 +61,7 @@ OPTIONS_DEFAULT=	ALSA ANALYZER ARCHIVE BS2B CDDA CONVERTER COPYPASTE COVER \
 		CROSSFADE CUE CURL DIR_ASSOC ENCA FFMPEG FILEOPS FILEWRITER FLAC \
 		GNOMEHOTKEY GME HISTORY HOTKEY JACK KDENOTIFY LADSPA LYRICS \
 		MPRIS MPLAYER MUSEPACK NOTIFIER NULLOUT \
-		OPUS OSS4 PROJECTM PULSEAUDIO QMMP_DIALOG QSUI QTMULTIMEDIA RGSCAN \
+		OPUS OSS4 PROJECTM PULSEAUDIO QMMP_DIALOG QSUI RGSCAN \
 		SHOUTCAST SB SCROBBLER SID SKINNEDUI SNDFILE SOXR STATICON STEREO \
 		TRACKCHANGE TWOPANELDIALOG UDISKS VORBIS WAVPACK WILDMIDI XMP
 
@@ -72,8 +71,8 @@ QSUI_DESC=	Simple UI based on standard widgets set
 QSUI_CMAKE_BOOL=	USE_QSUI
 
 SKINNEDUI_DESC=	Skinned GUI
-SKINNEDUI_USES=	qt:5 xorg
-SKINNEDUI_USE=	QT=x11extras XORG=x11
+SKINNEDUI_USES=	xorg
+SKINNEDUI_USE=	QT=base XORG=x11
 SKINNEDUI_CMAKE_BOOL=	USE_SKINNED
 
 DIR_ASSOC_DESC=	inode/directory mime type association
@@ -93,15 +92,13 @@ BS2B_LIB_DEPENDS=	libbs2b.so:audio/libbs2b
 BS2B_CMAKE_BOOL=	USE_BS2B
 
 HISTORY_DESC=	Information about listened tracks
-HISTORY_USES=	qt:5
-HISTORY_USE=	QT=sql
+HISTORY_USE=	QT=base
 HISTORY_CMAKE_BOOL=	USE_HISTORY
 
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PULSEAUDIO_CMAKE_BOOL=	USE_PULSE
 
 QTMULTIMEDIA_DESC=	Support to use Qt low-level multimedia API
-QTMULTIMEDIA_USES=	qt:5
 QTMULTIMEDIA_USE=	QT=multimedia
 QTMULTIMEDIA_CMAKE_BOOL=	USE_QTMULTIMEDIA
 
@@ -112,11 +109,13 @@ SHOUTCAST_LIB_DEPENDS=	libogg.so:audio/libogg \
 SHOUTCAST_CMAKE_BOOL=	USE_SHOUT
 
 FLAC_LIB_DEPENDS=	libFLAC.so:audio/flac \
-		libtag.so:audio/taglib
+			libtag.so:audio/taglib
+FLAC_USES=		iconv
 FLAC_CMAKE_BOOL=	USE_FLAC
 
 MUSEPACK_LIB_DEPENDS=	libmpcdec.so:audio/musepack \
-		libtag.so:audio/taglib
+			libtag.so:audio/taglib
+MUSEPACK_USES=		iconv
 MUSEPACK_CMAKE_BOOL=	USE_MPC
 
 GME_DESC=		Support video game music files
@@ -127,7 +126,8 @@ FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 FFMPEG_CMAKE_BOOL=	USE_FFMPEG
 
 FAAD_LIB_DEPENDS=	libfaad.so:audio/faad \
-		libtag.so:audio/taglib
+			libtag.so:audio/taglib
+FAAD_USES=		iconv
 FAAD_CMAKE_BOOL=	USE_AAC
 
 CDDA_LIB_DEPENDS=	libcdio.so:sysutils/libcdio \
@@ -149,8 +149,6 @@ MPLAYER_CMAKE_BOOL=	USE_MPLAYER
 
 PROJECTM_DESC=	Support the projectM music visualiser
 PROJECTM_LIB_DEPENDS=	libprojectM.so:graphics/libprojectm
-PROJECTM_USES=		gl
-PROJECTM_USE=		GL=gl
 PROJECTM_CMAKE_BOOL=	USE_PROJECTM
 
 OSS_CMAKE_BOOL=	USE_OSS
@@ -168,16 +166,19 @@ WILDMIDI_CMAKE_BOOL=	USE_MIDI
 
 MAD_LIB_DEPENDS=	libmad.so:audio/libmad \
 		libtag.so:audio/taglib
+MUAD_USES=		iconv
 MAD_CMAKE_BOOL=	USE_MAD
 
 MPG123_LIB_DEPENDS=	libmpg123.so:audio/mpg123 \
 		libtag.so:audio/taglib
+MPG123K_USES=		iconv
 MPG123_CMAKE_BOOL=	USE_MPG123
 
 OPUS_DESC=		Enable reading opusfile tags
 OPUS_LIB_DEPENDS=	libopusfile.so:audio/opusfile \
 		libopus.so:audio/opus \
 		libtag.so:audio/taglib
+OPUS_USES=		iconv
 OPUS_CMAKE_BOOL=	USE_OPUS
 
 RGSCAN_DESC=	ReplayGain scanner
@@ -190,6 +191,7 @@ SNDFILE_CMAKE_BOOL=	USE_SNDFILE
 VORBIS_LIB_DEPENDS=	libvorbis.so:audio/libvorbis \
 		libogg.so:audio/libogg \
 		libtag.so:audio/taglib
+VORBIS_USES=		iconv
 VORBIS_CMAKE_BOOL=	USE_VORBIS
 
 WAVPACK_LIB_DEPENDS=	libwavpack.so:audio/wavpack
@@ -231,8 +233,7 @@ COPYPASTE_DESC=	Enable copy/paste track infos between playlists
 COPYPASTE_CMAKE_BOOL=	USE_COPYPASTE
 
 MPRIS_DESC=	Support the Media Player Remote
-MPRIS_USES=	qt:5
-MPRIS_USE=	QT=dbus
+MPRIS_USE=	QT=base
 MPRIS_CMAKE_BOOL=	USE_MPRIS
 
 SCROBBLER_DESC=	Support Libre.fm/Last.fm scrobbler feature
@@ -255,13 +256,11 @@ LYRICS_DESC=	Support to show lyrics using lyrics.wikia.com
 LYRICS_CMAKE_BOOL=	USE_LYRICS
 
 HOTKEY_DESC=	Support global shortcut keys
-HOTKEY_USES=	qt:5
-HOTKEY_USE=	QT=x11extras XORG=x11
+HOTKEY_USE=	QT=base XORG=x11
 HOTKEY_CMAKE_BOOL=	USE_HOTKEY
 
 GNOMEHOTKEY_DESC=	Support GNOME/Cinnamon shortcut keys
-GNOMEHOTKEY_USES=	qt:5
-GNOMEHOTKEY_USE=	QT=dbus
+GNOMEHOTKEY_USE=	QT=base
 GNOMEHOTKEY_CMAKE_BOOL=	USE_GNOMEHOTKEY
 
 FILEOPS_DESC=	Support file operation
@@ -271,8 +270,7 @@ COVER_DESC=	Support to show cover images
 COVER_CMAKE_BOOL=	USE_COVER
 
 KDENOTIFY_DESC=	Support to popup notifier for KDE
-KDENOTIFY_USES=	qt:5
-KDENOTIFY_USE=	QT=dbus
+KDENOTIFY_USE=	QT=base
 KDENOTIFY_CMAKE_BOOL=	USE_KDENOTIFY
 
 TRACKCHANGE_DESC=	Enable to run external command each track
@@ -280,8 +278,7 @@ TRACKCHANGE_CMAKE_BOOL=	USE_TRACKCHANGE
 
 UDISKS_DESC=	Support removable disc detection using UDisks
 UDISKS_RUN_DEPENDS=	bsdisks:sysutils/bsdisks
-UDISKS_USES=	qt:5
-UDISKS_USE=	QT=dbus
+UDISKS_USE=	QT=base
 UDISKS_CMAKE_BOOL=	USE_UDISKS
 
 QMMP_DIALOG_DESC=	An original dialog

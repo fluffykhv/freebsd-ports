@@ -28,8 +28,9 @@ _QT5_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
 			serialport speech svg tools translations virtualkeyboard wayland \
 			webchannel webengine webglplugin websockets webview winextras \
 			x11extras xmlpatterns
-_QT6_DISTS=		3d 5compat base declarative doc imageformats quick3d quickcontrols2 \
-			quicktimeline networkauth shadertools svg tools translations webengine wayland
+_QT6_DISTS=		3d 5compat base declarative doc imageformats multimedia quick3d quickcontrols2 \
+			quicktimeline networkauth shadertools svg tools translations virtualkeyboard webchannel webengine \
+			websockets webview wayland
 
 _QT_DISTS=		${_QT${_QT_VER}_DISTS}
 
@@ -63,7 +64,6 @@ LICENSE?=		LGPL21
 .  if !exists(${PKGDIR}/pkg-descr)
 DESCR?=			${PORTSDIR}/devel/${_QT_RELNAME}/pkg-descr
 .  endif
-
 
 # Stage support.
 _QT5_DESTDIRNAME=	INSTALL_ROOT
@@ -286,11 +286,10 @@ PLIST_SUB+=		SHORTVER=${_QT_VERSION:R} \
 			FULLVER=${_QT_VERSION:C/-.*//}
 
 # Handle additional PLIST directories, which should only be used for Qt-dist ports.
-.  for dir in CMAKE ETC
-# Export QT_CMAKEDIR and QT_ETCDIR.
+.  for dir in ETC
+# Export QT_ETCDIR.
 PLIST_SUB+=		QT_${dir}DIR="${QT_${dir}DIR_REL}"
 .  endfor
-
 
 .  if ${_QT_VER:M5}
 .    if ${_QT_DIST} == "base"
@@ -375,6 +374,7 @@ qtbase-post-patch:
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
 .      endif
 .    endif
+
 
 pre-configure: qt5-pre-configure
 qt5-pre-configure:
@@ -491,6 +491,16 @@ qt-post-install:
 		>> ${TMPPLIST}
 .    endif # ${QT_CONFIG:N-*}
 .  endif # M5
+
+.  if ${_QT_VER:M6}
+post-stage:	qt6-post-stage
+# Clean-up of empty directories, as we install
+# * cmake to ${LOCALBASE}/lib/cmake not ${QT_LIBDIR}/cmake.
+# * pkgconfig to ${LOCALBASE}/libexec/pkgconfig not ${QT_LIBDIR}/pkgconfig
+qt6-post-stage:
+	${RM} -r ${STAGEDIR}${QT_LIBDIR}/cmake
+	${RM} -r ${STAGEDIR}${QT_LIBDIR}/pkgconfig
+.  endif
 
 qt-create-kde-distfile:
 	${SH} ${PORTSDIR}/devel/${_QT_RELNAME}/files/create_kde-qt_release.sh \

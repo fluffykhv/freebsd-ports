@@ -2,6 +2,7 @@ PORTNAME=	gallery-dl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.23.0
 CATEGORIES=	www
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 # Implicit approval to commit trivial version updates.
 MAINTAINER=	jbeich@FreeBSD.org
@@ -14,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}requests>=2.11.0:www/py-requests@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		python:3.4+
+USES=		python:3.7+
 USE_GITHUB=	yes
 USE_PYTHON=	autoplist distutils unittest
 GH_ACCOUNT=	mikf

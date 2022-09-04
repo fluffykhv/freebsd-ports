@@ -2413,6 +2413,7 @@ lib/wine/fakedlls/wimgapi.dll
 %%WINE32%%lib/wine/fakedlls/win87em.dll16
 %%WINE32%%lib/wine/fakedlls/winaspi.dll16
 %%WINE32%%lib/wine/fakedlls/windebug.dll16
+%%ALSA%%lib/wine/fakedlls/winealsa.drv
 lib/wine/fakedlls/windowscodecs.dll
 lib/wine/fakedlls/windowscodecsext.dll
 lib/wine/fakedlls/wineboot.exe
@@ -3155,6 +3156,7 @@ lib/wine/wimgapi.dll.so
 lib/wine/windowscodecs.dll.so
 lib/wine/windowscodecs.so
 lib/wine/windowscodecsext.dll.so
+%%ALSA%%lib/wine/winealsa.drv.so
 lib/wine/wineboot.exe.so
 lib/wine/winebrowser.exe.so
 lib/wine/winebus.sys.so

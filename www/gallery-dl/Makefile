@@ -7,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 # Implicit approval to commit trivial version updates.
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Command-line program to download image galleries and collections
+WWW=		https://github.com/mikf/gallery-dl
 
 LICENSE=	GPLv2
 

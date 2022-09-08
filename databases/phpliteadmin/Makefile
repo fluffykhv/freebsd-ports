@@ -7,6 +7,7 @@ PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	ports@freebsd.org
 COMMENT=	Web-based database management tool for Sqlite
+WWW=		https://www.phpliteadmin.org/
 
 LICENSE=	GPLv3
 

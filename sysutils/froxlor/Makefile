@@ -6,6 +6,7 @@ PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	PHP-based ISP Server Management Panel
+WWW=		https://www.froxlor.org/
 
 LICENSE=	GPLv2
 

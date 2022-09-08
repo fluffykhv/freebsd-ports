@@ -7,6 +7,7 @@ PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	m.muenz@gmail.com
 COMMENT=	Web-driven graphing interface for RRDTool
+WWW=		https://www.cacti.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

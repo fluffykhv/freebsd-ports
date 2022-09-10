@@ -23,4 +23,6 @@ CMAKE_ON=	USE_STD_MAP
 
 WRKSRC_SUBDIR=	cpp
 
+MAKE_JOBS_UNSAFE=	yes
+
 .include <bsd.port.mk>

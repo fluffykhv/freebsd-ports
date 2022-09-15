@@ -14,7 +14,6 @@ LIB_DEPENDS=	libcln.so:math/cln \
 		libicui18n.so:devel/icu \
 		libqalculate.so:math/libqalculate \
 		libwayland-client.so:graphics/wayland \
-		libLayerShellQtInterface.so:x11/plasma5-layer-shell-qt \
 		libxkbcommon.so:x11/libxkbcommon \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-util.so:x11/xcb-util
@@ -50,7 +49,8 @@ USE_QT=		concurrent core dbus declarative graphicaleffects gui network \
 		widgets x11extras xml \
 		buildtools:build qmake:build testlib:build \
 		paths:run quickcontrols:run
-USE_XORG=	ice sm x11 xau xcb xcomposite xcursor xext xfixes xft xi xkbfile xrender xtst
+USE_XORG=	ice sm x11 xau xcb xcomposite xcursor xext xfixes xft xi \
+		xkbfile xrender xtst
 
 CPE_VENDOR=	kde
 

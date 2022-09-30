@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/README
 #BUILD_DEPENDS=	gsed:textproc/gsed
 #BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
 
-EXPIRATION_DATE=2022-09-30
+EXPIRATION_DATE=2022-12-31
 
 USES=		ada autoreconf gmake pkgconfig tar:tgz
 

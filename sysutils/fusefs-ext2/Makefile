@@ -11,8 +11,8 @@ WWW=		https://github.com/alperakcan/fuse-ext2
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	mke2fs:sysutils/e2fsprogs
-RUN_DEPENDS=	mke2fs:sysutils/e2fsprogs
+BUILD_DEPENDS=	mke2fs:sysutils/e2fsprogs-core
+RUN_DEPENDS=	mke2fs:sysutils/e2fsprogs-core
 
 USES=		autoreconf libtool fuse pkgconfig localbase:ldflags
 USE_GITHUB=	yes

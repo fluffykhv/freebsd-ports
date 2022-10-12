@@ -1,3 +1,3 @@
-TIMESTAMP = 1663350776
-SHA256 (KDE/plasma/5.25.5/sddm-kcm-5.25.5.tar.xz) = a69c4cb9f0a4073e4b2be916e828709d2281420865aaec72308f6ea91f937cc3
-SIZE (KDE/plasma/5.25.5/sddm-kcm-5.25.5.tar.xz) = 83376
+TIMESTAMP = 1657550036
+SHA256 (KDE/plasma/5.24.6/sddm-kcm-5.24.6.tar.xz) = 78b9704037d0874138cab95e283c46c64e765818c8cdc00dd6f3af1ae6c7cf1d
+SIZE (KDE/plasma/5.24.6/sddm-kcm-5.24.6.tar.xz) = 81624

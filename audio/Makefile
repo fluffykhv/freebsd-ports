@@ -651,6 +651,7 @@
     SUBDIR += py-pulsectl
     SUBDIR += py-pyacoustid
     SUBDIR += py-pyaudio
+    SUBDIR += py-pyjacklib
     SUBDIR += py-pylast
     SUBDIR += py-pyliblo
     SUBDIR += py-pymad

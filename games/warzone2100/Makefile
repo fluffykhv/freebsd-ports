@@ -27,7 +27,7 @@ LIB_DEPENDS=	libphysfs.so:devel/physfs \
 		libminiupnpc.so:net/miniupnpc
 RUN_DEPENDS=	${LOCALBASE}/share/fonts/dejavu/DejaVuSans.ttf:x11-fonts/dejavu
 
-USES=		cmake bison compiler:c++11-lib gl openal:al pkgconfig \
+USES=		cmake bison compiler:c++11-lib gl localbase openal:al pkgconfig \
 		sdl tar:xz
 USE_GL=		gl
 USE_SDL=	sdl2

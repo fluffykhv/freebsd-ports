@@ -39,16 +39,12 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--parallel=${MAKE_JOBS_NUMBER} \
 		--init="${WRKSRC}/InitialCache.cmake"
 
-#		--bootstrap-system-libuv \
-#		--bootstrap-system-librhash \
-#		--bootstrap-system-jsoncpp \
-
 OPTIONS_DEFINE=	DOCS CPACK
 OPTIONS_SUB=	yes
 
 CPACK_DESC=		Enable FreeBSD generator in CPack (experimental)
 CPACK_LIB_DEPENDS=	libpkg.so:${PKG_ORIGIN}
-#CPACK_USES_OFF=		libarchive
+# CPACK_USES_OFF=		libarchive
 # When CPACK is on, uses base libarchive and won't pass stage-qa
 
 CXXFLAGS+=	-D__BSD_VISIBLE

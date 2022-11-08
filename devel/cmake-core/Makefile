@@ -1,6 +1,7 @@
 PORTNAME=	cmake
 # Remember to update devel/cmake-doc and devel/cmake-gui as well.
 DISTVERSION=	${_CMAKE_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-core
 
@@ -11,8 +12,7 @@ WWW=		https://www.cmake.org/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/Copyright.txt
 
-LIB_DEPENDS=	\
-		libexpat.so:textproc/expat2 \
+LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libjsoncpp.so:devel/jsoncpp \
 		libuv.so:devel/libuv \
 		librhash.so:security/rhash

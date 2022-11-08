@@ -59,7 +59,7 @@ IGNORE=	Incorrect 'USES+= cmake:${cmake_ARGS}' usage: argument [${arg}] is not r
 .    endif
 .  endfor
 
-# Check whehter other flags than only '_internal' are passed (this should be equivalent to PORT = devel/cmake
+# Check whehter other flags than only '_internal' are passed (this should be equivalent to PORT = devel/cmake-core
 .  if ${cmake_ARGS} != _internal
 CMAKE_BIN=		${LOCALBASE}/bin/cmake
 BUILD_DEPENDS+=		${CMAKE_BIN}:devel/cmake-core

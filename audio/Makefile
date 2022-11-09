@@ -642,6 +642,7 @@
     SUBDIR += py-audioread
     SUBDIR += py-discid
     SUBDIR += py-discogs-client
+    SUBDIR += py-essentia
     SUBDIR += py-eyed3
     SUBDIR += py-fmoo-audiotools
     SUBDIR += py-gtts

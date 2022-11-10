@@ -293,6 +293,7 @@
     SUBDIR += goocanvasmm2
     SUBDIR += goom
     SUBDIR += gource
+    SUBDIR += goxel
     SUBDIR += gpaint
     SUBDIR += gphoto2
     SUBDIR += gpicview
@@ -1049,6 +1050,7 @@
     SUBDIR += sane-epkowa
     SUBDIR += scale2x
     SUBDIR += scantailor
+    SUBDIR += sciplot
     SUBDIR += scr2png
     SUBDIR += scrot
     SUBDIR += scwm-icons

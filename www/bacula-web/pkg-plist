@@ -7,12 +7,10 @@
 %%WWWDIR%%/.eslintignore
 %%WWWDIR%%/.eslintrc.yml
 %%WWWDIR%%/.github/ISSUE_TEMPLATE/bug_report.md
-%%WWWDIR%%/.github/workflows/ci.yaml
+%%WWWDIR%%/.github/workflows/build.yml
 %%WWWDIR%%/.htaccess
-%%WWWDIR%%/.phpcs.xml
 %%WWWDIR%%/.readthedocs.yaml
 %%WWWDIR%%/.tx/config
-%%WWWDIR%%/CODE_OF_CONDUCT.md
 %%WWWDIR%%/CONTRIBUTING.md
 %%WWWDIR%%/LICENSE
 %%WWWDIR%%/README.md
@@ -125,14 +123,11 @@
 %%WWWDIR%%/core/graph/chart.class.php
 %%WWWDIR%%/core/helpers/sanitizer.php
 %%WWWDIR%%/core/i18n/ctranslation.class.php
-%%WWWDIR%%/core/utils/ConfigFileException.php
-%%WWWDIR%%/tests/DateTimeUtilTest.php
 %%WWWDIR%%/core/utils/cutils.class.php
 %%WWWDIR%%/core/utils/datetimeutil.class.php
 %%WWWDIR%%/core/utils/file.class.php
 %%WWWDIR%%/core/utils/htmlhelper.class.php
 %%WWWDIR%%/docs/CHANGELOG.md
-%%WWWDIR%%/docs/Makefile
 %%WWWDIR%%/docs/requirements.txt
 %%WWWDIR%%/docs/source/01_about/about.rst
 %%WWWDIR%%/docs/source/01_about/features.rst
@@ -145,7 +140,6 @@
 %%WWWDIR%%/docs/source/02_install/index.rst
 %%WWWDIR%%/docs/source/02_install/installarchive.rst
 %%WWWDIR%%/docs/source/02_install/installcomposer.rst
-%%WWWDIR%%/docs/source/02_install/lighttpd-installation.rst
 %%WWWDIR%%/docs/source/02_install/nginx-installation.rst
 %%WWWDIR%%/docs/source/02_install/overview.rst
 %%WWWDIR%%/docs/source/02_install/requirements.rst
@@ -175,10 +169,8 @@
 %%WWWDIR%%/docs/source/_static/bacula-web-user-settings.jpg
 %%WWWDIR%%/docs/source/_static/bacula-web-users.jpg
 %%WWWDIR%%/docs/source/_static/bacula-web-volumes.jpg
-%%WWWDIR%%/docs/source/_static/custom.css
 %%WWWDIR%%/docs/source/conf.py
 %%WWWDIR%%/docs/source/index.rst
-%%WWWDIR%%/phpunit.xml
 %%WWWDIR%%/public/.htaccess
 %%WWWDIR%%/public/css/.gitkeep
 %%WWWDIR%%/public/fonts/.gitkeep

@@ -4,7 +4,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.invisible-island.net/AdaCurses/
 DISTNAME=	AdaCurses-${DISTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Ada95 bindings for ncurses
 WWW=		https://invisible-island.net/ncurses/ncurses-Ada95.html
 
@@ -13,8 +13,6 @@ LICENSE_FILE=	${WRKSRC}/README
 
 #BUILD_DEPENDS=	gsed:textproc/gsed
 #BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
-
-EXPIRATION_DATE=2022-12-31
 
 USES=		ada autoreconf gmake pkgconfig tar:tgz
 

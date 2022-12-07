@@ -53,7 +53,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		${PYTHON_PKGNAMEPREFIX}jeepney>=0.6:devel/py-jeepney@${PY_FLAVOR} \
 		${PY_PILLOW} \
 		pdftohtml:graphics/poppler-utils \
-		${PYTHON_PKGNAMEPREFIX}zeroconf>0:net/py-zeroconf
+		${PYTHON_PKGNAMEPREFIX}zeroconf>0:net/py-zeroconf@${PY_FLAVOR}
 
 USES=		desktop-file-utils gettext-runtime gl gnome localbase:ldflags \
 		pkgconfig pyqt:5 python:3.8-3.10 qt:5 shared-mime-info shebangfix \

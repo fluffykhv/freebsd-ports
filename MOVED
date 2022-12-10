@@ -17584,7 +17584,6 @@ www/rubygem-protocol-rack01|www/rubygem-protocol-rack|2022-10-09|Remove obsolete
 www/rubygem-rack223|www/rubygem-rack|2022-10-09|Remove obsoleted port. Use www/rubygem-rack instead
 databases/pymongo|databases/py-pymongo|2022-10-09|Add the py- prefix which all Python ports should have
 audio/protracker|audio/pt2-clone|2022-10-12|Renamed to match project name
-x11/plasma5-kwayland-server|x11-wm/plasma5-kwin|2022-10-12|Reintegrated into x11-wm/plasma5-kwin
 multimedia/gstreamer1-transcoder|multimedia/gstreamer1-plugins-bad|2022-10-15|Upstream included transcoding in plugins-bad
 devel/py-ipykernel5|devel/py-ipykernel|2022-10-15|ipykernel5 is discontinued, ipykernel is used instead
 x11-toolkits/libshumate-shortwave|x11-toolkits/libshumate|2022-10-15|No longer used by audio/shortwave
@@ -17639,3 +17638,4 @@ ftp/php-fastdfs||2022-12-09|Requires php74 which was EOL on 2022-11-28
 multimedia/mlt7-qt5|multimedia/mlt7-qt|2022-12-10|Flavorized for Qt5 and Qt6
 sysutils/cfengine317||2022-12-10|Has expired: Expire one year after cfengine 3.19.0 released
 sysutils/cfengine-masterfiles317||2022-12-10|Has expired: Expire one year after cfengine-masterfiles 3.19.0 released
+x11/plasma5-kwayland-server|x11-wm/plasma5-kwin|2022-12-10|Reintegrated into x11-wm/plasma5-kwin

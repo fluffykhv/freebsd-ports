@@ -1,5 +1,6 @@
 PORTNAME=	discover
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -15,11 +16,11 @@ USE_KDE=	archive attica auth codecs completion config configwidgets \
 		coreaddons crash dbusaddons i18n iconthemes idletime \
 		itemmodels itemviews jobwidgets kcmutils kdeclarative kio \
 		kirigami2 newstuff notifications package plasma-framework \
-		purpose service solid textwidgets wallet widgetsaddons \
-		windowsystem xmlgui \
+		service solid textwidgets wallet widgetsaddons windowsystem \
+		xmlgui \
 		ecm:build
-USE_QT=		concurrent core dbus declarative gui network svg webview \
-		widgets x11extras xml \
+USE_QT=		concurrent core dbus declarative gui network svg widgets \
+		x11extras xml \
 		buildtools:build qmake:build testlib:build
 USE_XORG=	x11
 

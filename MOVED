@@ -17639,3 +17639,4 @@ multimedia/mlt7-qt5|multimedia/mlt7-qt|2022-12-10|Flavorized for Qt5 and Qt6
 sysutils/cfengine317||2022-12-10|Has expired: Expire one year after cfengine 3.19.0 released
 sysutils/cfengine-masterfiles317||2022-12-10|Has expired: Expire one year after cfengine-masterfiles 3.19.0 released
 x11/plasma5-kwayland-server|x11-wm/plasma5-kwin|2022-12-10|Reintegrated into x11-wm/plasma5-kwin
+www/ilias|www/ilias|2022-12-11|Flavorized for php

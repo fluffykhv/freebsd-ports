@@ -17641,3 +17641,4 @@ x11/plasma5-kwayland-server|x11-wm/plasma5-kwin|2022-12-10|Reintegrated into x11
 www/ilias|www/ilias|2022-12-11|Flavorized for php
 net-mgmt/icingaweb2-module-ipl|net-mgmt/icinga-php-library|2022-12-13|Renamed by project
 x11/darkman|accessibility/darkman|2022-12-14|Moved to a better category
+net/samba412||2022-12-18|Has expired: Reached its EoL on September 20, 2021

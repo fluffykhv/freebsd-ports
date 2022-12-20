@@ -14,6 +14,7 @@ LIB_DEPENDS=	libcln.so:math/cln \
 		libicui18n.so:devel/icu \
 		libqalculate.so:math/libqalculate \
 		libwayland-client.so:graphics/wayland \
+		libLayerShellQtInterface.so:x11/plasma5-layer-shell-qt \
 		libxkbcommon.so:x11/libxkbcommon \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-util.so:x11/xcb-util
@@ -36,12 +37,11 @@ USE_KDE=	activities activities-stats activitymanagerd archive attica \
 		coreaddons crash dbusaddons emoticons filemetadata globalaccel \
 		guiaddons holidays i18n iconthemes idletime init itemmodels \
 		itemviews jobwidgets js jsembed kcmutils kdeclarative kdesu \
-		kdewebkit kio kscreenlocker kwin layer-shell-qt libkscreen \
-		libksysguard newstuff notifications notifyconfig package parts \
-		people plasma-framework plasma-integration prison pty runner \
-		service solid sonnet syntaxhighlighting texteditor textwidgets \
-		unitconversion wallet wayland widgetsaddons windowsystem \
-		xmlgui xmlrpcclient \
+		kdewebkit kio kscreenlocker kwin libkscreen libksysguard \
+		newstuff notifications notifyconfig package parts people \
+		plasma-framework plasma-integration prison pty runner service \
+		solid sonnet syntaxhighlighting texteditor textwidgets unitconversion \
+		wallet wayland widgetsaddons windowsystem xmlgui xmlrpcclient \
 		doctools:build ecm:build \
 		breeze-icons:run breeze:run kded:run kquickcharts:run \
 		milou:run oxygen-icons5:run
@@ -50,8 +50,7 @@ USE_QT=		concurrent core dbus declarative graphicaleffects gui network \
 		widgets x11extras xml \
 		buildtools:build qmake:build testlib:build \
 		paths:run quickcontrols:run
-USE_XORG=	ice sm x11 xau xcb xcomposite xcursor xext xfixes xft xi \
-		xkbfile xrender xtst
+USE_XORG=	ice sm x11 xau xcb xcomposite xcursor xext xfixes xft xi xkbfile xrender xtst
 
 CPE_VENDOR=	kde
 

@@ -827,6 +827,7 @@
     SUBDIR += traverso
     SUBDIR += tse3
     SUBDIR += tta
+    SUBDIR += tuner
     SUBDIR += tuneradio
     SUBDIR += twolame
     SUBDIR += uade

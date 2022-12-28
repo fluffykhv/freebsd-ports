@@ -100,12 +100,17 @@
     SUBDIR += py-alpha-vantage
     SUBDIR += py-backtrader
     SUBDIR += py-bitcoin
+    SUBDIR += py-bt
+    SUBDIR += py-ccxt
+    SUBDIR += py-degiro-connector
     SUBDIR += py-ebaysdk
     SUBDIR += py-exchange-calendars
+    SUBDIR += py-ffn
     SUBDIR += py-financedatabase
     SUBDIR += py-finnhub-python
     SUBDIR += py-finviz
     SUBDIR += py-finvizfinance
+    SUBDIR += py-fredapi
     SUBDIR += py-fundamentalanalysis
     SUBDIR += py-investiny
     SUBDIR += py-investpy

@@ -5,7 +5,7 @@
  # Type: string (special format)
  #
 -#UdfAccess = Restrict UDF
-+UdfAccess = Restrict /usr/local/libexec/firebird/udf
++UdfAccess = Restrict %%PREFIX%%/libexec/firebird/udf
  
  
  # ----------------------------

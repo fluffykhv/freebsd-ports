@@ -1,9 +1,12 @@
 PORTNAME=	polkit
-PORTVERSION=	0.122
+PORTVERSION=	0.120
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	https://gitlab.freedesktop.org/polkit/polkit/-/archive/${PORTVERSION}/ \
-		https://www.freedesktop.org/software/polkit/releases/
-DISTNAME=	${PORTNAME}-${PORTVERSION:E}
+MASTER_SITES=	https://www.freedesktop.org/software/polkit/releases/
+
+PATCH_SITES=	https://gitlab.freedesktop.org/${PORTNAME}/${PORTNAME}/-/commit/
+PATCHFILES+=	e7f3d9e8341d.patch:-p1 # https://gitlab.freedesktop.org/polkit/polkit/-/merge_requests/99
+PATCHFILES+=	a2bf5c9c83b6.patch:-p1 # https://gitlab.freedesktop.org/polkit/polkit/-/merge_requests/104 (CVE-2021-4034)
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Framework for controlling access to system-wide components
@@ -14,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libdbus-1.so:devel/dbus \
-		libduktape.so:lang/duktape-lib
+		libmozjs-91.so:lang/spidermonkey91
 
 USERS=		polkitd
 GROUPS=		polkitd
@@ -57,8 +60,7 @@ post-patch:
 
 post-install:
 	@${MKDIR} ${STAGEDIR}/var/lib/polkit-1 \
-		  ${STAGEDIR}${PREFIX}/share/polkit-1/rules.d \
-		  ${STAGEDIR}${PREFIX}/etc/polkit-1/rules.d
+		  ${STAGEDIR}${PREFIX}/share/polkit-1/rules.d
 .for i in 10-vendor.d 20-org.d 30-site.d 50-local.d 90-mandatory.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/polkit-1/localauthority/${i}
 	${MKDIR} ${STAGEDIR}/var/lib/polkit-1/localauthority/${i}

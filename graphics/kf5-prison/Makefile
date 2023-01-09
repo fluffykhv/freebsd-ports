@@ -1,6 +1,5 @@
 PORTNAME=	prison
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	graphics kde kde-frameworks
 
 PATCH_SITES=	https://invent.kde.org/frameworks/prison/-/commit/

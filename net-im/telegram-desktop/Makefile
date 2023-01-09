@@ -51,8 +51,8 @@ qt6_PKGNAMESUFFIX=	-qt6
 qt5_CONFLICTS_INSTALL=	${PORTNAME}-qt6
 qt6_CONFLICTS_INSTALL=	${PORTNAME}
 
-USES=		cmake compiler:c++17-lang desktop-file-utils gl \
-		gnome localbase pkgconfig python:3.7+,build ssl xorg
+USES=		cmake compiler:c++17-lang desktop-file-utils gl gnome \
+		localbase llvm:min=14 pkgconfig python:3.7+,build ssl xorg
 
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	telegramdesktop

@@ -24,8 +24,7 @@ RUN_DEPENDS=	iso-codes>=0:misc/iso-codes \
 BUILD_DEPENDS=	xf86-input-evdev>0:x11-drivers/xf86-input-evdev \
 		xf86-input-synaptics>0:x11-drivers/xf86-input-synaptics \
 		xf86-input-libinput>0:x11-drivers/xf86-input-libinput \
-		xdg-user-dir:devel/xdg-user-dirs \
-		wayland-protocols>=1.18:graphics/wayland-protocols
+		xdg-user-dir:devel/xdg-user-dirs
 
 USES=		cmake compiler:c++11-lib cpe desktop-file-utils gettext gnome \
 		kde:5 pkgconfig python:3.5+,run qt:5 shebangfix tar:xz xorg

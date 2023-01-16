@@ -1097,6 +1097,7 @@
     SUBDIR += kpublictransport
     SUBDIR += kronosnet
     SUBDIR += ksql
+    SUBDIR += ktextaddons
     SUBDIR += kyra
     SUBDIR += kyua
     SUBDIR += lab
@@ -4030,6 +4031,7 @@
     SUBDIR += performance
     SUBDIR += perlconsole
     SUBDIR += phabricator
+    SUBDIR += phasar
     SUBDIR += php-Psr_Log
     SUBDIR += php-composer
     SUBDIR += php-composer2
@@ -5368,6 +5370,7 @@
     SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools-rust
     SUBDIR += py-setuptools44
+    SUBDIR += py-setuptools58
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
     SUBDIR += py-setuptools_scm_git_archive
@@ -7249,6 +7252,7 @@
     SUBDIR += rustc-demangle
     SUBDIR += rvi
     SUBDIR += rvm
+    SUBDIR += rxcpp
     SUBDIR += sabre
     SUBDIR += safe-iop
     SUBDIR += samurai

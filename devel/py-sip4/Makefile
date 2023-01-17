@@ -9,7 +9,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python to C and C++ bindings generator
 WWW=		http://www.riverbankcomputing.co.uk/software/sip/
 
-USES=		python pyqt:sip
+USES=		python:3.7-3.10 pyqt:sip
 USE_PYTHON=	concurrent py3kplist flavors
 USE_PYQT=	#
 

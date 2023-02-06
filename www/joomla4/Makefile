@@ -39,10 +39,6 @@ JOOMLADIR=	www/joomla4
 
 .include <bsd.port.options.mk>
 
-.if ${FLAVOR} != php80 && !defined(PACKAGE_BUILDING)
-USE_PHP+=	pdf
-.endif
-
 pre-install:
 	@${ECHO_CMD} "@owner ${WWWOWN}" >> ${PLIST}
 	@${ECHO_CMD} "@group ${WWWGRP}" >> ${PLIST}

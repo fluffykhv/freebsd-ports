@@ -1,7 +1,6 @@
 PORTNAME=	cocotb
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.7.2
-PORTREVISION=	1
 CATEGORIES=	cad python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -15,7 +14,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}find-libpython>0:devel/py-find-libpython@${PY_FLAVOR} \
 		gtkwave:cad/gtkwave
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytest-cov>=4.0.0:devel/py-pytest-cov@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytest-mock>=3.10.0:devel/py-pytest-mock@${PY_FLAVOR}
 
 USES=		python:3.6+ shebangfix
 USE_PYTHON=	pep517 autoplist

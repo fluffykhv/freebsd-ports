@@ -40,10 +40,6 @@ WWWDIR=		${PREFIX}/www/${PORTNAME}${PORTVERSION:R:R}
 
 .include <bsd.port.options.mk>
 
-.if ${FLAVOR} == php74 && !defined(PACKAGE_BUILDING)
-USE_PHP+=	pdf
-.endif
-
 do-install:
 	@${MKDIR} ${STAGEDIR}${WWWDIR}
 	@(cd ${WRKSRC} && \

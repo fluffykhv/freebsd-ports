@@ -35,7 +35,7 @@ USE_KDE=	activities activities-stats activitymanagerd archive attica \
 		auth baloo bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons emoticons filemetadata globalaccel \
 		guiaddons holidays i18n iconthemes idletime init itemmodels \
-		itemviews jobwidgets js kcmutils kdeclarative kdesu \
+		itemviews jobwidgets js jsembed kcmutils kdeclarative kdesu \
 		kdewebkit kio kscreenlocker kwin libkscreen libksysguard \
 		newstuff notifications notifyconfig package parts people \
 		plasma-framework plasma-integration prison pty runner service \

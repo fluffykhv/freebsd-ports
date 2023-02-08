@@ -8,7 +8,7 @@ MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Caching algorithms in httplib2 for use with requests session object
 WWW=		https://github.com/ionrock/cachecontrol/
 
-LICENSE=	BSD2CLAUSE
+LICENSE=	APACHE20
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}msgpack>=0.5.2:devel/py-msgpack@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR}
@@ -20,10 +20,15 @@ REINPLACE_ARGS=	-i ''
 
 CONFLICTS_INSTALL=	py*-cachecontrol # bin/doesitcache
 
-OPTIONS_DEFINE=		FILECACHE REDIS
-OPTIONS_DEFAULT=	FILECACHE
-FILECACHE_DESC=		FileCache support
-REDIS_DESC=		Redis support
+NO_ARCH=	yes
+
+OPTIONS_DEFINE=	FILECACHE REDIS
+OPTIONS_DEFAULT=FILECACHE
+FILECACHE_DESC=	FileCache support
+REDIS_DESC=	Redis support
+
+FILECACHE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}filelock>=3.7.1:sysutils/py-filelock@${PY_FLAVOR}
+REDIS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}redis>=2.10.5:databases/py-redis@${PY_FLAVOR}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|msgpack-python|msgpack|' ${WRKSRC}/setup.py ${WRKSRC}/CacheControl.egg-info/requires.txt

@@ -2,7 +2,7 @@ PORTNAME=	joomla
 DISTVERSION=	4-1-3
 CATEGORIES=	www
 MASTER_SITES=	https://downloads.joomla.org/cms/joomla4/${DISTVERSION}/
-PKGNAMESUFFIX=	4
+PKGNAMESUFFIX=	4${PHP_PKGNAMESUFFIX}
 DISTNAME=	Joomla_${DISTVERSION}-Stable-Full_Package
 
 MAINTAINER=	wen@FreeBSD.org
@@ -11,7 +11,7 @@ WWW=		https://www.joomla.org/
 
 LICENSE=	GPLv2
 
-USES=		cpe php:web shebangfix zip
+USES=		cpe php:web,flavors shebangfix zip
 CPE_VENDOR=	${PORTNAME}
 CPE_PRODUCT=	${PORTNAME}\!
 

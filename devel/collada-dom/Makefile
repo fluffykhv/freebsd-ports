@@ -20,4 +20,7 @@ USE_GNOME=	libxml2
 USE_GITHUB=	yes
 GH_ACCOUNT=	rdiankov
 
+# LLVM15 workaround
+CFLAGS=		-Wno-int-conversion
+
 .include <bsd.port.mk>

@@ -16,6 +16,9 @@ USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
+# LLVM15 workaround
+CFLAGS+=	-Wno-int-conversion
+
 post-patch:
 	@${REINPLACE_CMD} -e 's,libmpd-1.0\/libmpd,libmpd,' \
 		${WRKSRC}/src/Makefile.in

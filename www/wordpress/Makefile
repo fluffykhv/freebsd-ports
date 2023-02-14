@@ -7,6 +7,7 @@ MASTER_SITES=	https://wordpress.org/
 DISTVERSIONSUFFIX=	-${WORDPRESS_LANG}
 MASTER_SITES?=	https://${WORDPRESS_LANG}.wordpress.org/
 .endif
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 CATEGORIES+=	www
 
 
@@ -19,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/license.txt
 
 RUN_DEPENDS=	${IMAGEMAGICK_DEPENDS}
 
-USES=		cpe php:web
+USES=		cpe php:web,flavors
 .if ${DISTVERSION:N*.*.*}
 CPE_VERSION=	${DISTVERSION}.0
 .endif

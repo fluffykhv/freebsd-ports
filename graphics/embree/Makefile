@@ -10,7 +10,7 @@ WWW=		https://www.embree.org/
 
 LICENSE=	APACHE20
 
-ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 i386
 ONLY_FOR_ARCHS_REASON=	heavy use of SSE instructions
 
 USES=		cmake pkgconfig

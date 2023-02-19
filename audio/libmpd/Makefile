@@ -16,8 +16,7 @@ USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-# LLVM15 workaround
-CFLAGS+=	-Wno-int-conversion
+CFLAGS+=	-Wno-error=int-conversion
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,libmpd-1.0\/libmpd,libmpd,' \

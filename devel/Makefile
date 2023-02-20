@@ -170,6 +170,7 @@
     SUBDIR += apitrace
     SUBDIR += app-builder
     SUBDIR += appstream
+    SUBDIR += appstream-compose
     SUBDIR += appstream-glib
     SUBDIR += appstream-qt
     SUBDIR += apr1
@@ -270,6 +271,7 @@
     SUBDIR += bcunit
     SUBDIR += bear
     SUBDIR += benchmark
+    SUBDIR += bencodetools
     SUBDIR += bennugd-core
     SUBDIR += bennugd-modules
     SUBDIR += bfg

@@ -40,6 +40,7 @@ LIBTLS_CONFIGURE_ENABLE=	libtls-only
 NC_CONFIGURE_ENABLE=		nc
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	ac_cv_header_endian_h=no
 USES=		cpe libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 OPTIONS_SUB=	yes

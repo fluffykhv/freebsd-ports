@@ -44,6 +44,7 @@
     SUBDIR += aaphoto
     SUBDIR += acidwarp
     SUBDIR += acidwarp-sdl
+    SUBDIR += aeskulap
     SUBDIR += agg
     SUBDIR += airsaned
     SUBDIR += akira
@@ -260,7 +261,6 @@
     SUBDIR += gimp-app
     SUBDIR += gimp-beautify-plugin
     SUBDIR += gimp-data-extras
-    SUBDIR += gimp-gmic-plugin
     SUBDIR += gimp-jxl-plugin
     SUBDIR += gimp-lensfun-plugin
     SUBDIR += gimp-lqr-plugin

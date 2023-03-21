@@ -29,7 +29,7 @@ BASH_RUN_DEPENDS=	bash:shells/bash
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 
-USES=		dos2unix gmake gnome localbase magick pkgconfig xorg
+USES=		dos2unix gmake gnome localbase magick:6 pkgconfig xorg
 USE_GCC=	yes
 USE_GNOME=	gtk20
 USE_XORG=	x11 xext xrandr

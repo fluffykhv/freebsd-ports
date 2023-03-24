@@ -1,3 +1,88 @@
+  <vuln vid="1ba034fb-ca38-11ed-b242-d4c9ef517024">
+    <topic>OpenSSL -- Excessive Resource Usage Verifying X.509 Policy Constraints</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>1.1.1t,1_1</lt></range>
+      </package>
+      <package>
+	<name>openssl30</name>
+	<range><lt>3.0.8_1</lt></range>
+      </package>
+      <package>
+	<name>openssl31</name>
+	<range><lt>3.1.0_1</lt></range>
+      </package>
+      <package>
+	<name>openssl-quic</name>
+	<range><lt>3.0.8_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20230322.txt">
+	  <p>Severity: Low</p>
+	  <p>A security vulnerability has been identified in all supported versions
+	    of OpenSSL related to the verification of X.509 certificate chains
+	    that include policy constraints.  Attackers may be able to exploit this
+	    vulnerability by creating a malicious certificate chain that triggers
+	    exponential use of computational resources, leading to a denial-of-service
+	    (DoS) attack on affected systems.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-0464</cvename>
+      <url>https://www.openssl.org/news/secadv/20230322.txt</url>
+    </references>
+    <dates>
+      <discovery>2023-03-23</discovery>
+      <entry>2023-03-24</entry>
+      <modified>2023-03-24</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="2fdb053c-ca25-11ed-9d7e-080027f5fec9">
+    <topic>rack -- possible denial of service vulnerability in header parsing</topic>
+    <affects>
+      <package>
+	<name>rubygem-rack</name>
+	<range><lt>3.0.6.1,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack22</name>
+	<range><lt>2.2.6.6,3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack16</name>
+	<range><lt>1.6.14</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ooooooo_q reports:</p>
+	<blockquote cite="https://discuss.rubyonrails.org/t/cve-2023-27539-possible-denial-of-service-vulnerability-in-racks-header-parsing/82466">
+	  <p>
+	    Carefully crafted input can cause header parsing in Rack
+	    to take an unexpected amount of time, possibly resulting
+	    in a denial of service attack vector. Any applications
+	    that parse headers using Rack (virtually all Rails
+	    applications) are impacted.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-27539</cvename>
+      <url>https://discuss.rubyonrails.org/t/cve-2023-27539-possible-denial-of-service-vulnerability-in-racks-header-parsing/82466</url>
+    </references>
+    <dates>
+      <discovery>2023-03-13</discovery>
+      <entry>2023-03-24</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="dec6b8e9-c9fe-11ed-bb39-901b0e9408dc">
     <topic>dino -- Insufficient message sender validation in Dino</topic>
     <affects>
@@ -649,7 +734,7 @@
       </package>
       <package>
 	<name>rubygem-rack22</name>
-	<range><lt>2.2.6.6,3</lt></range>
+	<range><lt>2.2.6.3,3</lt></range>
       </package>
       <package>
 	<name>rubygem-rack16</name>

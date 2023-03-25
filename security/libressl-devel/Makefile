@@ -49,6 +49,13 @@ LDFLAGS+=	-pthread
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 
+PLIST_SUB+=	LIBCRYPTO_SHLIBMAJ=50 \
+		LIBCRYPTO_SHLIBFULL=50.0.2 \
+		LIBSSL_SHLIBMAJ=53 \
+		LIBSSL_SHLIBFULL=53.0.2 \
+		LIBTLS_SHLIBMAJ=26 \
+		LIBTLS_SHLIBFULL=26.0.2
+
 post-patch:
 	${REINPLACE_CMD} -e 's|endian\.h|sys/endian.h|g' \
 		${WRKSRC}/crypto/bn/bn_nist.c \

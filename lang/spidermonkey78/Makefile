@@ -21,7 +21,7 @@ LIB_DEPENDS=	libffi.so:devel/libffi \
 		libicudata.so:devel/icu \
 		libnspr4.so:devel/nspr
 
-USES=		compiler:c++17-lang gmake localbase pathfix pkgconfig python:3.7-3.10,build \
+USES=		compiler:c++17-lang gmake localbase pathfix pkgconfig python:build \
 		readline tar:xz
 USE_LDCONFIG=	yes
 SP_VER=		78

@@ -22,7 +22,7 @@ LIB_DEPENDS=	libffi.so:devel/libffi \
 		libnspr4.so:devel/nspr
 
 USES=		compiler:c++17-lang gmake localbase pathfix pkgconfig \
-		python:3.8-3.10,build readline tar:xz
+		python:build readline tar:xz
 USE_LDCONFIG=	yes
 SP_VER=		102
 HAS_CONFIGURE=	yes

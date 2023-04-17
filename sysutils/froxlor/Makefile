@@ -11,7 +11,7 @@ WWW=		https://www.froxlor.org/
 LICENSE=	GPLv2
 
 USES=		cpe php:cli,flavors shebangfix
-USE_PHP=	bcmath curl filter ftp json pdo_mysql posix session xml zip
+USE_PHP=	bcmath curl filter ftp pdo_mysql posix session xml zip
 
 SUB_FILES=	pkg-deinstall pkg-message
 SUB_LIST=	PORTNAME=${PORTNAME} \

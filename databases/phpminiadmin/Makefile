@@ -19,7 +19,7 @@ NO_WRKSUBDIR=	yes
 NO_BUILD=	yes
 USES=		cpe php:web,flavors
 CPE_VENDOR=	${PORTNAME}_project
-USE_PHP=	mysqli pcre session
+USE_PHP=	mysqli session
 NO_ARCH=	yes
 
 PLIST_FILES=	${WWWDIR_REL}/phpminiadmin.php

@@ -234,6 +234,7 @@
     SUBDIR += gupnp-av
     SUBDIR += gupnp-dlna
     SUBDIR += gupnp-igd
+    SUBDIR += gupnp-igd12
     SUBDIR += gupnp-tools
     SUBDIR += gupnp-ui
     SUBDIR += gupnp14
@@ -1579,6 +1580,12 @@
     SUBDIR += webalizer-geodb
     SUBDIR += whois
     SUBDIR += widentd
+    SUBDIR += wifi-firmware-ath10k-kmod
+    SUBDIR += wifi-firmware-ath11k-kmod
+    SUBDIR += wifi-firmware-base
+    SUBDIR += wifi-firmware-mt76-kmod
+    SUBDIR += wifi-firmware-rtw88-kmod
+    SUBDIR += wifi-firmware-rtw89-kmod
     SUBDIR += wifibox
     SUBDIR += wifibox-alpine
     SUBDIR += wifibox-core

@@ -582,6 +582,7 @@
     SUBDIR += opensips31
     SUBDIR += openslp
     SUBDIR += openvswitch
+    SUBDIR += openvswitch-lts
     SUBDIR += ortp
     SUBDIR += osrtspproxy
     SUBDIR += ossp-sa

@@ -1119,7 +1119,6 @@
     SUBDIR += py-power
     SUBDIR += py-prometheus-zfs
     SUBDIR += py-psutil
-    SUBDIR += py-psutil121
     SUBDIR += py-ptyprocess
     SUBDIR += py-puremagic
     SUBDIR += py-py-cpuinfo
@@ -1520,7 +1519,6 @@
     SUBDIR += u-boot-sopine
     SUBDIR += u-boot-sopine-spi
     SUBDIR += u-boot-tools
-    SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard
     SUBDIR += ua
     SUBDIR += ucspi-ipc

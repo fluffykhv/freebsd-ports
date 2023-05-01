@@ -61,6 +61,7 @@
     SUBDIR += appleseed
     SUBDIR += argyllcms
     SUBDIR += art
+    SUBDIR += asciinema-agg
     SUBDIR += asciio
     SUBDIR += aseprite
     SUBDIR += atril
@@ -553,6 +554,7 @@
     SUBDIR += maim
     SUBDIR += mandelbulber
     SUBDIR += mapcache
+    SUBDIR += mapnik
     SUBDIR += mapserver
     SUBDIR += mapyrus
     SUBDIR += matplotlib-cpp

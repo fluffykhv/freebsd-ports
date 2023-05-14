@@ -21,11 +21,6 @@ INSTALL_TARGET=	install-strip
 
 LENSESDIR=	${PREFIX}/share/augeas/lenses
 
-.include <bsd.port.options.mk>
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400079
-CFLAGS+=	-Wno-error=int-conversion
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e 's:/bin/bash:/usr/bin/env bash:' ${WRKSRC}/tests/*.sh
 	@${REINPLACE_CMD} -e 's:sed:gsed:' ${WRKSRC}/tests/test-augtool.sh

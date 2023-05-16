@@ -4,6 +4,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 DISTNAME=	drupal-${PORTVERSION}
 DIST_SUBDIR=	drupal
+PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Database driven web content management system (CMS)
@@ -11,7 +12,7 @@ WWW=		https://www.drupal.org/
 
 LICENSE=	GPLv2+
 
-USES=		php:web shebangfix
+USES=		php:web,flavors shebangfix
 USE_PHP=	dom filter gd mbstring opcache pdo session \
 		simplexml tokenizer xml
 IGNORE_WITH_PHP=80

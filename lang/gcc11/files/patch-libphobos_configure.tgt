@@ -1,0 +1,12 @@
+--- libphobos/configure.tgt.orig	2023-04-26 07:09:43 UTC
++++ libphobos/configure.tgt
+@@ -30,6 +30,9 @@ case "${target}" in
+   aarch64*-*-linux*)
+ 	LIBPHOBOS_SUPPORTED=yes
+ 	;;
++  aarch64*-*-freebsd*)
++	LIBPHOBOS_SUPPORTED=yes
++	;;
+   arm*-*-linux*)
+ 	LIBPHOBOS_SUPPORTED=yes
+ 	;;

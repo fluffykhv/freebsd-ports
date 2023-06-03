@@ -25,8 +25,6 @@ CPE_VENDOR=	c-icap_project
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	c-icap
 
-CFLAGS+=	-Wno-int-conversion -Wno-pointer-sign
-
 USERS=		${CICAP_USER}
 GROUPS=		${CICAP_GROUP}
 

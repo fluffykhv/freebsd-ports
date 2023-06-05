@@ -1400,7 +1400,6 @@
     SUBDIR += rubygem-twitter-stream
     SUBDIR += rubygem-twitter4r
     SUBDIR += rubygem-u2f
-    SUBDIR += rubygem-u2f0
     SUBDIR += rubygem-uri
     SUBDIR += rubygem-uri-redis
     SUBDIR += rubygem-uri_template

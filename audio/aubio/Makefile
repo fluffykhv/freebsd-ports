@@ -65,10 +65,6 @@ TEST_MAKE_ARGS_OFF=		--disable-tests
 
 PORTDOCS=	*
 
-post-patch:
-	@${REINPLACE_CMD} -e \
-		'/pkgconfig/s|$${LIBDIR}|&data|' ${WRKSRC}/waflib/TaskGen.py
-
 post-install:
 .for b in mfcc notes onset pitch quiet track
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/aubio${b}
@@ -76,5 +72,11 @@ post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libaubio.so
 
 .endif # !defined(SLAVEPORT)
+
+post-patch:
+	@${REINPLACE_CMD} -e \
+		'/pkgconfig/s|$${LIBDIR}|&data|' ${WRKSRC}/waflib/TaskGen.py
+	@${REINPLACE_CMD} -e \
+		'/read/s|rU|r|' ${WRKSRC}/waflib/ConfigSet.py ${WRKSRC}/waflib/Context.py
 
 .include <bsd.port.mk>

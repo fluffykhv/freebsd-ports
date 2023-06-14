@@ -1,6 +1,5 @@
 PORTNAME=	c-ares
-DISTVERSION=	1.19.0
-PORTREVISION=	1
+DISTVERSION=	1.19.1
 CATEGORIES=	dns
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/cares-${DISTVERSION:S/./_/g}/ \
 		https://c-ares.org/download/
@@ -25,7 +24,7 @@ OPTIONS_SUB=	yes
 
 STATIC_CMAKE_BOOL=	CARES_STATIC
 
-TEST_USES=		localbase:ldflags
+TEST_USES=		compiler:c++14-lang localbase:ldflags
 TEST_BUILD_DEPENDS=	googletest>0:devel/googletest
 TEST_TEST_TARGET=	test
 TEST_CMAKE_BOOL=	CARES_BUILD_TESTS

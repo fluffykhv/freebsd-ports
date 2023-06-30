@@ -83,7 +83,7 @@ SNDIO_VARS_OFF=		QMAKE_CONFIGURE_ARGS+=-no-sndio
 # We pass `norecursive' to USES=qmake because src/plugins/plugins.pro checks
 # whether webenginewidgets is available, which fails when qmake processes all
 # .pro files at once.
-USES=		gl gnome gperf jpeg minizip ninja:build nodejs:build,lts \
+USES=		gl gnome gperf jpeg minizip ninja:build nodejs:build,current \
 		perl5 pkgconfig python:2.7,build qmake:norecursive,outsource \
 		qt-dist:5,webengine shebangfix xorg
 USE_GL=		gl

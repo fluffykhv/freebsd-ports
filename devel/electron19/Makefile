@@ -63,7 +63,7 @@ TEST_DEPENDS=		git:devel/git \
 			npm-node16>0:www/npm-node16
 
 USES=		bison compiler:c++17-lang cpe gettext-tools gl gnome iconv \
-		jpeg localbase:ldflags ninja pkgconfig python:3.7-3.10,build,test \
+		jpeg localbase:ldflags ninja pkgconfig python:build,test \
 		shebangfix tar:xz xorg
 CPE_VENDOR=	electronjs
 USE_GITHUB=	yes

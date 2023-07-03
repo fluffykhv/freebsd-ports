@@ -1,7 +1,7 @@
 bin/gost12sum
 bin/gostsum
 %%EDIR%%/gost.so
-%%EDIRV%%/libgost.so
+%%EDIRV%%/libgost.so.1.1
 lib/libgost.so
 lib/libgostprov.so
 lib/ossl-modules/gostprov.so

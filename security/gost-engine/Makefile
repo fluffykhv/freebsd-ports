@@ -65,14 +65,9 @@ post-patch:
 	${REINPLACE_CMD} 's/-Werror //' ${WRKSRC}/CMakeLists.txt
 
 post-install:
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1400092
 	cd ${STAGEDIR}${PREFIX}/lib/engines-1.1 && \
 	  ${MV} gost.so.1.1 libgost.so.1.1 && ${LN} -s libgost.so.1.1 libgost.so && \
 	  ${RM} gost.so
-.else
-	cd ${STAGEDIR}${PREFIX}/${EDIR} && \
-	  ${LN} -s gost.so libgost.so
-.endif
 .endif
 
 post-install-DOCS-off:

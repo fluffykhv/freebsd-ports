@@ -17,7 +17,9 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LIB_DEPENDS=	libtiff.so:graphics/tiff
 
 GNU_CONFIGURE=	yes
-USES=	libtool pathfix
+USES=		libtool pathfix
+
+USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=	--with-tifflib=${LOCALBASE}

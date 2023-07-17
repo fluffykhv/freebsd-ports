@@ -113,6 +113,10 @@ SNDIO_CMAKE_OFF=	-DQT_FEATURE_webengine_system_sndio:BOOL=OFF
 EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-32bit-compress_files_js
 .endif
 
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+CXXFLAGS+= -Wno-error=enum-constexpr-conversion
+.endif
+
 post-extract:
 	@${MKDIR} ${WRKSRC}/src/3rdparty/chromium/media/audio/sndio \
 		${WRKSRC}/src/3rdparty/chromium/sandbox/policy/freebsd \

@@ -61,7 +61,7 @@ MOZILLA_VER?=	${PORTVERSION}
 MOZILLA_BIN?=	${PORTNAME}-bin
 MOZILLA_EXEC_NAME?=${MOZILLA}
 USES+=		compiler:c++17-lang cpe gl gmake gnome iconv localbase pkgconfig \
-			python:3.8-3.10:build desktop-file-utils
+			python:3.8-3.10,build desktop-file-utils
 .    if ${MOZILLA_VER:R:R} < 115
 USES+=		perl5
 .    endif

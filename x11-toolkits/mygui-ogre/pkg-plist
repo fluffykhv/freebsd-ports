@@ -1,3 +1,4 @@
+include/MYGUI/MyGUI_LastHeader.h
 include/MYGUI/MyGUI_OgreDataManager.h
 include/MYGUI/MyGUI_OgreDataStream.h
 include/MYGUI/MyGUI_OgreDiagnostic.h

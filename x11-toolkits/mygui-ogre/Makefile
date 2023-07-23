@@ -1,13 +1,11 @@
-PORTREVISION=	0
+PORTREVISION=	1
 PKGNAMESUFFIX=	-ogre
 
 COMMENT=	Ogre3d renderer for MyGUI
 
 MASTERDIR=	${.CURDIR}/../mygui
 
-USE_SDL+=	image2
-
-LIB_DEPENDS=	libOgreMain.so:graphics/ogre3d
+LIB_DEPENDS=	libOgreMain.so:graphics/ogre3d19
 
 MYGUI_RENDERSYSTEM=	3
 MYGUI_SUBDIR=		Platforms/Ogre/OgrePlatform

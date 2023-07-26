@@ -19,6 +19,10 @@ TIX_LIB_FILE=	${TIX_LIB}.0
 
 .include <bsd.port.pre.mk>
 
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=incompatible-function-pointer-types
+.endif
+
 .if ${TCL_VER} > 8.6
 ##CFLAGS+=	-DUSE_INTERP_RESULT -DUSE_INTERP_ERRORLINE
 post-patch:
@@ -56,11 +60,5 @@ post-install:
 .endfor
 	${LN} -sf ${PREFIX}/include/tix/generic/tix.h ${STAGEDIR}${PREFIX}/include/tix.h
 	${RMDIR} ${STAGEDIR}${PREFIX}/lib/Tix${PORTVERSION}/html
-
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
-CFLAGS+=	-Wno-error=incompatible-function-pointer-types
-.endif
 
 .include <bsd.port.post.mk>

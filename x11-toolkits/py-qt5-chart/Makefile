@@ -22,4 +22,6 @@ USE_PYQT=	sip:build pyqt5
 USE_PYTHON=	concurrent flavors py3kplist
 USE_QT=		charts core declarative gui qmake:build widgets
 
+PLIST_SUB=	PYQTCHART_VERSION=${DISTVERSION}
+
 .include <bsd.port.mk>

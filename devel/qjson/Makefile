@@ -44,8 +44,4 @@ post-install-DOXYGEN-on:
 CXXFLAGS+=	-Wno-register
 .endif
 
-post-extract:
-	@${REINPLACE_CMD} -e 's,register ,,' \
-		${WRKSRC}/src/json_scanner.cc
-
 .include <bsd.port.post.mk>

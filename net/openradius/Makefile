@@ -30,15 +30,6 @@ SUB_LIST=	LOGFILE="${LOGFILE}"
 
 OPTIONS_DEFINE=	LDAP DOCS EXAMPLES
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
-CFLAGS+=	-Wno-error=int-conversion
-.endif
-
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400092 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
-CFLAGS+=	-Wno-error=incompatible-function-pointer-types
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLDAP}
@@ -47,6 +38,16 @@ PLIST_SUB+=	LDAP=""
 SCRIPTS_ENV+=	USE_LDAP=yes
 .else
 PLIST_SUB+=	LDAP="@comment "
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=int-conversion
+.endif
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400092 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
 post-install:
@@ -97,4 +98,4 @@ post-install:
 		${STAGEDIR}${ETCDIR}/subdicts/
 .endfor
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

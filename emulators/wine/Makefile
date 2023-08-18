@@ -78,7 +78,7 @@ PORTSCOUT=	limit:^7\.0
 
 ALSA_CONFIGURE_ON=	--with-alsa --without-oss
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
-ALSA_RUN_DEPENDS=	libasound_module_pcm_oss.so:audio/alsa-plugins
+ALSA_RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins
 
 CUPS_CONFIGURE_WITH=	cups
 CUPS_LIB_DEPENDS=	libcups.so:print/cups

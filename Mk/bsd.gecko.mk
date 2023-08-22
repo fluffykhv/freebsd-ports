@@ -65,7 +65,7 @@ USES+=		compiler:c++17-lang cpe gl gmake gnome iconv localbase pkgconfig \
 .    if ${MOZILLA_VER:R:R} < 115
 USES+=		perl5
 .    endif
-CPE_VENDOR?=	mozilla
+CPE_VENDOR?=mozilla
 USE_GL=		gl
 USE_GNOME=	cairo gdkpixbuf2 gtk30
 .    if ${MOZILLA_VER:R:R} < 115

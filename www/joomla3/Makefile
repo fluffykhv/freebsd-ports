@@ -2,7 +2,7 @@ PORTNAME=	joomla
 DISTVERSION=	3-10-11
 CATEGORIES=	www
 MASTER_SITES=	https://downloads.joomla.org/cms/joomla3/${DISTVERSION}/
-PKGNAMESUFFIX=	3${PHP_PKGNAMESUFFIX}
+PKGNAMESUFFIX=	3
 DISTNAME=	Joomla_${DISTVERSION}-Stable-Full_Package.tar.bz2?format=bz2
 
 MAINTAINER=	wen@FreeBSD.org
@@ -11,7 +11,7 @@ WWW=		https://www.joomla.org/
 
 LICENSE=	GPLv2
 
-USES=		cpe php:web,flavors tar:bz2 shebangfix
+USES=		cpe php:web tar:bz2 shebangfix
 CPE_VENDOR=	${PORTNAME}
 CPE_PRODUCT=	${PORTNAME}\!
 
@@ -40,8 +40,6 @@ MYSQL_USE=	PHP=mysqli
 PGSQL_USE=	PHP=pgsql
 
 WWWDIR=		${PREFIX}/www/${PORTNAME}${PORTVERSION:R:R}
-
-.include <bsd.port.options.mk>
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${WWWDIR}

@@ -183,6 +183,7 @@
     SUBDIR += fusionpbx
     SUBDIR += g-cows
     SUBDIR += g-gcl
+    SUBDIR += galene
     SUBDIR += gallery-dl
     SUBDIR += gallery2
     SUBDIR += garage
@@ -2386,6 +2387,7 @@
     SUBDIR += unit-php
     SUBDIR += unit-python
     SUBDIR += unit-ruby
+    SUBDIR += unit-wasm
     SUBDIR += unitc
     SUBDIR += uwebsockets
     SUBDIR += uwsgi

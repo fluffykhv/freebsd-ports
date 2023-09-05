@@ -247,6 +247,8 @@ post-patch:
 .if ${OPSYS} == FreeBSD || ${SSL_DEFAULT:Mopenssl}
 	@${REINPLACE_CMD} -E -e 's|SSL_library_init|OPENSSL_init_ssl|g' \
 		${WRKSRC}/configure
+	@${REINPLACE_CMD} -E -e 's|static unsigned long|unsigned long|g' \
+		${WRKSRC}/snmplib/transports/snmpTLSBaseDomain.c
 .endif
 	@${CP} ${WRKSRC}/include/net-snmp/system/freebsd12.h \
 		${WRKSRC}/include/net-snmp/system/freebsd13.h

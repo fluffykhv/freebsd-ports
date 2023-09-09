@@ -1,6 +1,6 @@
---- Configure.orig	2023-01-16 22:42:40.000000000 -0800
-+++ Configure	2023-08-29 18:43:40.296306000 -0700
-@@ -1209,6 +1209,11 @@
+--- Configure.orig	2023-01-17 06:42:40 UTC
++++ Configure
+@@ -1209,6 +1209,11 @@ case $LSOF_TGT in	# {
  	LSOF_TSTBIGF=" "
  	LSOF_VERS=14000
  	;;
@@ -12,3 +12,12 @@
        *)
  	echo Unknown FreeBSD release: `uname -r`
  	rm -f $LSOF_HLP
+@@ -1220,7 +1225,7 @@ case $LSOF_TGT in	# {
+     # Clear LSOF_UNSUP message for supported versions of FreeBSD.
+ 
+     case $LSOF_VERS in  # {
+-    12000|13000|14000)
++    12000|13000|14000|15000)
+       LSOF_UNSUP=""
+       ;;
+     esac	# }

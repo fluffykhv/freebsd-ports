@@ -115,10 +115,4 @@ LLVM_LIBLLVM=		${_LLVM_MK_LIBLLVM}
 LLVM_VERSION=		${_LLVM_MK_VERSION}
 LLVM_PREFIX=		${_LLVM_MK_PREFIX}
 
-# === export tools ===
-LLVM_CC?=	${_LLVM_MK_PREFIX}/bin/clang
-LLVM_CPP?=	${_LLVM_MK_PREFIX}/bin/clang-cpp
-LLVM_CXX?=	${_LLVM_MK_PREFIX}/bin/clang++
-LLVM_LD?=	${_LLVM_MK_PREFIX}/bin/ld
-
 .endif

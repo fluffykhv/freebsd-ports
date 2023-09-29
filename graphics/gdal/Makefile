@@ -24,6 +24,10 @@ LIB_DEPENDS=	libgeotiff.so:graphics/libgeotiff \
 
 USES=		cmake compiler:c++17-lang cpe iconv jpeg localbase pkgconfig ssl tar:xz
 
+#On live system builds, triggers potential PR 262109 issue if swig is found, by also calling FindPython routines. 
+#If python alone is found it also triggers the issue. Disable explicitly for consistent builds given no bindings are built here, as well as jni/java for good measure
+CMAKE_ARGS+= -DCMAKE_DISABLE_FIND_PACKAGE_SWIG:BOOL=true -DCMAKE_DISABLE_FIND_PACKAGE_Python:BOOL=true -DCMAKE_DISABLE_FIND_PACKAGE_JNI:BOOL=true -DCMAKE_DISABLE_FIND_PACKAGE_Java:BOOL=true
+
 CMAKE_OFF=	BUILD_CSHARP_BINDINGS \
 		BUILD_DOCS \
 		BUILD_JAVA_BINDINGS \
@@ -192,6 +196,7 @@ SQLITE_CMAKE_BOOL=	GDAL_USE_SQLITE3
 SQLITE_USES=		sqlite
 TILEDB_CMAKE_BOOL=	GDAL_USE_TILEDB
 TILEDB_LIB_DEPENDS=	libtiledb.so:databases/tiledb
+TILEDB_CMAKE_BOOL_OFF=	HAVE_FLAG_NO_OPERATOR_NAMES
 WEBP_CMAKE_BOOL=	GDAL_USE_WEBP
 WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
 XERCES_CMAKE_BOOL=	GDAL_USE_XERCES

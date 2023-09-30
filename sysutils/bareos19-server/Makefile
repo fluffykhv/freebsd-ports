@@ -35,8 +35,7 @@ USE_LDCONFIG=	yes
 SHEBANG_LANG=	perl
 SHEBANG_FILES=	${WRKSRC}/core/src/cats/make_catalog_backup.pl.in
 
-CFLAGS+=	-fcommon
-CPPFLAGS+=	-I${LOCALBASE}/readline --allow-shlib-undefined
+CPPFLAGS+=	-I${LOCALBASE}/readline
 
 OPTIONS_DEFAULT=	OPENSSL
 OPTIONS_SINGLE=		CRYPTO

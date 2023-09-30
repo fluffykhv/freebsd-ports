@@ -107,9 +107,9 @@ MYSQL_DEFAULT?=		8.0
 NINJA_DEFAULT?=		ninja
 # Possible value: 16, 18, 20, current, lts (Note: current = 20 and lts = 18)
 NODEJS_DEFAULT?=	lts
-# Possible value: 24, 25, 26
+# Possible value: 25, 26
 OPENLDAP_DEFAULT?=	26
-# Possible values: 5.32, 5.34, 5.36, 5.38, devel
+# Possible values: 5.34, 5.36, 5.38, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
 PERL5_DEFAULT?=		5.34

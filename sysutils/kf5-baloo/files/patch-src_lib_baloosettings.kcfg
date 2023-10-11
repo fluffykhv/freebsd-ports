@@ -1,0 +1,20 @@
+--- src/lib/baloosettings.kcfg.orig	2023-07-01 09:52:25 UTC
++++ src/lib/baloosettings.kcfg
+@@ -9,7 +9,7 @@
+   <group name="Basic Settings">
+     <entry name="indexingEnabled" key="Indexing-Enabled" type="Bool">
+       <label>Indexing-Enabled</label>
+-      <default>true</default>
++      <default>false</default>
+     </entry>
+   </group>
+   <group name="General">
+@@ -23,7 +23,7 @@
+     </entry>
+     <entry name="onlyBasicIndexing" key="only basic indexing" type="Bool">
+       <label>only basic indexing</label>
+-      <default>false</default>
++      <default>true</default>
+     </entry>
+     <entry name="disableInitialUpdate" key="disable initial update" type="Bool">
+       <!-- KF6 TODO remove -->

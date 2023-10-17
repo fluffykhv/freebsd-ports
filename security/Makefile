@@ -123,6 +123,7 @@
     SUBDIR += cyrus-sasl2-saslauthd
     SUBDIR += cyrus-sasl2-sql
     SUBDIR += cyrus-sasl2-srp
+    SUBDIR += cyrus-sasl2-xoauth2
     SUBDIR += d0_blind_id
     SUBDIR += debian-keyring
     SUBDIR += dehydrated

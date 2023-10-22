@@ -828,7 +828,9 @@
     SUBDIR += py-redis3
     SUBDIR += py-redis4
     SUBDIR += py-rrdtool
+    SUBDIR += py-schemachange
     SUBDIR += py-sispy
+    SUBDIR += py-snowddl
     SUBDIR += py-snowflake-connector-python
     SUBDIR += py-south
     SUBDIR += py-sqlalchemy-json

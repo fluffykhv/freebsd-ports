@@ -6,6 +6,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Touch typing tutor for KDE
 WWW=		https://www.kde.org/applications/education/ktouch
 
+BUILD_DEPENDS=	kqtquickcharts>=${KDE_APPLICATIONS_VERSION}:graphics/kqtquickcharts
 RUN_DEPENDS=	kqtquickcharts>=${KDE_APPLICATIONS_VERSION}:graphics/kqtquickcharts
 
 USES=		cmake compiler:c++11-lang gettext kde:5 qt:5 tar:xz xorg

@@ -9,7 +9,7 @@ PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Web based photo album organizer written in PHP
-WWW=		http://gallery.sourceforge.net/
+WWW=		https://gallery.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

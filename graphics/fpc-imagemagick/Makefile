@@ -14,6 +14,6 @@ OPTIONS_DEFINE=	IMAGEMAGICK
 IMAGEMAGICK_DESC=	Install ImageMagick image proccesing tool
 OPTIONS_DEFAULT=	IMAGEMAGICK
 
-IMAGEMAGICK_USES=	magick
+IMAGEMAGICK_USES=	magick:6
 
 .include "${MASTERDIR}/Makefile"

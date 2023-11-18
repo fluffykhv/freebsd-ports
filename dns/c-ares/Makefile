@@ -16,13 +16,9 @@ USE_LDCONFIG=	yes
 
 CONFLICTS=	py*-ripe.atlas.tools
 
-CMAKE_ARGS=		-DCMAKE_INSTALL_MANDIR:PATH=${MANPREFIX}/share/man
+CMAKE_ARGS=		-DCMAKE_INSTALL_MANDIR:PATH=${MANPREFIX}/man
 
-OPTIONS_DEFINE=		STATIC TEST
-OPTIONS_DEFAULT=	STATIC
-OPTIONS_SUB=	yes
-
-STATIC_CMAKE_BOOL=	CARES_STATIC
+OPTIONS_DEFINE=		TEST
 
 TEST_USES=		compiler:c++14-lang localbase:ldflags
 TEST_BUILD_DEPENDS=	googletest>0:devel/googletest
@@ -32,8 +28,5 @@ TEST_CMAKE_BOOL=	CARES_BUILD_TESTS
 post-patch:
 	@${REINPLACE_CMD} -e 's|ares-test-live.cc||g' \
 		${PATCH_WRKSRC}/test/Makefile.inc
-
-post-install-STATIC-on:
-	@${LN} -s libcares_static.a ${STAGEDIR}/${PREFIX}/lib/libcares.a
 
 .include <bsd.port.mk>

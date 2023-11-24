@@ -48,7 +48,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libxkbcommon.so:x11/libxkbcommon
 
 USES=	bison cmake gl gnome gperf jpeg localbase:ldflags minizip ninja:build \
-	nodejs:build,current pkgconfig python:build qt-dist:6,webengine xorg
+	nodejs:build,lts pkgconfig python:build qt-dist:6,webengine xorg
 USE_GL=		gl
 USE_GNOME=	glib20 libxml2 libxslt
 USE_QT=		base declarative:run positioning quick3d:build tools webchannel

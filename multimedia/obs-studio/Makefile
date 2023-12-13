@@ -119,13 +119,6 @@ PLIST_SUB+=	LUAJIT="@comment "
 PLIST_SUB+=	LUAJIT=""
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400079
-CFLAGS+=	-Wno-error=deprecated-non-prototype
-CFLAGS+=	-Wno-error=array-parameter
-CFLAGS+=	-Wno-error=strict-prototypes
-CFLAGS+=	-Wno-error=int-conversion
-.endif
-
 post-install:
 	# https://github.com/obsproject/obs-studio/issues/2625
 	${INSTALL_DATA} ${WRKSRC}/UI/obs-frontend-api/obs-frontend-api.h ${STAGEDIR}${PREFIX}/include/obs

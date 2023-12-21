@@ -221,6 +221,7 @@
     SUBDIR += gopherus
     SUBDIR += gotty
     SUBDIR += gpx2map
+    SUBDIR += grafana
     SUBDIR += grafana9
     SUBDIR += grails
     SUBDIR += gregarius
@@ -1881,6 +1882,7 @@
     SUBDIR += py-xandikos
     SUBDIR += py-xyzservices
     SUBDIR += py-yarl
+    SUBDIR += py-yt-dlp-devel
     SUBDIR += pydio-cells
     SUBDIR += qdecoder
     SUBDIR += qhttpengine

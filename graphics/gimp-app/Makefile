@@ -45,7 +45,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:misc/iso-codes \
 		glib-networking>=0:net/glib-networking \
 		mypaint-brushes>0:graphics/mypaint-brushes
 
-USES+=		compiler:c++14-lang cpe gettext gmake gnome jpeg libtool \
+USES+=		cpe gettext gmake gnome jpeg libtool \
 		localbase pkgconfig shebangfix tar:bzip2 xorg
 CPE_VENDOR=	gimp
 CPE_PRODUCT=	gimp
@@ -141,6 +141,16 @@ WMF_LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 
 WMF_CONFIGURE_WITH=	wmf
 
+.endif
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && (${OSVERSION} >= 1500000 || \
+	(${OSVERSION} >= 1400000 && ${OSVERSION} < 1400097))
+USES+=	llvm:build
+#CHOSEN_COMPILER_TYPE=	clang
+.else
+USES+=	compiler:c++14-lang
 .endif
 
 post-patch:

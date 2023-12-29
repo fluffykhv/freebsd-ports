@@ -56,21 +56,6 @@ PLIST_SUB+=	LIBCRYPTO_SHLIBMAJ=52 \
 		LIBTLS_SHLIBMAJ=28 \
 		LIBTLS_SHLIBFULL=28.0.0
 
-post-patch:
-	${REINPLACE_CMD} -e 's|endian\.h|sys/endian.h|g' \
-		${WRKSRC}/crypto/bn/bn_nist.c \
-		${WRKSRC}/crypto/des/cfb_enc.c \
-		${WRKSRC}/crypto/gost/gost2814789.c \
-		${WRKSRC}/crypto/gost/streebog.c \
-		${WRKSRC}/crypto/modes/modes_lcl.h \
-		${WRKSRC}/crypto/modes/xts128.c \
-		${WRKSRC}/crypto/rc4/rc4_enc.c \
-		${WRKSRC}/crypto/sha/sha_locl.h \
-		${WRKSRC}/crypto/sha/sha256.c \
-		${WRKSRC}/crypto/sha/sha512.c \
-		${WRKSRC}/crypto/whrlpool/wp_block.c \
-		${WRKSRC}/ssl/d1_pkt.c
-
 post-patch-MAN3-off:
 	${REINPLACE_CMD} -e '/^install-man:/s/install-man3//' \
 		-e '/$$(MAKE) $$(AM_MAKEFLAGS) install-data-hook/d' \

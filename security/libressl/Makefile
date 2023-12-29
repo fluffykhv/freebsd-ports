@@ -61,10 +61,10 @@ post-patch:
 		${WRKSRC}/crypto/des/cfb_enc.c \
 		${WRKSRC}/crypto/gost/gost2814789.c \
 		${WRKSRC}/crypto/gost/streebog.c \
-		${WRKSRC}/crypto/modes/modes_local.h \
+		${WRKSRC}/crypto/modes/modes_lcl.h \
 		${WRKSRC}/crypto/modes/xts128.c \
 		${WRKSRC}/crypto/rc4/rc4_enc.c \
-		${WRKSRC}/crypto/sha/sha_local.h \
+		${WRKSRC}/crypto/sha/sha_locl.h \
 		${WRKSRC}/crypto/sha/sha256.c \
 		${WRKSRC}/crypto/sha/sha512.c \
 		${WRKSRC}/crypto/whrlpool/wp_block.c \

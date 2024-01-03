@@ -147,7 +147,7 @@ WMF_CONFIGURE_WITH=	wmf
 
 .if ${OPSYS} == FreeBSD && (${OSVERSION} >= 1500000 || \
 	(${OSVERSION} >= 1400000 && ${OSVERSION} < 1400097))
-USES+=	llvm:build
+USES+=	llvm:build,max=16
 #CHOSEN_COMPILER_TYPE=	clang
 .else
 USES+=	compiler:c++14-lang

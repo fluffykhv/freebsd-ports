@@ -1,5 +1,5 @@
 PORTNAME=	hplip-plugin
-PORTVERSION=	3.23.8
+PORTVERSION=	3.23.12
 CATEGORIES=	print
 MASTER_SITES=	https://developers.hp.com/sites/default/files/
 DISTNAME=	hplip-${DISTVERSION}-plugin
@@ -18,7 +18,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 
-RUN_DEPENDS=	hp-plugin:print/hplip
+RUN_DEPENDS=	hplip>=${PORTVERSION}<${PORTVERSION:R}.$$((${PORTVERSION:E}+1)):print/hplip
 
 PORTSCOUT=	ignore:1
 

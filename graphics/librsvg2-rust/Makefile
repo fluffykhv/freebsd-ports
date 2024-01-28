@@ -1,6 +1,6 @@
 PORTNAME=	librsvg
 PORTVERSION=	2.56.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2-rust
@@ -28,6 +28,7 @@ PLIST_SUB+=	SHLIBVERSION=2.48.0
 
 PORTSCOUT=	limitw:1,even
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-Bsymbolic \
 		--disable-dependency-tracking \
 		--disable-static \

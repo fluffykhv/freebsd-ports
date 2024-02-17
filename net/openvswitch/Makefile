@@ -1,5 +1,5 @@
 PORTNAME=	openvswitch
-DISTVERSION=	3.1.1
+DISTVERSION=	2.17.3
 CATEGORIES=	net
 MASTER_SITES=	http://openvswitch.org/releases/
 
@@ -13,7 +13,7 @@ BROKEN_mips64=		fails to compile: ofp-actions.h:486: flexible array member in ot
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
 
-USES=		compiler:c11 cpe gmake libtool perl5 pkgconfig python \
+USES=		compiler:c11 cpe gmake libtool perl5 pkgconfig python:3.7-3.9 \
 		shebangfix ssl
 SHEBANG_FILES=	ipsec/ovs-monitor-ipsec.in \
 		utilities/bugtool/ovs-bugtool-get-port-stats \
@@ -30,9 +30,6 @@ SHEBANG_FILES=	ipsec/ovs-monitor-ipsec.in \
 		utilities/ovs-tcpundump.in \
 		utilities/ovs-test.in \
 		utilities/ovs-vlan-test.in \
-		utilities/usdt-scripts/dpif_nl_exec_monitor.py \
-		utilities/usdt-scripts/upcall_cost.py \
-		utilities/usdt-scripts/upcall_monitor.py \
 		vtep/ovs-vtep.in
 
 USE_LDCONFIG=	yes
@@ -40,16 +37,12 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared --disable-static --localstatedir=/var \
 		--with-dbdir=/var/db/${PORTNAME} \
 		--with-openssl=${OPENSSLBASE}
-CONFIGURE_ENV+=	PYTHON3=${PYTHON_CMD}
 USE_RC_SUBR=	ovs-vswitchd ovsdb-server
 LDFLAGS+=	-lpthread
 INSTALL_TARGET=install-strip
 
-CONFLICTS_INSTALL=	openswitch-lts
-
 SHLIB_VER=	${DISTVERSION:C/\.[0-9]*$//}
-SO_VER=		0.0.${DISTVERSION:E}
-PLIST_SUB=	SHLIB_VER=${SHLIB_VER} SO_VER=${SO_VER}
+PLIST_SUB=	SHLIB_VER=${SHLIB_VER}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|uuid_from_string(|uuid_from_string_ovs(|g' \

@@ -210,6 +210,7 @@
     SUBDIR += argparse
     SUBDIR += args
     SUBDIR += argtable
+    SUBDIR += argtable3
     SUBDIR += arm-elf-binutils
     SUBDIR += arm-none-eabi-gcc
     SUBDIR += arm-none-eabi-newlib
@@ -1294,6 +1295,7 @@
     SUBDIR += libhtp
     SUBDIR += libibuddy
     SUBDIR += libical
+    SUBDIR += libiec61850
     SUBDIR += libindicator
     SUBDIR += libinjection
     SUBDIR += libinotify
@@ -1647,6 +1649,7 @@
     SUBDIR += newfile
     SUBDIR += newt
     SUBDIR += newtonsoft-json
+    SUBDIR += nextest
     SUBDIR += nextpnr
     SUBDIR += nexus2-oss
     SUBDIR += nimble
@@ -5218,6 +5221,7 @@
     SUBDIR += py-pluginbase
     SUBDIR += py-plux
     SUBDIR += py-ply
+    SUBDIR += py-pnio-dcp
     SUBDIR += py-pockets
     SUBDIR += py-podcastparser
     SUBDIR += py-poetry

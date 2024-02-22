@@ -144,6 +144,7 @@
     SUBDIR += dolibarr
     SUBDIR += dolibarr16
     SUBDIR += dolibarr17
+    SUBDIR += dolibarr18
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += dot-http
@@ -2170,6 +2171,7 @@
     SUBDIR += rubygem-rack-protection
     SUBDIR += rubygem-rack-protection1
     SUBDIR += rubygem-rack-protection2
+    SUBDIR += rubygem-rack-protection3
     SUBDIR += rubygem-rack-proxy
     SUBDIR += rubygem-rack-session
     SUBDIR += rubygem-rack-ssl

@@ -9,20 +9,6 @@ WWW=		https://www.x.org/
 
 USES=		gmake xorg-cat:driver
 
-LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/COPYING
-
-OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	UDEV
-
-OPTIONS_DEFAULT_FreeBSD_12=	UDEV
-OPTIONS_DEFAULT_FreeBSD_13=	UDEV
-OPTIONS_DEFAULT=${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
-
-UDEV_DESC=		Use udev for input events (requires kernel support)
-UDEV_LIB_DEPENDS=	libudev.so:devel/libudev-devd
-UDEV_CONFIGURE_WITH=	libudev
-
 ONLY_FOR_ARCHS=	i386 amd64
 ONLY_FOR_ARCHS_REASON=	vmmouse protocol is only supported on x86-compatible architectures
 

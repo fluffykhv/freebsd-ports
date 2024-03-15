@@ -9,7 +9,7 @@ WWW=		https://forge.ocamlcore.org/projects/labltk/
 
 LICENSE=	LGPL20
 
-USES=		gmake tk:86
+USES=		gmake tk
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	-tkdefs "-I${LOCALBASE}/include -I${TCL_INCLUDEDIR}\
 		-I${TK_INCLUDEDIR}" \

@@ -60,7 +60,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django42>=4.2.10<4.3:www/py-django42@${PY_FL
 		${PYTHON_PKGNAMEPREFIX}yaml>=6.0.1<7:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gunicorn>=21.2.0<22:www/py-gunicorn@${PY_FLAVOR}
 
-USES=		cpe pgsql:12+ python:3.8-3.10
+USES=		cpe pgsql:12+ python
 CPE_VENDOR=	netbox_project
 USE_GITHUB=	yes
 GH_ACCOUNT=	netbox-community

@@ -24,8 +24,6 @@ CPE_VENDOR=	gnome
 USE_GNOME=	cairo gdkpixbuf2 libxml2 pango introspection:build
 USE_LDCONFIG=	yes
 
-PLIST_SUB+=	SHLIBVERSION=2.48.0
-
 PORTSCOUT=	limitw:1,even
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share

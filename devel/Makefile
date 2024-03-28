@@ -623,6 +623,7 @@
     SUBDIR += elixir-hex
     SUBDIR += elixir-make
     SUBDIR += elm-format
+    SUBDIR += emacs-lsp-booster
     SUBDIR += embb
     SUBDIR += emscripten
     SUBDIR += entt
@@ -898,7 +899,6 @@
     SUBDIR += grcov
     SUBDIR += grex
     SUBDIR += grpc
-    SUBDIR += grpc142
     SUBDIR += grv
     SUBDIR += gsettings-desktop-schemas
     SUBDIR += gsoap
@@ -1387,6 +1387,7 @@
     SUBDIR += libs11n
     SUBDIR += libsavitar
     SUBDIR += libscca
+    SUBDIR += libscfg
     SUBDIR += libsearpc
     SUBDIR += libserdes
     SUBDIR += libserialport
@@ -4113,6 +4114,9 @@
     SUBDIR += perlconsole
     SUBDIR += phabricator
     SUBDIR += phasar
+    SUBDIR += phorgeit-arcanist
+    SUBDIR += phorgeit-arcanist-lib
+    SUBDIR += phorgeit-phorge
     SUBDIR += php-Psr_Log
     SUBDIR += php-composer
     SUBDIR += php-geshi
@@ -4592,6 +4596,7 @@
     SUBDIR += py-dal
     SUBDIR += py-darts.util.lru
     SUBDIR += py-dask
+    SUBDIR += py-dask-expr
     SUBDIR += py-dask-histogram
     SUBDIR += py-dataclass-array
     SUBDIR += py-dataclasses-json
@@ -5771,6 +5776,7 @@
     SUBDIR += py-transitions
     SUBDIR += py-tree-format
     SUBDIR += py-tree-sitter
+    SUBDIR += py-tree-sitter-languages
     SUBDIR += py-treelib
     SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers
@@ -6536,6 +6542,7 @@
     SUBDIR += rubygem-aws-sdk-swf
     SUBDIR += rubygem-aws-sdk-synthetics
     SUBDIR += rubygem-aws-sdk-textract
+    SUBDIR += rubygem-aws-sdk-timestreaminfluxdb
     SUBDIR += rubygem-aws-sdk-timestreamquery
     SUBDIR += rubygem-aws-sdk-timestreamwrite
     SUBDIR += rubygem-aws-sdk-tnb
@@ -7942,6 +7949,7 @@
     SUBDIR += wasi-compiler-rt15
     SUBDIR += wasi-compiler-rt16
     SUBDIR += wasi-compiler-rt17
+    SUBDIR += wasi-compiler-rt18
     SUBDIR += wasi-libc
     SUBDIR += wasi-libcxx
     SUBDIR += wasi-libcxx12
@@ -7950,6 +7958,7 @@
     SUBDIR += wasi-libcxx15
     SUBDIR += wasi-libcxx16
     SUBDIR += wasi-libcxx17
+    SUBDIR += wasi-libcxx18
     SUBDIR += wasm3
     SUBDIR += wasmer
     SUBDIR += websocketpp

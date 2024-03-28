@@ -51,6 +51,7 @@
     SUBDIR += bearssl
     SUBDIR += beecrypt
     SUBDIR += beid
+    SUBDIR += beidconnect
     SUBDIR += belier
     SUBDIR += bfbtester
     SUBDIR += binwalk
@@ -430,6 +431,7 @@
     SUBDIR += openssl31
     SUBDIR += openssl31-quictls
     SUBDIR += openssl32
+    SUBDIR += openssl33
     SUBDIR += openvas
     SUBDIR += openvpn
     SUBDIR += openvpn-admin
@@ -981,6 +983,7 @@
     SUBDIR += py-pgpdump
     SUBDIR += py-pgpy
     SUBDIR += py-plaso
+    SUBDIR += py-pnu-certwatch
     SUBDIR += py-pnu-vuxml
     SUBDIR += py-potr
     SUBDIR += py-pwntools
@@ -1072,6 +1075,7 @@
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
     SUBDIR += rage-encryption
+    SUBDIR += ratify
     SUBDIR += ratproxy
     SUBDIR += rats
     SUBDIR += rcracki_mt
@@ -1125,7 +1129,6 @@
     SUBDIR += rubygem-hrr_rb_ssh
     SUBDIR += rubygem-hrr_rb_ssh-ed25519
     SUBDIR += rubygem-lockbox
-    SUBDIR += rubygem-metasploit-aggregator
     SUBDIR += rubygem-metasploit-concern
     SUBDIR += rubygem-metasploit-credential
     SUBDIR += rubygem-metasploit-model

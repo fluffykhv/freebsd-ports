@@ -1,6 +1,6 @@
 PORTNAME=	mise
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2024.3.6
+DISTVERSION=	2024.3.9
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,7 +17,7 @@ GH_ACCOUNT=	jdx
 
 CARGO_CRATES=	addr2line-0.21.0 \
 		adler-1.0.2 \
-		aho-corasick-1.1.2 \
+		aho-corasick-1.1.3 \
 		android-tzdata-0.1.1 \
 		android_system_properties-0.1.5 \
 		ansi-str-0.8.0 \
@@ -31,19 +31,19 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		assert_cmd-2.0.14 \
 		async-compression-0.4.6 \
 		autocfg-1.1.0 \
-		backtrace-0.3.69 \
+		backtrace-0.3.71 \
 		base64-0.21.7 \
 		base64-0.22.0 \
 		base64ct-1.6.0 \
 		bitflags-1.3.2 \
-		bitflags-2.4.2 \
+		bitflags-2.5.0 \
 		block-buffer-0.10.4 \
 		bstr-1.9.1 \
 		built-0.7.1 \
 		bumpalo-3.15.4 \
 		bytecount-0.6.7 \
 		byteorder-1.5.0 \
-		bytes-1.5.0 \
+		bytes-1.6.0 \
 		calm_io-0.1.1 \
 		calmio_filters-0.1.0 \
 		cc-1.0.90 \
@@ -99,8 +99,8 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		exec-0.3.1 \
 		eyre-0.6.12 \
 		fastrand-1.9.0 \
-		fastrand-2.0.1 \
-		fiat-crypto-0.2.6 \
+		fastrand-2.0.2 \
+		fiat-crypto-0.2.7 \
 		filetime-0.2.23 \
 		fixedbitset-0.4.2 \
 		flate2-1.0.28 \
@@ -120,7 +120,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		generic-array-0.14.7 \
 		getrandom-0.2.12 \
 		gimli-0.28.1 \
-		git2-0.18.2 \
+		git2-0.18.3 \
 		globset-0.4.14 \
 		globwalk-0.8.1 \
 		globwalk-0.9.1 \
@@ -146,9 +146,9 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		ignore-0.4.22 \
 		indenter-0.3.3 \
 		indexmap-1.9.3 \
-		indexmap-2.2.5 \
+		indexmap-2.2.6 \
 		indicatif-0.17.8 \
-		indoc-2.0.4 \
+		indoc-2.0.5 \
 		insta-1.36.1 \
 		instant-0.1.12 \
 		ipnet-2.9.0 \
@@ -160,7 +160,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		lazy_static-1.4.0 \
 		libc-0.2.153 \
 		libgit2-sys-0.16.2+1.7.2 \
-		libz-sys-1.1.15 \
+		libz-sys-1.1.16 \
 		linked-hash-map-0.5.6 \
 		linux-raw-sys-0.4.13 \
 		log-0.4.21 \
@@ -217,20 +217,20 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		rand-0.8.5 \
 		rand_chacha-0.3.1 \
 		rand_core-0.6.4 \
-		rayon-1.9.0 \
+		rayon-1.10.0 \
 		rayon-core-1.12.1 \
 		redox_syscall-0.4.1 \
-		regex-1.10.3 \
+		regex-1.10.4 \
 		regex-automata-0.4.6 \
 		regex-syntax-0.8.2 \
-		reqwest-0.11.26 \
+		reqwest-0.11.27 \
 		ring-0.17.8 \
 		rmp-0.8.12 \
 		rmp-serde-1.1.2 \
 		roff-0.2.1 \
 		rustc-demangle-0.1.23 \
 		rustc_version-0.4.0 \
-		rustix-0.38.31 \
+		rustix-0.38.32 \
 		rustls-0.21.10 \
 		rustls-native-certs-0.6.3 \
 		rustls-pemfile-1.0.4 \
@@ -269,7 +269,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		strum_macros-0.26.2 \
 		subtle-2.5.0 \
 		syn-1.0.109 \
-		syn-2.0.53 \
+		syn-2.0.55 \
 		sync_wrapper-0.1.2 \
 		sys-info-0.9.1 \
 		system-configuration-0.5.1 \
@@ -297,9 +297,9 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		tokio-native-tls-0.3.1 \
 		tokio-rustls-0.24.1 \
 		tokio-util-0.7.10 \
-		toml-0.8.11 \
+		toml-0.8.12 \
 		toml_datetime-0.6.5 \
-		toml_edit-0.22.7 \
+		toml_edit-0.22.9 \
 		tower-service-0.3.2 \
 		tracing-0.1.40 \
 		tracing-core-0.1.32 \
@@ -327,7 +327,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		valuable-0.1.0 \
 		vcpkg-0.2.15 \
 		version_check-0.9.4 \
-		versions-6.1.0 \
+		versions-6.2.0 \
 		vte-0.10.1 \
 		vte_generate_state_changes-0.1.1 \
 		wait-timeout-0.2.0 \
@@ -342,7 +342,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		wasm-bindgen-shared-0.2.92 \
 		web-sys-0.3.69 \
 		webpki-roots-0.25.4 \
-		which-6.0.0 \
+		which-6.0.1 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
 		winapi-util-0.1.6 \
@@ -368,6 +368,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		windows_x86_64_msvc-0.52.4 \
 		winnow-0.6.5 \
 		winreg-0.50.0 \
+		winsafe-0.0.19 \
 		xattr-1.3.1 \
 		xx-0.2.5 \
 		yaml-rust-0.4.5 \

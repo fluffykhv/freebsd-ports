@@ -1,7 +1,8 @@
 PORTNAME=	libtommath
-DISTVERSION=	1.2.1
+DISTVERSION=	1.3.0
+PORTREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	https://github.com/libtom/libtommath/releases/download/v${DISTVERSION}/
+MASTER_SITES=	https://github.com/libtom/${PORTNAME}/releases/download/v${DISTVERSION}/
 DISTNAME=	ltm-${DISTVERSION}
 
 MAINTAINER=	gahr@FreeBSD.org
@@ -11,38 +12,20 @@ WWW=		https://libtom.net/
 LICENSE=	UNLICENSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		gmake libtool:build pathfix tar:xz
-
-WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
+USES=		cmake:testing tar:xz
 USE_LDCONFIG=	yes
 
-MAKEFILE=	makefile.shared
-MAKE_ENV+=	IGNORE_SPEED=yes
-ALL_TARGET=	default
-CFLAGS+=	-fPIC
-PORTDOCS=	*
+WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
-PLIST_FILES=	include/tommath.h \
-		lib/libtommath.a \
-		lib/libtommath.so \
-		lib/libtommath.so.${DISTVERSION:R:R} \
-		lib/libtommath.so.${DISTVERSION} \
-		libdata/pkgconfig/libtommath.pc
+CMAKE_ON=	BUILD_SHARED_LIBS
+# Remove this in next release and use USES= pathfix instead
+CMAKE_ARGS=	-DCMAKE_INSTALL_PKGCONFIGDIR:STRING=libdata/pkgconfig
 
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=		LTO OPTIMIZED_CFLAGS
+OPTIONS_DEFAULT=	LTO OPTIMIZED_CFLAGS
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|$$(LIBPATH)/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
-		${WRKSRC}/${MAKEFILE}
+LTO_CMAKE_BOOL=	COMPILE_LTO
 
-post-install:
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/bn.pdf ${STAGEDIR}${DOCSDIR}
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libtommath.so.${DISTVERSION}
-
-do-test:
-	(cd ${WRKSRC}; \
-	 ${SETENV} ${MAKE_ENV} ${MAKE_CMD} -f makefile mtest/mtest test; \
-	 ./mtest/mtest | ./test)
+OPTIMIZED_CFLAGS_CFLAGS=	-O3 -funroll-loops -fomit-frame-pointer
 
 .include <bsd.port.mk>

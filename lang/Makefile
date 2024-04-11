@@ -228,7 +228,6 @@
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-camlidl
-    SUBDIR += ocaml-nox11
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opensycl
@@ -368,7 +367,6 @@
     SUBDIR += tcc
     SUBDIR += tcl-manual
     SUBDIR += tcl-wrapper
-    SUBDIR += tcl85
     SUBDIR += tcl86
     SUBDIR += tcl87
     SUBDIR += tcl9

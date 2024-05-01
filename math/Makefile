@@ -488,7 +488,6 @@
     SUBDIR += math77
     SUBDIR += mathgl
     SUBDIR += mathicsscript
-    SUBDIR += mathlibtools
     SUBDIR += mathmod
     SUBDIR += mathomatic
     SUBDIR += mathpresso
@@ -962,6 +961,7 @@
     SUBDIR += py-intspan
     SUBDIR += py-iohexperimenter
     SUBDIR += py-ipyopt
+    SUBDIR += py-islpy
     SUBDIR += py-isosurfaces
     SUBDIR += py-jacobi
     SUBDIR += py-jax

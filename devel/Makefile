@@ -827,6 +827,7 @@
     SUBDIR += git-subrepo
     SUBDIR += git-svn
     SUBDIR += git-town
+    SUBDIR += git-tui
     SUBDIR += git-workspace
     SUBDIR += gitaly
     SUBDIR += gitflow
@@ -7911,6 +7912,7 @@
     SUBDIR += stxxl
     SUBDIR += stylua
     SUBDIR += styx
+    SUBDIR += subprocess
     SUBDIR += subversion
     SUBDIR += subversion-book
     SUBDIR += subversion-lts

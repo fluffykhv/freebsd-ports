@@ -11,7 +11,7 @@ WWW=		https://github.com/Jet1oeil/opendbviewer
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cmake compiler:c++11-lang magick:build qt:5
+USES=		cmake compiler:c++11-lang magick:6,build qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	Jet1oeil
 USE_QT=		core gui network sql sql-sqlite3 testlib widgets \

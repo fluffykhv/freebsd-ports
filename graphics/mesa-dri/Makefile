@@ -40,10 +40,7 @@ GALLIUM_DRIVERS+=	SWRAST \
 VULKAN_DRIVERS+=	SWRAST	# lavapipe
 
 .if ${ARCH} == aarch64
-GALLIUM_DRIVERS+=	PANFROST SVGA
-PLIST_SUB+=	AARCH64=""
-.else
-PLIST_SUB+=	AARCH64="@comment "
+GALLIUM_DRIVERS+=	PANFROST
 .endif
 
 .if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == i386 \

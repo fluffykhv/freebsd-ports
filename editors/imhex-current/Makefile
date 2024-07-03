@@ -1,5 +1,5 @@
 PORTNAME=	imhex
-PORTVERSION=	1.35.1
+PORTVERSION=	1.35.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 MASTER_SITES=	https://git.sr.ht/~danyspin97/xdgpp/blob/f01f810714443d0f10c333d4d1d9c0383be41375/:xdg \
@@ -106,8 +106,7 @@ NLS_USES=	gettext
 .include <bsd.port.pre.mk>
 
 # Before LLVM 17 import into the base system
-.if (${OSVERSION} < 1302510 \
-    || (${OSREL:R} == 14 && ${OSVERSION} < 1400504) \
+.if ((${OSREL:R} == 14 && ${OSVERSION} < 1400504) \
     || (${OSREL:R} == 15 && ${OSVERSION} < 1500006))
 IGNORE=	requires libc++ of LLVM 17 on the base system
 .endif

@@ -16,7 +16,7 @@ LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpc.so:math/mpc \
 		libmpfr.so:math/mpfr
 
-USES=		localbase python:3.7-3.11
+USES=		localbase python
 USE_PYTHON=	distutils autoplist
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}

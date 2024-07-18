@@ -576,7 +576,6 @@
     SUBDIR += devtodo
     SUBDIR += dfuife-curses
     SUBDIR += dia2code
-    SUBDIR += dia2code+
     SUBDIR += dill
     SUBDIR += ding-libs
     SUBDIR += dispy
@@ -1322,7 +1321,6 @@
     SUBDIR += libindicator
     SUBDIR += libinjection
     SUBDIR += libinotify
-    SUBDIR += libiqxmlrpc
     SUBDIR += libisofs
     SUBDIR += libixp
     SUBDIR += libjitterentropy
@@ -2173,6 +2171,7 @@
     SUBDIR += p5-Const-Fast
     SUBDIR += p5-Context-Preserve
     SUBDIR += p5-Contextual-Return
+    SUBDIR += p5-Convert-Age
     SUBDIR += p5-Convert-Scalar
     SUBDIR += p5-Coro
     SUBDIR += p5-Curses

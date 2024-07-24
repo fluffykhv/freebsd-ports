@@ -36,7 +36,7 @@ OPENSSL_CMAKE_BOOL=	BUILD_MTPZ
 PYTHON_BUILD_DEPENDS=	pybind11>0:devel/pybind11
 PYTHON_USES=		python:3.7-3.10
 PYTHON_CMAKE_BOOL=	BUILD_PYTHON
-PYTHON_PLIST_FILES=	%%PYTHON_SITELIBDIR%%/aftl%%PYTHON_EXT_SUFFIX%%.so
+PYTHON_PLIST_FILES=	%%PYTHON_SITELIBDIR%%/aftl.so
 
 QT5_USES=	qt:5
 QT5_USE=	QT=qmake:build,buildtools:build,linguisttools:build,core,gui,network,widgets
@@ -60,7 +60,7 @@ post-patch-CLI-off:
 
 post-install-PYTHON-on:
 	${MKDIR} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
-	${INSTALL_LIB} ${BUILD_WRKSRC}/python/aftl${PYTHON_EXT_SUFFIX}.so \
+	${INSTALL_LIB} ${BUILD_WRKSRC}/python/aftl.so \
 		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 
 .include <bsd.port.mk>

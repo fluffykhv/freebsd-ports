@@ -12,14 +12,8 @@ WWW=		https://www.xiph.org/paranoia/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING-GPL
 
-USES=		autoreconf gmake
+USES=		gmake
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-
-post-patch:
-	@${REINPLACE_CMD} \
-		-e '/cp.*guess/d' \
-		-e '/cp.*sub/d' \
-		${WRKSRC}/configure.in
 
 .include <bsd.port.mk>

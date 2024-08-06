@@ -417,6 +417,7 @@
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
     SUBDIR += py-crudini
+    SUBDIR += py-datasets
     SUBDIR += py-detecta
     SUBDIR += py-dictdiffer
     SUBDIR += py-eemeter
@@ -439,6 +440,7 @@
     SUBDIR += py-icoextract
     SUBDIR += py-instructor
     SUBDIR += py-ipyfastscape
+    SUBDIR += py-jiwer
     SUBDIR += py-kartograph
     SUBDIR += py-laspy
     SUBDIR += py-lazrs

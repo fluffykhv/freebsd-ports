@@ -119,9 +119,6 @@
     SUBDIR += keydb
     SUBDIR += kyotocabinet
     SUBDIR += kyototycoon
-    SUBDIR += ldb15
-    SUBDIR += ldb20
-    SUBDIR += ldb21
     SUBDIR += ldb22
     SUBDIR += ldb25
     SUBDIR += ldb28
@@ -768,6 +765,7 @@
     SUBDIR += py-dbt-snowflake
     SUBDIR += py-dbutils
     SUBDIR += py-duckdb
+    SUBDIR += py-duckdb_engine
     SUBDIR += py-fakeredis
     SUBDIR += py-fastapi-users-db-ormar
     SUBDIR += py-fastparquet
@@ -913,6 +911,7 @@
     SUBDIR += rubygem-activemodel61
     SUBDIR += rubygem-activemodel70
     SUBDIR += rubygem-activemodel71
+    SUBDIR += rubygem-activemodel72
     SUBDIR += rubygem-activerecord-explain-analyze
     SUBDIR += rubygem-activerecord-import
     SUBDIR += rubygem-activerecord-jdbc-adapter
@@ -927,6 +926,7 @@
     SUBDIR += rubygem-activerecord61
     SUBDIR += rubygem-activerecord70
     SUBDIR += rubygem-activerecord71
+    SUBDIR += rubygem-activerecord72
     SUBDIR += rubygem-after_commit_queue
     SUBDIR += rubygem-amalgalite
     SUBDIR += rubygem-arel
@@ -984,6 +984,7 @@
     SUBDIR += rubygem-globalid-rails61
     SUBDIR += rubygem-globalid-rails70
     SUBDIR += rubygem-globalid-rails71
+    SUBDIR += rubygem-globalid-rails72
     SUBDIR += rubygem-google-cloud-datastore
     SUBDIR += rubygem-google-cloud-datastore-v1
     SUBDIR += rubygem-google-cloud-firestore
@@ -1038,6 +1039,9 @@
     SUBDIR += rubygem-scenic61
     SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
+    SUBDIR += rubygem-solid_cable
+    SUBDIR += rubygem-solid_cache
+    SUBDIR += rubygem-solid_queue
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby
     SUBDIR += rubygem-sqlite31

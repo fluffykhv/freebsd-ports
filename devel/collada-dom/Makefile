@@ -21,7 +21,4 @@ GH_ACCOUNT=	rdiankov
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 
-# LLVM15 workaround
-CFLAGS=		-Wno-int-conversion
-
 .include <bsd.port.mk>

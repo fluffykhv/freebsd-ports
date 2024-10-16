@@ -1,12 +1,12 @@
 PORTNAME=	mariadb
-DISTVERSION=	1.1.8
+DISTVERSION=	1.1.10
 CATEGORIES=	databases python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	DtxdF@disroot.org
 COMMENT=	Python MariaDB extension
-WWW=		https://www.github.com/mariadb-corporation/mariadb-connector-python
+WWW=		https://github.com/mariadb-corporation/mariadb-connector-python
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

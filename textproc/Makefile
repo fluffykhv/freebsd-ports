@@ -521,6 +521,7 @@
     SUBDIR += obsidian
     SUBDIR += ocaml-csv
     SUBDIR += ocaml-expat
+    SUBDIR += ocaml-spelll
     SUBDIR += ocaml-text
     SUBDIR += ocaml-yojson
     SUBDIR += odt2txt
@@ -1379,6 +1380,7 @@
     SUBDIR += py-fasttext-predict
     SUBDIR += py-faust-cchardet
     SUBDIR += py-feedparser
+    SUBDIR += py-file-read-backwards
     SUBDIR += py-fingerprints
     SUBDIR += py-flor
     SUBDIR += py-fluent.syntax
@@ -1391,6 +1393,8 @@
     SUBDIR += py-grapheme
     SUBDIR += py-grep-ast
     SUBDIR += py-griffe
+    SUBDIR += py-grimoire-elk
+    SUBDIR += py-grimoirelab-panels
     SUBDIR += py-guess-language
     SUBDIR += py-hashids
     SUBDIR += py-hexdump
@@ -1420,6 +1424,7 @@
     SUBDIR += py-junit-xml
     SUBDIR += py-jupyter_sphinx
     SUBDIR += py-jupyterlab-pygments
+    SUBDIR += py-kidash
     SUBDIR += py-langcodes
     SUBDIR += py-langdetect
     SUBDIR += py-langid

@@ -148,7 +148,6 @@
     SUBDIR += eventviews
     SUBDIR += exabgp4
     SUBDIR += fb303
-    SUBDIR += fbzmq
     SUBDIR += fiche
     SUBDIR += file2pcap
     SUBDIR += findmtu
@@ -210,6 +209,8 @@
     SUBDIR += gopher
     SUBDIR += goreplay
     SUBDIR += gorss
+    SUBDIR += gotify-cli
+    SUBDIR += gotify-server
     SUBDIR += gotthard
     SUBDIR += graphpath
     SUBDIR += grilo
@@ -1683,6 +1684,7 @@
     SUBDIR += yconalyzer
     SUBDIR += yggdrasil
     SUBDIR += yptransitd
+    SUBDIR += zapret
     SUBDIR += zebra-server
     SUBDIR += zerotier
     SUBDIR += zillion

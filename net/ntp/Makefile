@@ -63,6 +63,7 @@ THREADS_CONFIGURE_ENABLE=	thread-support
 THREADS_CONFIGURE_WITH=		threads
 
 MD5_LIB_DEPENDS=	libmd5.so:www/libwww
+MD5_LDFLAGS=		-lmd5
 MD5_IMPLIES=		SSL
 
 .for D in ${NTP_DRIVERS}

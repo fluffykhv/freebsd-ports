@@ -1568,6 +1568,7 @@
     SUBDIR += tcpxtract
     SUBDIR += td-system-tools
     SUBDIR += tdetect
+    SUBDIR += teddycloud
     SUBDIR += termshark
     SUBDIR += tftpgrab
     SUBDIR += throttled

@@ -1682,6 +1682,7 @@
     SUBDIR += py-flask-script
     SUBDIR += py-flask-security
     SUBDIR += py-flask-session
+    SUBDIR += py-flask-simpleldap
     SUBDIR += py-flask-smorest
     SUBDIR += py-flask-socketio
     SUBDIR += py-flask-sockets
@@ -1695,6 +1696,7 @@
     SUBDIR += py-formencode
     SUBDIR += py-fqdn
     SUBDIR += py-frappe-bench
+    SUBDIR += py-free-proxy
     SUBDIR += py-freenit
     SUBDIR += py-frozen-flask
     SUBDIR += py-gevent-websocket

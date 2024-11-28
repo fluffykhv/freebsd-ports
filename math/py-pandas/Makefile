@@ -14,7 +14,7 @@ WWW=		https://pandas.pydata.org/ \
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	meson>=1.2.1:devel/meson@${PY_FLAVOR} \
+BUILD_DEPENDS=	meson:devel/meson@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}meson-python>=0.13.1:devel/meson-python@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}numpy>=1.26.0,1<2,1:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}versioneer>=0:devel/py-versioneer@${PY_FLAVOR} \

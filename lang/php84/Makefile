@@ -594,7 +594,7 @@ USES+=			pkgconfig
 CONFIGURE_ARGS+=--disable-opcache-jit
 .endif
 
-.if ${PHP_MODNAME} == "opcache" && ${ARCH} != aarch64
+.if ${PHP_MODNAME} == "opcache"
 post-configure:
 	@${BSDMAKE} -C ${WRKSRC} ./jit/ir/ir_fold_hash.h
 	@${BSDMAKE} -C ${WRKSRC} ./jit/ir/ir_emit.lo

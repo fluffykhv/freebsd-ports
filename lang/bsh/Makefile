@@ -8,8 +8,6 @@ WWW=		http://www.beanshell.org/
 
 LICENSE=	APACHE20
 
-USES=		dos2unix
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	beanshell
 GH_PROJECT=	beanshell
@@ -21,6 +19,7 @@ CONFLICTS_INSTALL=	schilyutils # bin/bsh
 
 ALL_TARGET=	jarall
 
+USES+=		dos2unix
 DOS2UNIX_FILES=	engine/src/bsh/TestBshScriptEngine.java
 
 SUB_FILES=	${PORTNAME}.sh

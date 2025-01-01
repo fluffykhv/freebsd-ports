@@ -22,7 +22,7 @@ LIB_DEPENDS=	libantlr3c.so:devel/libantlr3c \
 		libcadical.so:math/cadical
 
 USES=		cmake:testing ncurses compiler:c++17-lang \
-		localbase:ldflags pkgconfig python:build,3.8-3.10
+		localbase:ldflags pkgconfig python:build
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 

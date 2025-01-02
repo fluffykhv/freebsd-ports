@@ -1,5 +1,5 @@
 PORTNAME=	librist
-DISTVERSION=	0.2.10
+DISTVERSION=	0.2.11
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -8,6 +8,9 @@ WWW=		https://code.videolan.org/rist/librist
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	Depends on expired security/mbedtls
+EXPIRATION_DATE=2025-03-31
 
 LIB_DEPENDS=	libcjson.so:devel/libcjson \
 		libmbedcrypto.so:security/mbedtls \
@@ -19,7 +22,7 @@ USE_LDCONFIG=	yes
 
 GL_SITE=	https://code.videolan.org
 GL_ACCOUNT=	rist
-GL_TAGNAME=	1e805500dc14a507598cebdd49557c32e514899f
+GL_TAGNAME=	c526858020ce14c1ef156c0c68a655ba8dfe8b00
 
 MESON_ARGS=	-Dtest=false
 

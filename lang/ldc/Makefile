@@ -17,12 +17,7 @@ ONLY_FOR_ARCHS_REASON=	The bootstrap compiler is provided only for x86_64
 
 LIB_DEPENDS=	libconfig.so:devel/libconfig
 
-USES=		llvm:max=16,lib,run ninja localbase:ldflags cmake:insource pkgconfig
-
-#required by bootstrap
-BUILD_DEPENDS+=	llvm-config15:devel/llvm15
-LIB_DEPENDS+=	libzstd.so:archivers/zstd
-LDFLAGS+=	-lzstd
+USES=		llvm:lib,run ninja cmake:insource pkgconfig
 
 #USE_GITHUB=	yes
 #GH_ACCOUNT=	ldc-developers

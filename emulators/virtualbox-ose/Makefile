@@ -112,8 +112,7 @@ VDE_RUN_DEPENDS=	vde_switch:net/vde2
 VNC_CONFIGURE_ON=	--enable-vnc
 VNC_LIB_DEPENDS=	libvncserver.so:net/libvncserver
 VPX_CONFIGURE_OFF=	--disable-libvpx
-VPX_LIB_DEPENDS=	libvpx.so:multimedia/libvpx \
-			libopus.so:audio/opus
+VPX_LIB_DEPENDS=	libvpx.so:multimedia/libvpx
 WEBSERVICE_BUILD_DEPENDS=	soapcpp2:devel/gsoap
 X11_USES=		sdl xorg
 X11_USE=		SDL=sdl XORG=x11,xcursor,xext,xinerama,xmu,xorgproto,xt
@@ -268,14 +267,6 @@ post-patch:
 	    ${WRKSRC}/LocalConfig.kmk
 	@${ECHO_CMD} 'VBOX_WITH_VALIDATIONKIT =' >> ${WRKSRC}/LocalConfig.kmk
 	@${ECHO_CMD} 'VBOX_WITH_X11_ADDITIONS =' >> ${WRKSRC}/LocalConfig.kmk
-.if ${PORT_OPTIONS:MVPX}
-	@${ECHO} 'SDK_VBOX_OPUS_INCS = ${PREFIX}/include/opus' >> \
-	    ${WRKSRC}/LocalConfig.kmk
-	@${ECHO} 'SDK_VBOX_OPUS_LIBS = opus' >> ${WRKSRC}/LocalConfig.kmk
-.else
-	@${ECHO} 'SDK_VBOX_OPUS_INCS =' >> ${WRKSRC}/LocalConfig.kmk
-	@${ECHO} 'SDK_VBOX_OPUS_LIBS =' >> ${WRKSRC}/LocalConfig.kmk
-.endif
 .if ${PORT_OPTIONS:MR0LOGGING}
 	@${ECHO_CMD} 'VBOX_WITH_R0_LOGGING = 1' >> ${WRKSRC}/LocalConfig.kmk
 .endif

@@ -17,7 +17,6 @@ USES=		bison:alias cpe gmake iconv meson perl5 pkgconfig python ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	rkd77
 
-CFLAGS+=	-fcommon
 LDFLAGS+=	-lexecinfo
 MESON_ARGS=	-Dgpm=false -Dperl=true
 

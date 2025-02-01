@@ -1,5 +1,5 @@
 PORTNAME=	telegram-desktop
-DISTVERSION=	5.10.6
+DISTVERSION=	5.10.7
 PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/

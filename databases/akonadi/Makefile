@@ -17,7 +17,7 @@ BUILD_DEPENDS=	xsltproc:textproc/libxslt
 
 CONFLICTS=	akonadi akonadi-kf5-git
 
-USES=		cmake compiler:c++11-lib gettext gnome kde:5 pkgconfig qt:5 \
+USES=		cmake compiler:c++11-lib gettext gnome kde:5 qt:5 \
 		shared-mime-info sqlite:3 tar:xz xorg
 USE_GNOME=	libxml2
 USE_KDE=	auth codecs completion config configwidgets coreaddons crash \

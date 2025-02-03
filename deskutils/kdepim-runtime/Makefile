@@ -16,7 +16,7 @@ LIB_DEPENDS=	libboost_date_time.so:devel/boost-libs \
 		libxerces-c.so:textproc/xerces-c3 \
 		libqt5keychain.so:security/qtkeychain@qt5
 
-USES=		cmake:noninja compiler:c++11-lib gettext grantlee:5 kde:5 pkgconfig qca \
+USES=		cmake:noninja compiler:c++11-lib gettext grantlee:5 kde:5 qca \
 		qt:5 shared-mime-info tar:xz xorg
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons guiaddons holidays i18n iconthemes \

@@ -18,7 +18,7 @@ LIB_DEPENDS=	libaudiofile.so:audio/libaudiofile \
 		libvorbisenc.so:audio/libvorbis
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:5 \
-		localbase:ldflags magick:build pkgconfig qt:5 tar:xz xorg
+		localbase:ldflags magick:6,build pkgconfig qt:5 tar:xz xorg
 USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons i18n iconthemes itemviews \
 		jobwidgets kio service solid sonnet textwidgets widgetsaddons \

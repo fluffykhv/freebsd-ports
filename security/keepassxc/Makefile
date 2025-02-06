@@ -1,5 +1,5 @@
 PORTNAME=	keepassxc
-DISTVERSION=	2.7.6
+DISTVERSION=	2.7.9
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/keepassxreboot/keepassxc/releases/download/${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src
@@ -18,9 +18,9 @@ LICENSE_PERMS_NOKIA-LGPL-EXCEPTION=	dist-mirror dist-sell pkg-mirror pkg-sell au
 BUILD_DEPENDS=	asciidoctor:textproc/rubygem-asciidoctor
 LIB_DEPENDS=	libargon2.so:security/libargon2 \
 		libqrencode.so:graphics/libqrencode \
-		libbotan-2.so:security/botan2
+		libbotan-3.so:security/botan3
 
-USES=		cmake compiler:c++17-lang desktop-file-utils pkgconfig qt:5 \
+USES=		cmake compiler:c++20-lang desktop-file-utils pkgconfig qt:5 \
 		readline shared-mime-info tar:xz xorg
 USE_QT=		concurrent core dbus gui network svg widgets buildtools:build \
 		linguisttools:build qmake:build testlib:build x11extras

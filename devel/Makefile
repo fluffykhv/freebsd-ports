@@ -4642,6 +4642,7 @@
     SUBDIR += py-check-jsonschema
     SUBDIR += py-check-manifest
     SUBDIR += py-check-sdist
+    SUBDIR += py-check-wheel-contents
     SUBDIR += py-cheetah3
     SUBDIR += py-circuitbreaker
     SUBDIR += py-circuits
@@ -6154,6 +6155,7 @@
     SUBDIR += py-websockets
     SUBDIR += py-websockify
     SUBDIR += py-wheel
+    SUBDIR += py-wheel-filename
     SUBDIR += py-whichcraft
     SUBDIR += py-whistle
     SUBDIR += py-widgetsnbextension

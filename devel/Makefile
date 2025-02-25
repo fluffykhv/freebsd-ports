@@ -833,6 +833,7 @@
     SUBDIR += ghq
     SUBDIR += ghub
     SUBDIR += ghub-devel
+    SUBDIR += gilt
     SUBDIR += gindent
     SUBDIR += gio-sharp
     SUBDIR += git
@@ -5746,7 +5747,6 @@
     SUBDIR += py-python-editor
     SUBDIR += py-python-engineio
     SUBDIR += py-python-gflags
-    SUBDIR += py-python-gilt
     SUBDIR += py-python-gist
     SUBDIR += py-python-gitlab
     SUBDIR += py-python-jenkins
@@ -8198,6 +8198,7 @@
     SUBDIR += stdman
     SUBDIR += stdx-allocator
     SUBDIR += stfl
+    SUBDIR += stgit
     SUBDIR += stlfilt
     SUBDIR += stlink
     SUBDIR += str

@@ -12,7 +12,7 @@ CCACHE_COMPILERS+=	icc icpc
 # ===================== devel/ccache and devel/ccache-memcached ==========
 # ========================================================================
 
-GNU_COMPILERS+=		34 42 43 44 45 46 47 48 49 5 6 7 8 9 10 11 12 13 14
+GNU_COMPILERS+=		34 42 43 44 45 46 47 48 49 5 6 7 8 9 10 11 12 13
 CCACHE_COMPILERS+=	cc c++ CC gcc g++ ${GNU_COMPILERS:S|^|gcc|} \
 			${GNU_COMPILERS:S|^|g++|} \
 			${GNU_COMPILERS:S|^|cpp|}
